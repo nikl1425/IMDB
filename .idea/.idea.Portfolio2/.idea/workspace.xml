@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="New Project">
-      <change beforePath="$PROJECT_DIR$/DataService/DataService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/DataService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PortFolio2.Tests/PortFolio2.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PortFolio2.Tests/PortFolio2.Tests.csproj" afterDir="false" />
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
+      <change afterPath="$PROJECT_DIR$/DataService/DataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/DataService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PortFolio2.Tests/DataServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PortFolio2.Tests/DataServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/WebService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/WebService.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +31,15 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DataService/DataService" />
+        <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
+        <option value="$PROJECT_DIR$/DataService/DataService.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1jmGrcphClSvAKu3pwemx3IMvtn" />
   <component name="ProjectViewState">
@@ -78,6 +100,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.WebService" />
+      <item itemvalue=".NET Launch Settings Profile.WebService: IIS Express" />
+      <item itemvalue=".NET Project.PortFolio2.Tests" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604402054164</updated>
-      <workItem from="1604402059376" duration="328000" />
+      <workItem from="1604402059376" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1604402132484</created>
@@ -96,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604402132484</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Portfolio 2">
+      <created>1604402398471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604402398471</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Portfolio 2">
+      <created>1604402402882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604402402882</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +164,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Project" />
+    <MESSAGE value="Portfolio 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Portfolio 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
+      <screen x="0" y="25" width="1792" height="1038" />
+    </state>
+    <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402509785" />
+    <state x="771" y="445" width="497" height="198" key="Github.ShareDialog" timestamp="1604402239002">
+      <screen x="0" y="25" width="1792" height="1038" />
+    </state>
+    <state x="771" y="445" width="497" height="198" key="Github.ShareDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402239002" />
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1604402167300">
+      <screen x="0" y="25" width="1792" height="1038" />
+    </state>
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
+    <state x="563" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1604402311132">
+      <screen x="0" y="25" width="1792" height="1038" />
+    </state>
+    <state x="563" y="253" width="672" height="678" key="search.everywhere.popup/0.25.1792.1038@0.25.1792.1038" timestamp="1604402311132" />
   </component>
 </project>
