@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{F91B6068-347C-4EA5-BA5C-DD1D2D44D889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{8822EB2B-0631-4BCE-BADD-FBCE57F90866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortFolio2.Tests", "PortFolio2.Tests\PortFolio2.Tests.csproj", "{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F91B6068-347C-4EA5-BA5C-DD1D2D44D889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91B6068-347C-4EA5-BA5C-DD1D2D44D889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91B6068-347C-4EA5-BA5C-DD1D2D44D889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91B6068-347C-4EA5-BA5C-DD1D2D44D889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8822EB2B-0631-4BCE-BADD-FBCE57F90866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8822EB2B-0631-4BCE-BADD-FBCE57F90866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8822EB2B-0631-4BCE-BADD-FBCE57F90866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8822EB2B-0631-4BCE-BADD-FBCE57F90866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
