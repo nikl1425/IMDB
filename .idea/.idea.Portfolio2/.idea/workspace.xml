@@ -11,13 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
-      <change afterPath="$PROJECT_DIR$/DataService/DataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/DataService" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PortFolio2.Tests/DataServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PortFolio2.Tests/DataServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/WebService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/WebService.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.PortFolio2.Tests">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebService">
     <configuration name="PortFolio2.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -115,6 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604402054164</updated>
       <workItem from="1604402059376" duration="749000" />
+      <workItem from="1604405518015" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1604402132484</created>
@@ -137,13 +132,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604402402882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Hej jesper">
+      <created>1604405604835</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604405604835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -161,11 +163,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Project" />
     <MESSAGE value="Portfolio 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Portfolio 2" />
+    <MESSAGE value="Hej jesper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hej jesper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -176,9 +180,26 @@
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="771" y="445" width="497" height="198" key="Github.ShareDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402239002" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1604402167300">
-      <screen x="0" y="25" width="1792" height="1038" />
+    <state width="1089" height="402" key="GridCell.Tab.0.bottom" timestamp="1604405807967">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
+    <state width="1089" height="402" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1604405807967" />
+    <state width="1089" height="402" key="GridCell.Tab.0.center" timestamp="1604405807967">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1089" height="402" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1604405807967" />
+    <state width="1089" height="402" key="GridCell.Tab.0.left" timestamp="1604405807967">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1089" height="402" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1604405807967" />
+    <state width="1089" height="402" key="GridCell.Tab.0.right" timestamp="1604405807967">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1089" height="402" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1604405807967" />
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604405787046">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604405787046" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
     <state x="563" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1604402311132">
       <screen x="0" y="25" width="1792" height="1038" />

@@ -11,6 +11,8 @@ namespace DataService
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
+            //NIklas
             //optionsBuilder.UseLoggerFactory(MyLoggerFactory);
             
             //DATABASE CONNECT - LAD OS KØRE MED JSON.
