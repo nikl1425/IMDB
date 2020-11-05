@@ -19,6 +19,8 @@ namespace DataService
         }
 
         public DbSet<Genre> genre { get; set; }
+        
+        public DbSet<Person> Person { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +32,15 @@ namespace DataService
             modelBuilder.Entity<Title_Genre>().Property(x => x.Id).HasColumnName("title_genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.GenreId).HasColumnName("genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.TitleId).HasColumnName("title_id");
+            
+            modelBuilder.Entity<Person>().ToTable("person");
+            modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
+            modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
+            modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
+            modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("birth_year");
+            
+            
+
             
             
             

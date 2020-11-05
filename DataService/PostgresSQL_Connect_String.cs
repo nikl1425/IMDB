@@ -4,8 +4,8 @@
     {
         private string host = "localhost";
         private string db = "imdb";
-        private string UserId = "postgres";
-        private string pwd = "Flintholm2020";
+        private string UserId = "jesper";
+        private string pwd = "Hcn27wzv";
 
         public override string ToString()
         {
