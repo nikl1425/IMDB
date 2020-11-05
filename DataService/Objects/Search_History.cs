@@ -8,6 +8,7 @@ namespace DataService.Objects
         public int User_Id { get; set; }
         public string Search_Name { get; set; } 
         public DateTime Timestamp { get; set; }
-   
+        public User Users;
+
     }
 }

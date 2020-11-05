@@ -81,8 +81,13 @@ namespace DataService
             modelBuilder.Entity<Rating>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
             modelBuilder.Entity<Rating>().Property(x => x.Rating_).HasColumnName("rating");
-            modelBuilder.Entity<Rating>().HasKey(r => new {r.User_Id});
             
+            modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
+            modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
+            modelBuilder.Entity<Title_Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
+            modelBuilder.Entity<Title_Rating>().Property(x => x.Average_Rating).HasColumnName("average_rating");
+            modelBuilder.Entity<Title_Rating>().Property(x => x.Num_Votes).HasColumnName("num_votes");
+
             //Person
             modelBuilder.Entity<Person>().ToTable("person");
             modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
@@ -156,6 +161,7 @@ namespace DataService
             modelBuilder.Entity<Profession>().ToTable("profession");
             modelBuilder.Entity<Profession>().Property(x => x.Id).HasColumnName("profession_id");
             modelBuilder.Entity<Profession>().Property(x => x.ProfessionName).HasColumnName("profession_name");
+            
 
             //Title_Rating
             modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
@@ -164,7 +170,6 @@ namespace DataService
             modelBuilder.Entity<Title_Rating>().Property(x => x.Average_Rating).HasColumnName("average_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Num_Votes).HasColumnName("num_votes");
             
-           
             
             base.OnModelCreating(modelBuilder);
         }

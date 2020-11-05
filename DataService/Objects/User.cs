@@ -11,6 +11,12 @@ namespace DataService.Objects
         public string Email { get; set; }
 
         private List<Title_Bookmark_List> TitleBookmarkLists { get; set; }
+
+        private List<Rating> Ratings { get; set; }
         
+        private List<Person_Bookmark_list> PersonBookmarkLists { get; set; }
+        
+        private List<Search_History> SearchHistories { get; set; }
+
     }
 }

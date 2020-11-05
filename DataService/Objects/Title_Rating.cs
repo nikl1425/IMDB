@@ -1,4 +1,6 @@
-﻿namespace DataService.Objects
+﻿using System.Collections.Generic;
+
+namespace DataService.Objects
 {
     public class Title_Rating
     {
@@ -6,6 +8,7 @@
         public string Title_Id { get; set; }
         public double Average_Rating { get; set; }
         public int Num_Votes { get; set; }
+        public IList<Title> Titles = new List<Title>();
         
     }
 }

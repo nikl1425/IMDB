@@ -13,5 +13,6 @@
         
         
         //MANGLER ALLE KLASSER
+        public Title_Rating TitleRating;
     }
 }
