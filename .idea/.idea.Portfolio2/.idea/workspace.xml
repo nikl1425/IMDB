@@ -11,18 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
-      <change afterPath="$PROJECT_DIR$/DataService/Objects/Person.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/DataService/Objects/Title.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/Objects/Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Genre.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/Objects/Rating.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Rating.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +35,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/760DCDFB-2F2B-4C8D-9D3B-A922FA70B507/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/30/4ccbedb9/TestRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/7b/a15d2076/XunitTestCaseRunner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/59/5b106b0e/XunitTestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/UnitTest/TitleDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/b4/f3f2d74c/TestCaseRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/31/7aeb5dd7/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e6/4e9f7a77/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92FCB906-F2E6-482A-9C7A-BCB425FF229D/f0/f67ceeef/ILoggerFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,6 +66,7 @@
         <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
         <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Person.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />

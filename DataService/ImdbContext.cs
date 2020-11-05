@@ -21,6 +21,7 @@ namespace DataService
         public DbSet<Genre> genre { get; set; }
         
         public DbSet<Person> Person { get; set; }
+        public DbSet<Title_Genre> title_genre { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
