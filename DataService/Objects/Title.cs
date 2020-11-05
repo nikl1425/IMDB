@@ -1,4 +1,6 @@
-﻿namespace DataService.Objects
+﻿using System.Collections.Generic;
+
+namespace DataService.Objects
 {
     public class Title
     {
@@ -10,9 +12,21 @@
         public string StartYear { get; set; }
         public string EndYear { get; set; }
         public int RunTimeMinutes { get; set; }
-        
-        
+
+
         //MANGLER ALLE KLASSER
         public Title_Rating TitleRating;
+        public IList<Title_Genre> TitleGenres { get; set; }
+        public IList<Title_Search> TitleSearches { get; set; }
+        public IList<Akas> Akases { get; set; }
+        public Title_Episode TitleEpisode { get; set; }
+        public Type Type { get; set; }
+        public IList<Title_Person> TitlePersons { get; set; }
+        
+        
+        //Måske skal ændres
+        public IList<Title_Bookmark> TitleBookmarks { get; set; }
+        
+        
     }
 }
