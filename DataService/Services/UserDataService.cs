@@ -25,6 +25,6 @@ namespace DataService.Services
             return x.ToList();
         }
         
-        public 
+        
     }
 }
