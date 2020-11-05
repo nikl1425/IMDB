@@ -17,25 +17,27 @@
         </e>
         <e p="Objects" t="Include">
           <e p="Genre.cs" t="Include" />
+          <e p="Title_Genre.cs" t="Include" />
         </e>
         <e p="PostgresSQL_Connect_String.cs" t="Include" />
         <e p="Services" t="Include">
-          <e p="DataService.cs" t="Include" />
+          <e p="TitleDataService.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Portfolio2.sln" t="IncludeFlat" />
-      <e p="PortFolio2.Tests" t="IncludeRecursive">
+      <e p="UnitTest" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DataServiceTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="PortFolio2.Tests.AssemblyInfo.cs" t="Include" />
+              <e p="UnitTest.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="PortFolio2.Tests.csproj" t="IncludeRecursive" />
+        <e p="TitleDataServiceTest.cs" t="Include" />
+        <e p="UnitTest.csproj" t="IncludeRecursive" />
         <e p="WebServiceTests.cs" t="Include" />
       </e>
       <e p="WebService" t="IncludeRecursive">
