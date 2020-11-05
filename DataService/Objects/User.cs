@@ -1,4 +1,6 @@
-﻿namespace DataService.Objects
+﻿using System.Collections.Generic;
+
+namespace DataService.Objects
 {
     public class User
     {
@@ -7,6 +9,8 @@
         public string Last_Name { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
+
+        private List<Title_Bookmark_List> TitleBookmarkLists { get; set; }
         
     }
 }
