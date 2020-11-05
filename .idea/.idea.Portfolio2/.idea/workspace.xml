@@ -11,11 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
-      <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/UnitTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/UnitTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,21 +26,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92FCB906-F2E6-482A-9C7A-BCB425FF229D/f0/f67ceeef/ILoggerFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DataService/DataService" />
         <option value="$PROJECT_DIR$/DataService/DataService.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
+        <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/DataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
-        <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
       </list>
     </option>
@@ -126,7 +118,7 @@
       <workItem from="1604405518015" duration="288000" />
       <workItem from="1604405823879" duration="3607000" />
       <workItem from="1604526608563" duration="36000" />
-      <workItem from="1604568106514" duration="4080000" />
+      <workItem from="1604568106514" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1604402132484</created>
@@ -191,12 +183,12 @@
       <option name="project" value="LOCAL" />
       <updated>1604570893807</updated>
     </task>
-    <task id="LOCAL-00010" summary="installeret xunit">
-      <created>1604571390271</created>
+    <task id="LOCAL-00010" summary="Users added">
+      <created>1604572799830</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1604571390271</updated>
+      <updated>1604572799830</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
@@ -232,8 +224,8 @@
     <MESSAGE value="Flere config at DataService.csproj" />
     <MESSAGE value="Added genre to context + installed logger package for logging actions" />
     <MESSAGE value="created TitleDataService.cs and TitleDataServiceTest.cs" />
-    <MESSAGE value="installeret xunit" />
-    <option name="LAST_COMMIT_MESSAGE" value="installeret xunit" />
+    <MESSAGE value="Users added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Users added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -260,18 +252,24 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1089" height="402" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1604405807967" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1604572334304">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572334304" />
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog" timestamp="1604408159408">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604571392285">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2" timestamp="1604572803940">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604571392285" />
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572803939" />
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604570895206" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
-    <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604568109787">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604572499383">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572499383" />
     <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604568109787" />
     <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup" timestamp="1604570298064">
       <screen x="0" y="0" width="3440" height="1400" />

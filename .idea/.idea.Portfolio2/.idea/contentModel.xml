@@ -51,6 +51,7 @@
         </e>
         <e p="TitleDataServiceTest.cs" t="Include" />
         <e p="UnitTest.csproj" t="IncludeRecursive" />
+        <e p="UserDataServiceTest.cs" t="Include" />
         <e p="WebServiceTests.cs" t="Include" />
       </e>
       <e p="WebService" t="IncludeRecursive">
