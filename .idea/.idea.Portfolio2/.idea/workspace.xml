@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
-      <change afterPath="$PROJECT_DIR$/DataService/Objects/Genre.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/DataService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/DataService.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
     </list>
@@ -39,6 +37,7 @@
         <option value="$PROJECT_DIR$/DataService/DataService" />
         <option value="$PROJECT_DIR$/DataService/DataService.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
+        <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
       </list>
     </option>
@@ -120,7 +119,7 @@
       <workItem from="1604405518015" duration="288000" />
       <workItem from="1604405823879" duration="3607000" />
       <workItem from="1604526608563" duration="36000" />
-      <workItem from="1604568106514" duration="1422000" />
+      <workItem from="1604568106514" duration="2043000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1604402132484</created>
@@ -164,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604408362777</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Flere config at DataService.csproj">
+      <created>1604569618915</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604569618915</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +201,8 @@
     <MESSAGE value="Portfolio 2" />
     <MESSAGE value="Hej jesper" />
     <MESSAGE value="hej jesper" />
-    <option name="LAST_COMMIT_MESSAGE" value="hej jesper" />
+    <MESSAGE value="Flere config at DataService.csproj" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flere config at DataService.csproj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -226,10 +233,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604408364179">
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604569620623">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604408364179" />
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604569620623" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
     <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604568109787">
       <screen x="0" y="0" width="3440" height="1400" />

@@ -18,6 +18,7 @@
         <e p="Objects" t="Include">
           <e p="Genre.cs" t="Include" />
         </e>
+        <e p="PostgresSQL_Connect_String.cs" t="Include" />
         <e p="Services" t="Include">
           <e p="DataService.cs" t="Include" />
         </e>
