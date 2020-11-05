@@ -21,11 +21,11 @@ namespace PortFolio2.Tests
         [Fact]
         public void GetRatingFromUser()
         {
-            /*var service = new UserDataService();
+            var service = new UserDataService();
             var rating = service.GetRatingFromUsers(1);
             Assert.Equal(2, rating.Count);
             Assert.Equal("tt0052520", rating.First().Title_Id);
-            Assert.Equal(15, rating.Last().Id);*/
+            Assert.Equal(8, rating.Last().Rating_);
             
         }
     }

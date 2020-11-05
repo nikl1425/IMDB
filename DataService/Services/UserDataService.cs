@@ -24,5 +24,7 @@ namespace DataService.Services
             var x = ctx.rating.Where(r => r.User_Id == user);
             return x.ToList();
         }
+        
+        public 
     }
 }
