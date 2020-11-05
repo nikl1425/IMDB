@@ -41,6 +41,7 @@ namespace DataService
         public DbSet<Akas> akas { get; set; }
         public DbSet<Title_Bookmark> title_bookmarks { get; set; }
         public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
+        public DbSet<Title_Episode> title_episode { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -66,6 +67,14 @@ namespace DataService
             modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.Id).HasColumnName("list_id");
             modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.UserId).HasColumnName("user_id");
             modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.ListName).HasColumnName("list_name");
+            
+            //Title_episode
+            modelBuilder.Entity<Title_Episode>().ToTable("title_episodes");
+            modelBuilder.Entity<Title_Episode>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<Title_Episode>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Title_Episode>().Property(x => x.ParentId).HasColumnName("parent_id");
+            modelBuilder.Entity<Title_Episode>().Property(x => x.SeasonNumber).HasColumnName("season_number");
+            modelBuilder.Entity<Title_Episode>().Property(x => x.EpisodeNumber).HasColumnName("episode_number");
             
             //User
             modelBuilder.Entity<User>().ToTable("users");
