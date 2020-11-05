@@ -19,10 +19,18 @@ namespace DataService
         }
 
         public DbSet<Genre> genre { get; set; }
+
         public DbSet<Person> Person { get; set; }
         public DbSet<Title_Genre> title_genre { get; set; }
         public DbSet<Akas_Type> akas_type { get; set; }
         public DbSet<Akas_Akas_Type> akas_akas_type { get; set; }
+        
+        public DbSet<Person_known_title> PersonKnownTitles { get; set; }
+        
+        public DbSet<Person_Person_Known_Title> PersonPersonKnownTitles { get; set; }
+        
+        public DbSet<Person_Profession> PersonProfessions { get; set; }
+        public DbSet<Profession> Professions { get; set; }
         public DbSet<Users> users { get; set; }
         public DbSet<Rating> rating { get; set; }
         public DbSet<Title_Rating> title_rating { get; set; }
@@ -55,6 +63,7 @@ namespace DataService
             modelBuilder.Entity<Rating>().Property(x => x.Rating_).HasColumnName("rating");
             modelBuilder.Entity<Rating>().HasKey(r => new {r.User_Id});
             
+            //Person
             modelBuilder.Entity<Person>().ToTable("person");
             modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
@@ -86,6 +95,33 @@ namespace DataService
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasAkasId).HasColumnName("akas_akas_id");
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasTypeId).HasColumnName("akas_type_id");
             
+            
+            //Person_title_id
+            modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_title_id");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.TitleName).HasColumnName("title_name");
+            
+            //Person_person_known_title
+            modelBuilder.Entity<Person_Person_Known_Title>().ToTable("person_person_known_title");
+            modelBuilder.Entity<Person_Person_Known_Title>().Property(x => x.Id).HasColumnName("person_person_title_id");
+            modelBuilder.Entity<Person_Person_Known_Title>().Property(x => x.PersonId).HasColumnName("person_id");
+            modelBuilder.Entity<Person_Person_Known_Title>().Property(x => x.PersonTitleId).HasColumnName("person_title_id");
+
+            //Person_profession
+            modelBuilder.Entity<Person_Profession>().ToTable("person_profession");
+            modelBuilder.Entity<Person_Profession>().Property(x => x.Id).HasColumnName("person_profession_id");
+            modelBuilder.Entity<Person_Profession>().Property(x => x.PersonId).HasColumnName("person_id");
+            modelBuilder.Entity<Person_Profession>().Property(x => x.ProfessionId).HasColumnName("profession_id");
+            
+            //Profession
+            modelBuilder.Entity<Profession>().ToTable("profession");
+            modelBuilder.Entity<Profession>().Property(x => x.Id).HasColumnName("profession_id");
+            modelBuilder.Entity<Profession>().Property(x => x.ProfessionName).HasColumnName("profession_name");
+
+
+
+
+
             modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
