@@ -26,6 +26,11 @@ namespace PortFolio2.Tests
             Assert.Equal(2, rating.Count);
             Assert.Equal("tt0052520", rating.First().Title_Id);
             Assert.Equal(8, rating.Last().Rating_);
+        }
+
+        [Fact]
+        public void Get()
+        {
             
         }
     }

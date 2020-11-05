@@ -35,7 +35,7 @@ namespace DataService
         public DbSet<Rating> rating { get; set; }
         public DbSet<Title_Rating> title_rating { get; set; }
         public DbSet<Search_History> search_history { get; set; }
-        public DbSet<Person_Bookmarks> person_bookmarks { get; set; }
+        public DbSet<Person_Bookmark> person_bookmarks { get; set; }
         public DbSet<Person_Bookmark_list> person_bookmark_list { get; set; }
         public DbSet<Akas_Attribute> akas_attributes { get; set; }
         public DbSet<Akas> akas { get; set; }
@@ -43,6 +43,7 @@ namespace DataService
         public DbSet<Title_Bookmark> title_bookmarks { get; set; }
         public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
         public DbSet<Title_Episode> title_episode { get; set; }
+        public DbSet<Title_Search> title_search { get; set; }
         public DbSet<Type> type { get; set; }
         public DbSet<Person_Rating> PersonRatings { get; set; }
 
@@ -79,6 +80,7 @@ namespace DataService
             modelBuilder.Entity<User>().Property(x => x.Last_Name).HasColumnName("last_name");
             modelBuilder.Entity<User>().Property(x => x.Age).HasColumnName("age");
             modelBuilder.Entity<User>().Property(x => x.Email).HasColumnName("email");
+            
             //Title_bookmark
             modelBuilder.Entity<Title_Bookmark>().ToTable("title_booksmarks");
             modelBuilder.Entity<Title_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
@@ -98,6 +100,13 @@ namespace DataService
             modelBuilder.Entity<Title_Episode>().Property(x => x.ParentId).HasColumnName("parent_id");
             modelBuilder.Entity<Title_Episode>().Property(x => x.SeasonNumber).HasColumnName("season_number");
             modelBuilder.Entity<Title_Episode>().Property(x => x.EpisodeNumber).HasColumnName("episode_number");
+            
+            //Title_Search
+            modelBuilder.Entity<Title_Search>().ToTable("title_seatch");
+            modelBuilder.Entity<Title_Search>().Property(x => x.Id).HasColumnName("title_id");
+            modelBuilder.Entity<Title_Search>().Property(x => x.Word).HasColumnName("word");
+            modelBuilder.Entity<Title_Search>().Property(x => x.Field).HasColumnName("field");
+            modelBuilder.Entity<Title_Search>().Property(x => x.Lexeme).HasColumnName("lexeme");
             
             //Type
             modelBuilder.Entity<Type>().ToTable("type");
@@ -127,10 +136,10 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
             modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("birth_year");
             
-            modelBuilder.Entity<Person_Bookmarks>().ToTable("person_bookmarks");
-            modelBuilder.Entity<Person_Bookmarks>().Property(x => x.Id).HasColumnName("bookmark_id");
-            modelBuilder.Entity<Person_Bookmarks>().Property(x => x.List_Id).HasColumnName("list_id");
-            modelBuilder.Entity<Person_Bookmarks>().Property(x => x.Person_Id).HasColumnName("person_id");
+            modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
+            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
+            modelBuilder.Entity<Person_Bookmark>().Property(x => x.List_Id).HasColumnName("list_id");
+            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id");
 
             modelBuilder.Entity<Person_Bookmark_list>().ToTable("person_bookmark_list");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.Id).HasColumnName("list_id");

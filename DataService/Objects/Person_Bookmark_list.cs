@@ -9,7 +9,7 @@ namespace DataService.Objects
         public int User_Id { get; set; }
         public string List_Name { get; set; }
         public User Users;
-        public IList<Person_Bookmarks> PersonBookmarks = new List<Person_Bookmarks>();
+        public IList<Person_Bookmark> PersonBookmarks = new List<Person_Bookmark>();
         
         
     }

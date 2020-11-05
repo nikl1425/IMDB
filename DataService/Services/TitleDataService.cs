@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using DataService.Objects;
 
 namespace DataService.Services
@@ -13,6 +16,15 @@ namespace DataService.Services
         {
             using var ctx = new ImdbContext();
             return ctx.genre.Find(id);
+        }
+
+        public IList<Title_Search> TitleSearches(string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.title_search
+                .Where(s => s.Id.Equals(titleid));
+            return x.ToList();
+
         }
     }
 }

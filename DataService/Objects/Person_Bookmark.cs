@@ -2,7 +2,7 @@
 
 namespace DataService.Objects
 {
-    public class Person_Bookmarks
+    public class Person_Bookmark
     {
         public int Id { get; set; }
         public int List_Id { get; set; }

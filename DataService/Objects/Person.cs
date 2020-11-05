@@ -12,7 +12,7 @@ namespace DataService.Objects
         public string BirthYear { get; set; }
         public string DeathYear { get; set; }
         
-        public Person_Bookmarks PersonBookmarks;
+        public Person_Bookmark PersonBookmark;
         
         public IList<Person_Person_Known_Title> PersonPersonKnownTitles = new List<Person_Person_Known_Title>();
         

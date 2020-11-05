@@ -26,7 +26,7 @@ namespace DataService.Objects
 
         //Måske skal ændres
         public IList<Title_Bookmark> TitleBookmarks { get; set; }
-        public IList<Person_Bookmarks> PersonBookmarks { get; set; }
+        public IList<Person_Bookmark> PersonBookmarks { get; set; }
         
         
     }
