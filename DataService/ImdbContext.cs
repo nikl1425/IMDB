@@ -39,6 +39,7 @@ namespace DataService
         public DbSet<Person_Bookmark_list> person_bookmark_list { get; set; }
         public DbSet<Akas_Attribute> akas_attributes { get; set; }
         public DbSet<Akas> akas { get; set; }
+        public DbSet<Title_Person> TitlePersons { get; set; }
         public DbSet<Title_Bookmark> title_bookmarks { get; set; }
         public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
         public DbSet<Title_Episode> title_episode { get; set; }
@@ -57,6 +58,21 @@ namespace DataService
             modelBuilder.Entity<Title_Genre>().Property(x => x.GenreId).HasColumnName("genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.TitleId).HasColumnName("title_id");
             
+            modelBuilder.Entity<Title_Person>().ToTable("title_person");
+            modelBuilder.Entity<Title_Person>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<Title_Person>().Property(x => x.PersonId).HasColumnName("person_id");
+            modelBuilder.Entity<Title_Person>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Title_Person>().Property(x => x.Ordering).HasColumnName("ordering");
+            modelBuilder.Entity<Title_Person>().Property(x => x.Category).HasColumnName("category");
+            modelBuilder.Entity<Title_Person>().Property(x => x.Job).HasColumnName("job");
+            modelBuilder.Entity<Title_Person>().Property(x => x.Character).HasColumnName("character");
+            
+            modelBuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<User>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<User>().Property(x => x.Surname).HasColumnName("surname");
+            modelBuilder.Entity<User>().Property(x => x.Last_Name).HasColumnName("last_name");
+            modelBuilder.Entity<User>().Property(x => x.Age).HasColumnName("age");
+            modelBuilder.Entity<User>().Property(x => x.Email).HasColumnName("email");
             //Title_bookmark
             modelBuilder.Entity<Title_Bookmark>().ToTable("title_booksmarks");
             modelBuilder.Entity<Title_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
@@ -96,13 +112,8 @@ namespace DataService
             modelBuilder.Entity<Rating>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
             modelBuilder.Entity<Rating>().Property(x => x.Rating_).HasColumnName("rating");
+            modelBuilder.Entity<Rating>().HasKey(r => new {r.User_Id});
             
-            modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
-            modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
-            modelBuilder.Entity<Title_Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
-            modelBuilder.Entity<Title_Rating>().Property(x => x.Average_Rating).HasColumnName("average_rating");
-            modelBuilder.Entity<Title_Rating>().Property(x => x.Num_Votes).HasColumnName("num_votes");
-
             //Person
             modelBuilder.Entity<Person>().ToTable("person");
             modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
@@ -179,12 +190,14 @@ namespace DataService
             
 
             //Title_Rating
+            //title_rating
             modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Average_Rating).HasColumnName("average_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Num_Votes).HasColumnName("num_votes");
             
+           
             
             base.OnModelCreating(modelBuilder);
         }
