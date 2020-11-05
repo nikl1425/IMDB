@@ -12,7 +12,7 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
         }
 
-        public Users GetUsers(int id)
+        public User GetUsers(int id)
         {
             using var ctx = new ImdbContext();
             return ctx.users.Find(id);

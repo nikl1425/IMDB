@@ -31,7 +31,7 @@ namespace DataService
         
         public DbSet<Person_Profession> PersonProfessions { get; set; }
         public DbSet<Profession> Professions { get; set; }
-        public DbSet<Users> users { get; set; }
+        public DbSet<User> users { get; set; }
         public DbSet<Rating> rating { get; set; }
         public DbSet<Title_Rating> title_rating { get; set; }
         public DbSet<Search_History> search_history { get; set; }
@@ -42,22 +42,26 @@ namespace DataService
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //genre
             modelBuilder.Entity<Genre>().ToTable("genre");
             modelBuilder.Entity<Genre>().Property(x => x.Id).HasColumnName("genre_id");
             modelBuilder.Entity<Genre>().Property(x => x.Name).HasColumnName("genre_name");
-
+            
+            //Title_genre
             modelBuilder.Entity<Title_Genre>().ToTable("title_genre");
             modelBuilder.Entity<Title_Genre>().Property(x => x.Id).HasColumnName("title_genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.GenreId).HasColumnName("genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.TitleId).HasColumnName("title_id");
             
-            modelBuilder.Entity<Users>().ToTable("users");
-            modelBuilder.Entity<Users>().Property(x => x.Id).HasColumnName("id");
-            modelBuilder.Entity<Users>().Property(x => x.Surname).HasColumnName("surname");
-            modelBuilder.Entity<Users>().Property(x => x.Last_Name).HasColumnName("last_name");
-            modelBuilder.Entity<Users>().Property(x => x.Age).HasColumnName("age");
-            modelBuilder.Entity<Users>().Property(x => x.Email).HasColumnName("email");
+            //User
+            modelBuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<User>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<User>().Property(x => x.Surname).HasColumnName("surname");
+            modelBuilder.Entity<User>().Property(x => x.Last_Name).HasColumnName("last_name");
+            modelBuilder.Entity<User>().Property(x => x.Age).HasColumnName("age");
+            modelBuilder.Entity<User>().Property(x => x.Email).HasColumnName("email");
             
+            //Rating
             modelBuilder.Entity<Rating>().ToTable("rating");
             modelBuilder.Entity<Rating>().Property(x => x.Id).HasColumnName("rating_id");
             modelBuilder.Entity<Rating>().Property(x => x.User_Id).HasColumnName("user_id");

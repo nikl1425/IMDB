@@ -36,9 +36,11 @@
           <e p="Rating.cs" t="Include" />
           <e p="Search_History.cs" t="Include" />
           <e p="Title.cs" t="Include" />
+          <e p="Title_Bookmark.cs" t="Include" />
+          <e p="Title_Bookmark_List.cs" t="Include" />
           <e p="Title_Genre.cs" t="Include" />
           <e p="Title_Rating.cs" t="Include" />
-          <e p="Users.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="PostgresSQL_Connect_String.cs" t="Include" />
         <e p="Services" t="Include">

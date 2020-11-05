@@ -1,6 +1,6 @@
 ﻿namespace DataService.Objects
 {
-    public class Users
+    public class User
     {
         public int Id { get; set; }
         public string Surname { get; set; }
