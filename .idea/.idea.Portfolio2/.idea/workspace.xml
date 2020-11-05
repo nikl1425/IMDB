@@ -11,12 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Person stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Profession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataService/Objects/Person_Rating.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,6 @@
         <option value="$PROJECT_DIR$/DataService/Services/Person.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/PeronDataService.cs" />
-        <option value="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title.cs" />
@@ -88,6 +82,9 @@
         <option value="$PROJECT_DIR$/DataService/Objects/Profession.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Title_Person.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person_Rating.cs" />
       </list>
     </option>
   </component>
@@ -284,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604587002205</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Person stuff">
+      <created>1604588300300</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1604588300300</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,10 +427,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="500" y="276" key="Vcs.Push.Dialog.v2" timestamp="1604587004578">
+    <state x="500" y="276" key="Vcs.Push.Dialog.v2" timestamp="1604588304383">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="500" y="276" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604587004578" />
+    <state x="500" y="276" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604588304383" />
     <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572803939" />
     <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604579552705" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />

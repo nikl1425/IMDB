@@ -19,8 +19,8 @@ namespace DataService.Objects
         public IList<Title_Person> TitlePersons = new List<Title_Person>();
 
         public IList<Person_Profession> PersonProfessions = new List<Person_Profession>();
-        
-        
+
+        public Person_Rating PersonRating;
 
     }
 }

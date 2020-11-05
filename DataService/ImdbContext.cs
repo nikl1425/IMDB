@@ -44,6 +44,7 @@ namespace DataService
         public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
         public DbSet<Title_Episode> title_episode { get; set; }
         public DbSet<Type> type { get; set; }
+        public DbSet<Person_Rating> PersonRatings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +52,11 @@ namespace DataService
             modelBuilder.Entity<Genre>().ToTable("genre");
             modelBuilder.Entity<Genre>().Property(x => x.Id).HasColumnName("genre_id");
             modelBuilder.Entity<Genre>().Property(x => x.Name).HasColumnName("genre_name");
+            
+            //genre
+            modelBuilder.Entity<Person_Rating>().ToTable("person_rating");
+            modelBuilder.Entity<Person_Rating>().Property(x => x.Id).HasColumnName("person_id");
+            modelBuilder.Entity<Person_Rating>().Property(x => x.PersonRating).HasColumnName("person_rating");
             
             //Title_genre
             modelBuilder.Entity<Title_Genre>().ToTable("title_genre");
