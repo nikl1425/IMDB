@@ -22,6 +22,7 @@ namespace DataService
         public DbSet<Person> Person { get; set; }
         public DbSet<Title_Genre> title_genre { get; set; }
         public DbSet<Akas_Type> akas_type { get; set; }
+        public DbSet<Akas_Akas_Type> akas_akas_type { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,6 +44,12 @@ namespace DataService
             modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Id).HasColumnName("type_id");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Name).HasColumnName("type_name");
+
+            modelBuilder.Entity<Akas_Akas_Type>().ToTable("akas_akas_type");
+            modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.Id).HasColumnName("akas_akas_type_id");
+            modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasAkasId).HasColumnName("akas_akas_id");
+            modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasTypeId).HasColumnName("akas_type_id");
+            
 
 
 
