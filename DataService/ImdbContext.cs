@@ -95,6 +95,12 @@ namespace DataService
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasAkasId).HasColumnName("akas_akas_id");
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasTypeId).HasColumnName("akas_type_id");
             
+            //Akas_Attribute
+            modelBuilder.Entity<Akas_Attribute>().ToTable("akas_attribute");
+            modelBuilder.Entity<Akas_Attribute>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<Akas_Attribute>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Akas_Attribute>().Property(x => x.AttributeName).HasColumnName("attribute_name");
+            
             
             //Person_title_id
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
@@ -118,16 +124,14 @@ namespace DataService
             modelBuilder.Entity<Profession>().Property(x => x.Id).HasColumnName("profession_id");
             modelBuilder.Entity<Profession>().Property(x => x.ProfessionName).HasColumnName("profession_name");
 
-
-
-
-
+            //Title_Rating
             modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Average_Rating).HasColumnName("average_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Num_Votes).HasColumnName("num_votes");
             
+           
             
             base.OnModelCreating(modelBuilder);
         }

@@ -1,4 +1,6 @@
-﻿namespace DataService.Objects
+﻿using System.Collections.Generic;
+
+namespace DataService.Objects
 {
     public class Akas
     {
@@ -12,5 +14,6 @@
         public bool IsOriginalTitle { get; set; }
         public Akas_Akas_Type AkasAkasType { get; set; }
         public Title Title { get; set; }
+        public IList<Akas_Attribute> AkasAttributes { get; set; }
     }
 }
