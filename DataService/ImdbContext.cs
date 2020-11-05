@@ -39,6 +39,8 @@ namespace DataService
         public DbSet<Person_Bookmark_list> person_bookmark_list { get; set; }
         public DbSet<Akas_Attribute> akas_attributes { get; set; }
         public DbSet<Akas> akas { get; set; }
+        public DbSet<Title_Bookmark> title_bookmarks { get; set; }
+        public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -52,6 +54,18 @@ namespace DataService
             modelBuilder.Entity<Title_Genre>().Property(x => x.Id).HasColumnName("title_genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.GenreId).HasColumnName("genre_id");
             modelBuilder.Entity<Title_Genre>().Property(x => x.TitleId).HasColumnName("title_id");
+            
+            //Title_bookmark
+            modelBuilder.Entity<Title_Bookmark>().ToTable("title_booksmarks");
+            modelBuilder.Entity<Title_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
+            modelBuilder.Entity<Title_Bookmark>().Property(x => x.ListId).HasColumnName("list_id");
+            modelBuilder.Entity<Title_Bookmark>().Property(x => x.TitleId).HasColumnName("title_id");
+            
+            //Title_bookmark_list
+            modelBuilder.Entity<Title_Bookmark_List>().ToTable("title_bookmark_list");
+            modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.Id).HasColumnName("list_id");
+            modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.UserId).HasColumnName("user_id");
+            modelBuilder.Entity<Title_Bookmark_List>().Property(x => x.ListName).HasColumnName("list_name");
             
             //User
             modelBuilder.Entity<User>().ToTable("users");
