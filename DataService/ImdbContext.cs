@@ -1,20 +1,19 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
+
 namespace DataService
 {
     public class Portfolio2ImdbContext : DbContext
     {
-        /*
+       
         public static readonly ILoggerFactory MyLoggerFactory
-            = LoggerFactory.Create(builder => { builder.AddConsole(); });*/
-        
+            = LoggerFactory.Create(builder => { builder.AddConsole(); });
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
-            //NIklas
-            //optionsBuilder.UseLoggerFactory(MyLoggerFactory);
-            
+            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+
             //DATABASE CONNECT - LAD OS KØRE MED JSON.
             //optionsBuilder.UseNpgsql("host=;db=;uid=;pwd=");
             //optionsBuilder.UseNpgsql(_connectionString);
