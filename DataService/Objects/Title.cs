@@ -10,5 +10,8 @@
         public string StartYear { get; set; }
         public string EndYear { get; set; }
         public int RunTimeMinutes { get; set; }
+        
+        
+        //MANGLER ALLE KLASSER
     }
 }

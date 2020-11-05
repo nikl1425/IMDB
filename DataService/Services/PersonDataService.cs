@@ -1,3 +1,4 @@
+using System.Linq;
 using DataService.Objects;
 
 namespace DataService.Services
@@ -12,7 +13,9 @@ namespace DataService.Services
         public Person GetPerson(string id)
         {
             using var ctx = new ImdbContext();
-            return ctx.Person.Find(id);
+            var query = ctx.Person.Find(id);
+            return query;
+
         }
     }
 }

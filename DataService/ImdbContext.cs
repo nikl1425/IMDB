@@ -19,9 +19,9 @@ namespace DataService
         }
 
         public DbSet<Genre> genre { get; set; }
-        
         public DbSet<Person> Person { get; set; }
         public DbSet<Title_Genre> title_genre { get; set; }
+        public DbSet<Akas_Type> akas_type { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,16 +39,20 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
             modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("birth_year");
-            
-            
 
-            
-            
-            
-            
-            
-            
-            
+            modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
+            modelBuilder.Entity<Akas_Type>().Property(x => x.Id).HasColumnName("type_id");
+            modelBuilder.Entity<Akas_Type>().Property(x => x.Name).HasColumnName("type_name");
+
+
+
+
+
+
+
+
+
+
             base.OnModelCreating(modelBuilder);
         }
     }

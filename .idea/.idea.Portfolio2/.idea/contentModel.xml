@@ -21,6 +21,8 @@
           </e>
         </e>
         <e p="Objects" t="Include">
+          <e p="Akas_Akas_Type.cs" t="Include" />
+          <e p="Akas_Type.cs" t="Include" />
           <e p="Genre.cs" t="Include" />
           <e p="Person.cs" t="Include" />
           <e p="Person_Bookmark_list.cs" t="Include" />

@@ -9,7 +9,5 @@ namespace DataService.Objects
         public string Name { get; set; }
 
         public IList<Title_Genre> TitleGenres { get; set; }
-        
-        
     }
 }
