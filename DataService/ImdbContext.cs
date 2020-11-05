@@ -37,6 +37,8 @@ namespace DataService
         public DbSet<Search_History> search_history { get; set; }
         public DbSet<Person_Bookmarks> person_bookmarks { get; set; }
         public DbSet<Person_Bookmark_list> person_bookmark_list { get; set; }
+        public DbSet<Akas_Attribute> akas_attributes { get; set; }
+        public DbSet<Akas> akas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -86,10 +88,12 @@ namespace DataService
             modelBuilder.Entity<Search_History>().Property(x => x.Search_Name).HasColumnName("search_name");
             modelBuilder.Entity<Search_History>().Property(x => x.Timestamp).HasColumnName("timestamp");
             
+            //Akas_type
             modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Id).HasColumnName("type_id");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Name).HasColumnName("type_name");
-
+            
+            //Akas_Akas_type
             modelBuilder.Entity<Akas_Akas_Type>().ToTable("akas_akas_type");
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.Id).HasColumnName("akas_akas_type_id");
             modelBuilder.Entity<Akas_Akas_Type>().Property(x => x.AkasAkasId).HasColumnName("akas_akas_id");
@@ -100,6 +104,17 @@ namespace DataService
             modelBuilder.Entity<Akas_Attribute>().Property(x => x.Id).HasColumnName("id");
             modelBuilder.Entity<Akas_Attribute>().Property(x => x.TitleId).HasColumnName("title_id");
             modelBuilder.Entity<Akas_Attribute>().Property(x => x.AttributeName).HasColumnName("attribute_name");
+            
+            //Akas
+            modelBuilder.Entity<Akas>().ToTable("akas");
+            modelBuilder.Entity<Akas>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<Akas>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Akas>().Property(x => x.Ordering).HasColumnName("ordering");
+            modelBuilder.Entity<Akas>().Property(x => x.AkasName).HasColumnName("akas_name");
+            modelBuilder.Entity<Akas>().Property(x => x.Region).HasColumnName("region");
+            modelBuilder.Entity<Akas>().Property(x => x.Language).HasColumnName("language");
+            modelBuilder.Entity<Akas>().Property(x => x.Type).HasColumnName("type");
+            modelBuilder.Entity<Akas>().Property(x => x.IsOriginalTitle).HasColumnName("is_original_title");
             
             
             //Person_title_id
