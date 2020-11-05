@@ -1,22 +1,19 @@
-using System.Collections.Generic;
+using DataService.Objects;
 
-namespace TitleDataService
+namespace DataService.Services
 {
     public class TitleDataService
     {
-        //private readonly string _connectionString;
         public TitleDataService()
         {
-           //using var ctx = new ImdbContext();
+            using var ctx = new ImdbContext();
         }
 
-/*
-        public IList<> GetCategories()
+        public Genre GetGenre(int id)
         {
-            using var ctx = new NorthWindContext();
-            return ctx.Categories.ToList();
+            using var ctx = new ImdbContext();
+            return ctx.genre.Find(id);
         }
-
-          */
+        
     }
 }

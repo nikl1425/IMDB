@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DataService
 {
-    public class Portfolio2ImdbContext : DbContext
+    public class ImdbContext : DbContext
     {
         PostgresSQL_Connect_String myConnection = new PostgresSQL_Connect_String();
 
