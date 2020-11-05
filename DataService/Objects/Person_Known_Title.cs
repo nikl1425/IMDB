@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DataService.Objects
@@ -8,6 +9,8 @@ namespace DataService.Objects
         public int Id { get; set; }
         public string TitleName { get; set; }
 
-        public Person_Person_Known_Title PersonPersonKnownTitle;
+        public IList<Person_Person_Known_Title> PersonPersonKnownTitles = new List<Person_Person_Known_Title>();
+        
+        //public Person_Person_Known_Title PersonPersonKnownTitle;
     }
 }

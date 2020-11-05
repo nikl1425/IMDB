@@ -5,5 +5,8 @@ namespace DataService.Objects
         public int Id { get; set; }
         public string PersonId { get; set; }
         public int ProfessionId { get; set; }
+
+        public Profession Profession;
+
     }
 }

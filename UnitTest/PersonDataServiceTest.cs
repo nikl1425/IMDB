@@ -17,7 +17,7 @@ namespace PortFolio2.Tests
         {
             var person = _personDataService.GetPerson("nm0000001");
             Assert.Equal("nm0000001", person.Id);
-            Assert.Equal("Ian Holm", person.Name);
+            Assert.Equal("Fred Astaire", person.Name);
         }
 
         [Fact]

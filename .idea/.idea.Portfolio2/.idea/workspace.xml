@@ -10,10 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Akas attribute">
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Person stuff">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Profession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +33,28 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/UnitTest/TitleDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/30/4ccbedb9/TestRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Person.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/7b/a15d2076/XunitTestCaseRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/b4/f3f2d74c/TestCaseRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/760DCDFB-2F2B-4C8D-9D3B-A922FA70B507/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/59/5b106b0e/XunitTestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/31/7aeb5dd7/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e6/4e9f7a77/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92FCB906-F2E6-482A-9C7A-BCB425FF229D/f0/f67ceeef/ILoggerFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -61,9 +73,7 @@
         <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Person.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
-        <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/PeronDataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
         <option value="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title.cs" />
@@ -73,6 +83,11 @@
         <option value="$PROJECT_DIR$/DataService/Objects/Akas.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Akas_Attribute.cs" />
         <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Profession.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person_Profession.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
       </list>
     </option>
   </component>
@@ -255,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604579551161</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Person stuff">
+      <created>1604586893100</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604586893100</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Person stuff">
+      <created>1604587002205</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604587002205</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +323,8 @@
     <MESSAGE value="akas" />
     <MESSAGE value="akas akas type type akas type" />
     <MESSAGE value="Akas attribute" />
-    <option name="LAST_COMMIT_MESSAGE" value="Akas attribute" />
+    <MESSAGE value="Person stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Person stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -393,9 +423,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604579552705">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="500" y="276" key="Vcs.Push.Dialog.v2" timestamp="1604587004578">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="500" y="276" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1604587004578" />
     <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572803939" />
     <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604579552705" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
@@ -404,9 +435,10 @@
     </state>
     <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572499383" />
     <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604580211967" />
-    <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup" timestamp="1604576629968">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="563" y="246" width="672" height="732" key="search.everywhere.popup" timestamp="1604586812053">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="563" y="246" width="672" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1604586812053" />
     <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1604576629968" />
     <state x="563" y="253" width="672" height="678" key="search.everywhere.popup/0.25.1792.1038@0.25.1792.1038" timestamp="1604402311132" />
   </component>

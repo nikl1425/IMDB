@@ -13,7 +13,7 @@ namespace DataService.Objects
         public string Job { get; set; }
         public string Character { get; set; }
 
-        public Person Person;
+        public IList<Person> Persons = new List<Person>();
         
         public IList<Title> Titles = new List<Title>();
     }

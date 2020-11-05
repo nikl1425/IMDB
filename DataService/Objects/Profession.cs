@@ -7,7 +7,9 @@ namespace DataService.Objects
         public int Id { get; set; }
         
         public string ProfessionName { get; set; }
-        
+
         public IList<Person_Profession> PersonProfessions = new List<Person_Profession>();
+        
+        
     }
 }
