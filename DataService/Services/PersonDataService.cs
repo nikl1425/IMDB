@@ -41,5 +41,7 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.Professions.Find(id);
         }
+        
+        
     }
 }

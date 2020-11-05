@@ -15,6 +15,8 @@ namespace DataService.Objects
         public Person_Bookmarks PersonBookmarks;
         
         public IList<Person_Person_Known_Title> PersonPersonKnownTitles = new List<Person_Person_Known_Title>();
+        
+        public IList<Title_Person> TitlePersons = new List<Title_Person>();
 
         
 
