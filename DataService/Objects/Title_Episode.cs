@@ -8,5 +8,6 @@
         public int SeasonNumber { get; set; }
         public int EpisodeNumber { get; set; }
         
+        public Title Title { get; set; }
     }
 }
