@@ -14,6 +14,5 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.genre.Find(id);
         }
-        
     }
 }

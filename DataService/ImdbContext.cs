@@ -25,7 +25,11 @@ namespace DataService
             modelBuilder.Entity<Genre>().ToTable("genre");
             modelBuilder.Entity<Genre>().Property(x => x.Id).HasColumnName("genre_id");
             modelBuilder.Entity<Genre>().Property(x => x.Name).HasColumnName("genre_name");
-            
+
+            modelBuilder.Entity<Title_Genre>().ToTable("title_genre");
+            modelBuilder.Entity<Title_Genre>().Property(x => x.Id).HasColumnName("title_genre_id");
+            modelBuilder.Entity<Title_Genre>().Property(x => x.GenreId).HasColumnName("genre_id");
+            modelBuilder.Entity<Title_Genre>().Property(x => x.TitleId).HasColumnName("title_id");
             
             
             

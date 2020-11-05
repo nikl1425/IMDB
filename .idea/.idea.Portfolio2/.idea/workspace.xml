@@ -11,7 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Portfolio 2">
+      <change afterPath="$PROJECT_DIR$/DataService/Objects/Title.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/ImdbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Genre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Rating.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Rating.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +35,29 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/UnitTest/TitleDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92FCB906-F2E6-482A-9C7A-BCB425FF229D/f0/f67ceeef/ILoggerFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/45535/Desktop/RAWDATA/C#/Projects/IMDB/DataService/PostgresSQL_Connect_String.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DataService/DataService" />
         <option value="$PROJECT_DIR$/DataService/DataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
-        <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
-        <option value="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/DataService.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
         <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Rating.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Title.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" />
+        <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
       </list>
     </option>
   </component>

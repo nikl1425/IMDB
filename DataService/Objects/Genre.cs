@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataService.Objects
 {
@@ -6,5 +7,9 @@ namespace DataService.Objects
     {
         [Key] public int Id { get; set; }
         public string Name { get; set; }
+
+        public IList<Title_Genre> TitleGenres { get; set; }
+        
+        
     }
 }
