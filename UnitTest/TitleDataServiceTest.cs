@@ -36,5 +36,13 @@ namespace PortFolio2.Tests
             Assert.Equal("tt0098904", title.TitleEpisode.ParentId);
             Assert.Equal(6, title.TitleEpisode.SeasonNumber);
         }
+
+        [Fact]
+        public void getTitleGenreNames()
+        {
+            var service = new TitleDataService();
+            var title = service.getTitleGenreName("tt0078672");
+            Assert.Equal("Comedy", title.TitleGenres.First().Genre.Name);
+        }
     }
 }

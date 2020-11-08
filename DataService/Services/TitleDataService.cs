@@ -37,8 +37,23 @@ namespace DataService.Services
         public Title getTitleEpisode(string id)
         {
             using var ctx = new ImdbContext();
-            var query = ctx.title.Where(x => x.Id == "tt0697644")
+            var query = ctx.title.Where(x => x.Id == id)
                 .Include(x => x.TitleEpisode).FirstOrDefault();
+            return query;
+        }
+
+        public Title getTitleGenreName(string id)
+        {
+            using var ctx = new ImdbContext();
+            
+            // Denne title har 3 genre derfor er den udvalgt.
+
+            var query = ctx.title
+                .Include(x => x.TitleGenres)
+                .ThenInclude(o => o.Genre)
+                .AsSingleQuery()
+                .FirstOrDefault(o=>o.Id==id);
+            
             return query;
         }
     }

@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataService.Objects
 {
     public class Title_Genre
     {
-        public int Id { get; set; }
+
+        [Key]public int Id { get; set; }
         public string TitleId { get; set; }
         public int GenreId { get; set; }
-        public Genre Genre;
+       [Required] public Genre Genre { get; set; }
         public IList<Title> Titles = new List<Title>();
     }
 }
