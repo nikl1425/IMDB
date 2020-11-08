@@ -5,7 +5,6 @@ namespace DataService.Services
 {
     public class PersonDataService
     {
-        
         public PersonDataService()
         {
             using var ctx = new ImdbContext();
@@ -29,7 +28,6 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.PersonPersonKnownTitles.Find(id);
         }
-        
         public Person_Profession GetPersonProfession(int id)
         {
             using var ctx = new ImdbContext();
@@ -41,7 +39,5 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.Professions.Find(id);
         }
-        
-        
     }
 }

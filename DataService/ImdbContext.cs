@@ -19,16 +19,12 @@ namespace DataService
         }
 
         public DbSet<Genre> genre { get; set; }
-
         public DbSet<Person> Person { get; set; }
         public DbSet<Title_Genre> title_genre { get; set; }
         public DbSet<Akas_Type> akas_type { get; set; }
         public DbSet<Akas_Akas_Type> akas_akas_type { get; set; }
-        
         public DbSet<Person_known_title> PersonKnownTitles { get; set; }
-        
         public DbSet<Person_Person_Known_Title> PersonPersonKnownTitles { get; set; }
-        
         public DbSet<Person_Profession> PersonProfessions { get; set; }
         public DbSet<Profession> Professions { get; set; }
         public DbSet<User> users { get; set; }
@@ -46,6 +42,7 @@ namespace DataService
         public DbSet<Title_Search> title_search { get; set; }
         public DbSet<Type> type { get; set; }
         public DbSet<Person_Rating> PersonRatings { get; set; }
+        public DbSet<Title> title { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -107,6 +104,17 @@ namespace DataService
             modelBuilder.Entity<Title_Search>().Property(x => x.Word).HasColumnName("word");
             modelBuilder.Entity<Title_Search>().Property(x => x.Field).HasColumnName("field");
             modelBuilder.Entity<Title_Search>().Property(x => x.Lexeme).HasColumnName("lexeme");
+            
+            // Title
+            modelBuilder.Entity<Title>().ToTable("title");
+            modelBuilder.Entity<Title>().Property(x => x.Id).HasColumnName("title_id");
+            modelBuilder.Entity<Title>().Property(x => x.TypeId).HasColumnName("type_id");
+            modelBuilder.Entity<Title>().Property(x => x.PrimaryTitle).HasColumnName("primary_title");
+            modelBuilder.Entity<Title>().Property(x => x.OriginalTitle).HasColumnName("original_title");
+            modelBuilder.Entity<Title>().Property(x => x.IsAdult).HasColumnName("is_adult");
+            modelBuilder.Entity<Title>().Property(x => x.StartYear).HasColumnName("start_year");
+            modelBuilder.Entity<Title>().Property(x => x.EndYear).HasColumnName("end_year");
+            modelBuilder.Entity<Title>().Property(x => x.RunTimeMinutes).HasColumnName("runtimeminutes");
             
             //Type
             modelBuilder.Entity<Type>().ToTable("type");

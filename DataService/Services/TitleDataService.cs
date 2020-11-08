@@ -24,7 +24,15 @@ namespace DataService.Services
             var x = ctx.title_search
                 .Where(s => s.Id.Equals(titleid));
             return x.ToList();
-
         }
+
+        public Title getTitle(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.title.Find(id);
+            return query;
+        }
+        
+        public Title getTitleEpisode()
     }
 }
