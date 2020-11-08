@@ -27,5 +27,14 @@ namespace PortFolio2.Tests
             Assert.Equal("Kuambil Lagi Hatiku", title.PrimaryTitle);
             Assert.Equal("2019", title.StartYear);
         }
+
+        [Fact]
+        public void getTitleEpisodeNumber()
+        {
+            var service = new TitleDataService();
+            var title = service.getTitleEpisode("tt0697644");
+            Assert.Equal("tt0098904", title.TitleEpisode.ParentId);
+            Assert.Equal(6, title.TitleEpisode.SeasonNumber);
+        }
     }
 }
