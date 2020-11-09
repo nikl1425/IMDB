@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace DataService.Objects
 {
     public class Person_Profession
@@ -5,8 +8,7 @@ namespace DataService.Objects
         public int Id { get; set; }
         public string PersonId { get; set; }
         public int ProfessionId { get; set; }
-
-        public Profession Profession;
+        [Required] public Profession Profession { get; set; }
 
     }
 }

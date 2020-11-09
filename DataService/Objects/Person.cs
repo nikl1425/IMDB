@@ -14,12 +14,11 @@ namespace DataService.Objects
         
         public Person_Bookmark PersonBookmark;
         
-        public IList<Person_Person_Known_Title> PersonPersonKnownTitles { get; set; }
+        public IList<Person_Person_Known_Title> PersonPersonKnownTitles = new List<Person_Person_Known_Title>();
         
-        public IList<Title_Person> TitlePersons { get; set; }
+        public IList<Title_Person> TitlePersons = new List<Title_Person>();
 
-        public IList<Person_Profession> PersonProfessions { get; set; }
-    
+        public IList<Person_Profession> PersonProfessions {get; set;}
 
         public Person_Rating PersonRating;
 

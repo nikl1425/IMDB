@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using System.Linq;
 using DataService.Objects;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
 {
@@ -9,7 +11,7 @@ namespace DataService.Services
         {
             using var ctx = new ImdbContext();
         }
-
+        
         public Person GetPerson(string id)
         {
             using var ctx = new ImdbContext();
@@ -28,6 +30,30 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.PersonPersonKnownTitles.Find(id);
         }
+        
+        public Person GetProfessionByPersonId(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.Person
+                .Include(x => x.PersonProfessions)
+                .ThenInclude(z => z.Profession)
+                .AsSingleQuery()
+                .FirstOrDefault(c => c.Id == id);
+            return query;
+        }
+        
+        public Profession GetPersonAmountByProfession (string profession)
+        {
+            var ctx = new ImdbContext();
+            var personList = ctx.Professions
+                .Include(x => x.PersonProfessions)
+                .ThenInclude(c => c.Profession)
+                .AsSingleQuery()
+                .FirstOrDefault(v => v.ProfessionName == profession);
+
+            return personList;
+        }
+        
         public Person_Profession GetPersonProfession(int id)
         {
             using var ctx = new ImdbContext();

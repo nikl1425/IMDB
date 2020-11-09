@@ -1,15 +1,19 @@
+using System;
+using System.Linq;
 using DataService.Services;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace PortFolio2.Tests
 {
     public class PersonDataServiceTest
     {
         private PersonDataService _personDataService;
-        
-        public PersonDataServiceTest()
+        private readonly ITestOutputHelper output;
+        public PersonDataServiceTest(ITestOutputHelper output)
         {
             _personDataService = new PersonDataService();
+            this.output = output;
         }
         
         [Fact]
@@ -53,7 +57,29 @@ namespace PortFolio2.Tests
             Assert.Equal(1, Profession.Id);
             Assert.Equal("editor", Profession.ProfessionName);
         }
-        
+
+        [Fact]
+        public void GetProfessionByPersonId()
+        {
+            var service = _personDataService.GetProfessionByPersonId("nm0000001");
+            Assert.Equal("actor", service.PersonProfessions.First().Profession.ProfessionName);
+            Assert.Equal("soundtrack", service.PersonProfessions.Last().Profession.ProfessionName);
+        }
+
+        [Fact]
+        public void GetPersonsByProfession()
+        {
+            var service = _personDataService.GetPersonAmountByProfession("soundtrack");
+            Assert.Equal(12507, service.PersonProfessions.Count);
+        }
+
+        [Fact]
+        public void GetPersonRating()
+        {
+            //var personRating = _personDataService.GetPersonRating(1);
+            //Assert.Equal(null, personRating.Id);
+            //Assert.Equal();
+        }
         
 
         

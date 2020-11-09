@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataService.Objects
 {
@@ -8,7 +9,8 @@ namespace DataService.Objects
         
         public string ProfessionName { get; set; }
 
-        public IList<Person_Profession> PersonProfessions = new List<Person_Profession>();
+        [Required] public IList<Person_Profession> PersonProfessions { get; set; }
+        
         
         
     }
