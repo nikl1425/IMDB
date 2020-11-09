@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DataService.Objects;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
 {
@@ -36,26 +37,11 @@ namespace DataService.Services
         {
             using var ctx = new ImdbContext();
             var x = ctx.person_bookmark_list
-                .Where(b => b.User_Id == userid); 
-            return x.ToList();
+                .Where(b => b.User_Id == userid)
+                .ToList(); 
+            return x;
         }
         
-        public IList<Person_Bookmark> GetPersonBookmarks(int userid)
-        {
-            using var ctx = new ImdbContext();
-            /*
-             * TODO
-             * Hent alle bookmarks fra en person - er det nested qeuery?
-             * x = ctx.person_bookmarks
-             *     .where(b=>b.list_id = ctx.personbookmark_list.Id
-             *     .Include(x => x.personbookmark_list.userid)
-             *     .toList();
-             * 
-             */
-            var x = ctx.person_bookmarks
-                .Where(b => b.List_Id == userid); 
-            return x.ToList();
-        }
 
     }
 }
