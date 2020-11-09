@@ -44,5 +44,23 @@ namespace PortFolio2.Tests
             var title = service.getTitleGenreName("tt0078672");
             Assert.Equal("Comedy", title.TitleGenres.First().Genre.Name);
         }
+
+        [Fact]
+        public void getTitlePerson()
+        {
+            var service = new TitleDataService();
+            var titlePerson = service.getTitlePersons("tt0098286");
+            Assert.Equal(10, titlePerson.Count);
+        }
+
+        [Fact]
+        public void getTitlePersonName()
+        {
+            
+            //test midlertidligt unpassable :P
+            var service = new TitleDataService();
+            var names = service.getTitlePersonName("tt0098286");
+            Assert.Equal("Jerry Seinfeld", names.TitlePersons.First().Persons.First().Name);
+        }
     }
 }

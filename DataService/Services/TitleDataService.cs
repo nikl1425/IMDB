@@ -45,15 +45,37 @@ namespace DataService.Services
         public Title getTitleGenreName(string id)
         {
             using var ctx = new ImdbContext();
-            
+
             // Denne title har 3 genre derfor er den udvalgt.
 
             var query = ctx.title
                 .Include(x => x.TitleGenres)
                 .ThenInclude(o => o.Genre)
                 .AsSingleQuery()
-                .FirstOrDefault(o=>o.Id==id);
-            
+                .FirstOrDefault(o => o.Id == id);
+
+            return query;
+        }
+
+
+        public IList<Title_Person> getTitlePersons(string id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.TitlePersons
+                .Where(x => x.TitleId == id)
+                .ToList();
+            return query;
+        }
+
+        public Title getTitlePersonName(string id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.title
+                .Include(x => x.TitlePersons)
+                .ThenInclude(x => x.Persons)
+                .FirstOrDefault(x => x.Id == id);
             return query;
         }
     }
