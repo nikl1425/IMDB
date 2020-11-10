@@ -1,6 +1,10 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
+using DataService.Objects;
 using DataService.Services;
 using Microsoft.AspNetCore.Mvc;
+using WebService.ObjectDto;
 
 namespace WebService.Controllers
 {
@@ -22,12 +26,13 @@ namespace WebService.Controllers
         {
             var genre = _dataService.GetGenres();
 
-            if (genre == null)
+            IList<GenreDto> newGenreDtos = genre.Select(x => new GenreDto
             {
-                return null;
-            }
+                Name = x.Name,
+                Id = x.Id
+            }).ToList();
 
-            return Ok(genre);
+            return Ok(newGenreDtos);
         }
     }
 }
