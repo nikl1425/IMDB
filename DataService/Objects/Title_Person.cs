@@ -12,10 +12,7 @@ namespace DataService.Objects
         public string Category { get; set; }
         public string Job { get; set; }
         public string Character { get; set; }
-
         public IList<Person> Persons { get; set; }
-
-
         public IList<Title> Titles { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace DataService.Objects
         public int Id { get; set; }
         public string TitleName { get; set; }
 
-        public IList<Person_Person_Known_Title> PersonPersonKnownTitles = new List<Person_Person_Known_Title>();
+        public IList<Person_Person_Known_Title> PersonPersonKnownTitles { get; set; }
         
         //public Person_Person_Known_Title PersonPersonKnownTitle;
     }

@@ -10,6 +10,6 @@ namespace DataService.Objects
         public string TitleId { get; set; }
         public int GenreId { get; set; }
        [Required] public Genre Genre { get; set; }
-        public IList<Title> Titles = new List<Title>();
+       public IList<Title> Titles { get; set; }
     }
-}
+    }

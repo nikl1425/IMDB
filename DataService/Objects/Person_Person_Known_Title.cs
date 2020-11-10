@@ -10,8 +10,8 @@ namespace DataService.Objects
         
         public Person person;
 
-        public IList<Person_known_title> PersonKnownTitles = new List<Person_known_title>();
+        public IList<Person_known_title> PersonKnownTitles { get; set; }
+    }
         
         
     }
-}
