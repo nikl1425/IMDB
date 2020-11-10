@@ -99,7 +99,7 @@ namespace DataService
             modelBuilder.Entity<Title_Episode>().Property(x => x.EpisodeNumber).HasColumnName("episode_number");
             
             //Title_Search
-            modelBuilder.Entity<Title_Search>().ToTable("title_seatch");
+            modelBuilder.Entity<Title_Search>().ToTable("title_search");
             modelBuilder.Entity<Title_Search>().Property(x => x.Id).HasColumnName("title_id");
             modelBuilder.Entity<Title_Search>().Property(x => x.Word).HasColumnName("word");
             modelBuilder.Entity<Title_Search>().Property(x => x.Field).HasColumnName("field");

@@ -8,19 +8,28 @@ namespace TestQueryConsole
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            Title getTitlePersonName(string id)
+            using var ctx = new ImdbContext();
+
+           
+
+
+            Genre getGenreTitles(int id)
             {
-                using var ctx = new ImdbContext();
-                var query = ctx.title
-                    .Include(x => x.TitlePersons)
-                    .ThenInclude(x => x.Person)
-                    .FirstOrDefault(x => x.Id == id);
+                var query = ctx.genre
+                    .Where(x => x.Id == id)
+                    .Include(x => x.TitleGenres)
+                    .ThenInclude(x => x.Title)
+                    .FirstOrDefault();
                 return query;
             }
 
-            getTitlePersonName("tt0098286");
+            getGenreTitles(1);
+
+
         }
     }
 }

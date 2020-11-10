@@ -21,7 +21,7 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("genre")]
         public IActionResult getGenres()
         {
             var genre = _dataService.GetGenres();
@@ -33,6 +33,35 @@ namespace WebService.Controllers
             }).ToList();
 
             return Ok(newGenreDtos);
+        }
+
+        [HttpGet("genre/{id}", Name = nameof(getGenre))]
+        public IActionResult getGenre(int id)
+        {
+            var genre = _dataService.GetGenre(id);
+            if (genre == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(genre);
+        }
+
+        [HttpGet("genreTitle/{id}", Name = nameof(getGenreTitles))]
+        public IActionResult getGenreTitles(int id)
+        {
+            var genreTitle = _dataService.getGenreTitles(id);
+            IList<GenreTitleNameDTO> genreTitleNameDto = genreTitle.Select(x => new GenreTitleNameDTO
+            {
+                Id = x.Id,
+                Name = x.Name,
+                TitleNames = x.TitleGenres.Select(x => new TitleDto
+                {
+                    Name = x.Title.PrimaryTitle
+                }).ToList()
+            }).ToList();
+
+            return Ok(genreTitleNameDto);
         }
     }
 }

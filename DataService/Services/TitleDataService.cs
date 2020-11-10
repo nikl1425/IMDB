@@ -84,5 +84,16 @@ namespace DataService.Services
                 .FirstOrDefault(x => x.Id == id);
             return query;
         }
+
+        public List<Genre> getGenreTitles(int id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.genre
+                .Include(x => x.TitleGenres)
+                .ThenInclude(x => x.Title)
+                .ToList();
+            return query;
+        }
+        
     }
 }

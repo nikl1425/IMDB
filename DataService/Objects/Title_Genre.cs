@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DataService.Objects
 {
@@ -10,6 +11,7 @@ namespace DataService.Objects
         public string TitleId { get; set; }
         public int GenreId { get; set; }
        [Required] public Genre Genre { get; set; }
-       public IList<Title> Titles { get; set; }
+       
+       public Title Title { get; set; }
     }
     }
