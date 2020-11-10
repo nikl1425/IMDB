@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebService.Controllers
 {
-    
     [ApiController]
-    [Route("/api/titles")]
+    [Route("api/titles")]
     public class TitleController : ControllerBase
     {
         private ITitleDataService _dataService;
@@ -18,19 +17,17 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("genres")]
+        [HttpGet]
         public IActionResult getGenres()
         {
             var genre = _dataService.GetGenres();
-            
+
             if (genre == null)
             {
                 return null;
             }
-            
+
             return Ok(genre);
         }
-        
-        
     }
 }
