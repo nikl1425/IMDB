@@ -16,7 +16,13 @@ namespace DataService.Services
         {
             using var ctx = new ImdbContext();
             //var smthing = ctx.Person.FirstOrDefault(t => t.Id.Trim().ToLower() == id.Trim().ToLower());
+
             return ctx.Person.Find(id);
+        }
+        public IList<Person> GetPersons()
+        {
+            using var ctx = new ImdbContext();
+            return ctx.Person.ToList();
         }
 
         public Person_known_title GetPersonKnownTitle(int id)

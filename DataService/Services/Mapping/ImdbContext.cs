@@ -142,7 +142,7 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
-            modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("birth_year");
+            modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("death_year");
             
             modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
