@@ -74,7 +74,7 @@ namespace DataService.Services
 
             var query = ctx.title
                 .Include(x => x.TitlePersons)
-                .ThenInclude(x => x.Persons)
+                .ThenInclude(x => x.Person)
                 .FirstOrDefault(x => x.Id == id);
             return query;
         }
