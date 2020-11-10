@@ -61,5 +61,13 @@ namespace PortFolio2.Tests
             var names = service.getTitlePersonName("tt0098286");
             Assert.Equal("Leland Gray", names.TitlePersons.First().Person.Name);
         }
+
+        [Fact]
+        public void getGenres()
+        {
+            var service = new TitleDataService();
+            var genres = service.GetGenres();
+            Assert.Equal(28, genres.Count);
+        }
     }
 }

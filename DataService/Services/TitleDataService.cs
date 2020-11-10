@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
 {
-    public class TitleDataService
+    public class TitleDataService : ITitleDataService
     {
         public TitleDataService()
         {
@@ -18,6 +18,12 @@ namespace DataService.Services
         {
             using var ctx = new ImdbContext();
             return ctx.genre.Find(id);
+        }
+
+        public List<Genre> GetGenres()
+        {
+            using var ctx = new ImdbContext();
+            return ctx.genre.ToList();
         }
 
         public IList<Title_Search> TitleSearches(string titleid)
