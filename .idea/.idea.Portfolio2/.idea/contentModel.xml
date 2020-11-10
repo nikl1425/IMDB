@@ -103,11 +103,15 @@
         <e p="Models" t="Include">
           <e p="ObjectDto" t="Include">
             <e p="GenreDto.cs" t="Include" />
+            <e p="GenreTitleNameDTO.cs" t="Include" />
             <e p="PersonBookmarkDto.cs" t="Include" />
+            <e p="TitleDto.cs" t="Include" />
           </e>
           <e p="Profile" t="Include">
             <e p="GenreProfile.cs" t="Include" />
             <e p="PersonBookmarkProfile.cs" t="Include" />
+            <e p="TitleGenreProfile.cs" t="Include" />
+            <e p="TitleProfile.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
