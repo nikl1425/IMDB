@@ -13,20 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="akas akas type type akas type">
-      <change afterPath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebService/Models/Profile/PersonBookmarkProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestQueryConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestQueryConsole/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="akas akas type type akas type" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +74,6 @@
         <option value="$PROJECT_DIR$/DataService/Objects/Title_Person.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Person_Known_Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" />
-        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />
         <option value="$PROJECT_DIR$/TestQueryConsole/Program.cs" />
@@ -99,6 +85,7 @@
         <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
         <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
       </list>
     </option>
   </component>
@@ -303,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605004824055</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Users Updated">
+      <created>1605022472520</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605022472520</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Users Updated">
+      <created>1605022781268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605022781268</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +346,8 @@
     <MESSAGE value="Akas" />
     <MESSAGE value="Title bookmark and list" />
     <MESSAGE value="MiddlewareLogger" />
-    <option name="LAST_COMMIT_MESSAGE" value="MiddlewareLogger" />
+    <MESSAGE value="Users Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Users Updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -356,28 +358,28 @@
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="771" y="445" width="497" height="198" key="Github.ShareDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402239002" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1605019710356">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1605022511653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
     <state width="1125" height="518" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050330" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1605019710356">
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1605022511653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
     <state width="1125" height="518" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1605019710356">
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1605022511653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
     <state width="1125" height="518" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050328" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1605019710356">
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1605022511653">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
     <state width="1125" height="518" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050330" />
     <state width="1125" height="518" key="GridCell.Tab.1.bottom" timestamp="1604576050331">
@@ -453,10 +455,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="536" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605004867898">
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605022782551">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004867898" />
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022782551" />
     <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604583663526" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
     <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605022434402">
