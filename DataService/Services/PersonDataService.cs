@@ -47,7 +47,6 @@ namespace DataService.Services
             var ctx = new ImdbContext();
             var personList = ctx.Professions
                 .Include(x => x.PersonProfessions)
-                .ThenInclude(c => c.Profession)
                 .AsSingleQuery()
                 .FirstOrDefault(v => v.ProfessionName == profession);
 
