@@ -9,6 +9,7 @@ namespace WebService.Models
         public PersonBookmarkProfile()
         {
             CreateMap<Person_Bookmark, PersonBookmarkDto>();
+            CreateMap<Person_Bookmark, UserDto>();
         }
     }
 }

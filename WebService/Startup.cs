@@ -22,6 +22,7 @@ namespace WebService
         {
             services.AddControllers();
             services.AddSingleton<ITitleDataService, TitleDataService>();
+            services.AddSingleton<IUserDataService, UserDataService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>

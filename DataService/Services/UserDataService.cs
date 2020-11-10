@@ -14,11 +14,34 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
         }
 
-        public User GetUsers(int id)
+        public User GetUser(int id)
         {
             using var ctx = new ImdbContext();
+            
             return ctx.users.Find(id);
         }
+
+        public User CreateUser(string surname, string lastname, int age, string email)
+        {
+            using var ctx = new ImdbContext();
+            var maxId = ctx.users.Max(x => x.Id);
+            ctx.users.Add(new User {Id = maxId + 1, Age = age, Surname = surname, Last_Name = lastname, Email = email});
+            ctx.SaveChanges();
+            return ctx.users.Find(maxId + 1);
+        }
+        public bool UpdateUser(int id, string surname, string lastname, int age, string email)
+        {
+            using var ctx = new ImdbContext();
+            if (id <= 0) return false;
+            ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
+            ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
+            ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
+            ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
+            ctx.SaveChanges();
+
+            return GetUser(id).Email == email;
+        }
+        
 
         public IList<Rating> GetRatingFromUsers(int userid)
         {

@@ -22,18 +22,44 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult getUser()
+        //Enter a userprofile. 
+        [HttpGet ("{id}", Name = nameof(getUser))]
+        public IActionResult getUser(int id)
         {
-            var user = _dataService.GetUsers(1);
-
-            /*IList<PersonBookmarkDto> newGenreDtos = genre.Select(x => new GenreDto
+            var user = _dataService.GetUser(id);
+            if (user == null)
             {
-                Name = x.Name,
-                Id = x.Id
-            }).ToList();*/
-
-            return Ok();
+                return NotFound();
+            }
+            return Ok(user);
         }
+        
+        //New user
+        [HttpPost]
+        public IActionResult createUser(UserDto userDto)
+        {
+            //string surname, string lastname, int age, string email
+            var user = _dataService.CreateUser(userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
+
+            return Created("New user: ", user);
+
+        }
+        
+        
+        //Update username
+        //[httpput] https://sookocheff.com/post/api/when-to-use-http-put-and-http-post/
+        [HttpPut("{id}")]
+        public IActionResult updateUser(int id, UserDto userDto)
+        {
+            if (id <= 0)
+            {
+                return NotFound();
+            }
+
+            var updateUser = _dataService.UpdateUser(id, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
+            return Ok(updateUser);
+        }
+
+
     }
 }

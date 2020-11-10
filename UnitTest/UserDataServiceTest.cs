@@ -13,7 +13,7 @@ namespace PortFolio2.Tests
         public void GetUser()
         {
             var service = new UserDataService();
-            var users = service.GetUsers(1);
+            var users = service.GetUser(1);
             Assert.Equal(1, users.Id);
             Assert.Equal("TestSurname", users.Surname);
         }
