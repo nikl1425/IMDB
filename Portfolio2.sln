@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestQueryConsole", "TestQueryConsole\TestQueryConsole.csproj", "{17CF79B2-A871-466D-A2C3-7A82CE97F7B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAE32AE7-0D07-4A03-9BB6-EA7BF733CD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CF79B2-A871-466D-A2C3-7A82CE97F7B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CF79B2-A871-466D-A2C3-7A82CE97F7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CF79B2-A871-466D-A2C3-7A82CE97F7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CF79B2-A871-466D-A2C3-7A82CE97F7B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

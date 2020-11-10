@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +72,6 @@ namespace DataService.Services
         public Title getTitlePersonName(string id)
         {
             using var ctx = new ImdbContext();
-
             var query = ctx.title
                 .Include(x => x.TitlePersons)
                 .ThenInclude(x => x.Person)
