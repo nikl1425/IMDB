@@ -12,4 +12,13 @@
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0-rc2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Objects\Person_Known_Title.cs" />
+      <Compile Remove="Objects\Person_Profession.cs" />
+      <Compile Remove="Objects\Search_History.cs" />
+      <Compile Remove="Objects\Type.cs" />
+      <Compile Remove="Objects\Akas_Type.cs" />
+      <Compile Remove="Objects\Title.cs" />
+    </ItemGroup>
+
 </Project>
