@@ -6,8 +6,6 @@ namespace WebService.ObjectDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string TitleName { get; set; }
-
         public List<TitleDto> TitleNames{
             get;
             set;
