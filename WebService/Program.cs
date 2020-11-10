@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataService;
+using DataService.Objects;
 using DataService.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -15,11 +17,6 @@ namespace WebService
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            
-            /////////////
-            /// DEBUG ///
-            /////////////
-
         }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
@@ -27,10 +24,7 @@ namespace WebService
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-      
-        
-        
-        
+
 
     }
 }

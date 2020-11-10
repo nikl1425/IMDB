@@ -49,6 +49,11 @@
         </e>
         <e p="PostgresSQL_Connect_String.cs" t="Include" />
         <e p="Services" t="Include">
+          <e p="Interface" t="Include">
+            <e p="IPersonDataService.cs" t="Include" />
+            <e p="ITitleDataService.cs" t="Include" />
+            <e p="IUserDataService.cs" t="Include" />
+          </e>
           <e p="PersonDataService.cs" t="Include" />
           <e p="TitleDataService.cs" t="Include" />
           <e p="UserDataService.cs" t="Include" />
@@ -88,11 +93,23 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="TitleController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
         <e p="Middleware" t="Include">
           <e p="RequestLoggerMiddleware.cs" t="Include" />
         </e>
-        <e p="Models" t="Include" />
+        <e p="Models" t="Include">
+          <e p="ObjectDto" t="Include">
+            <e p="GenreDto.cs" t="Include" />
+            <e p="PersonBookmarkDto.cs" t="Include" />
+          </e>
+          <e p="Profile" t="Include">
+            <e p="GenreProfile.cs" t="Include" />
+            <e p="PersonBookmarkProfile.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

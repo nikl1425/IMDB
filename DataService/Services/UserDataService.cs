@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DataService.Objects;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
 {
-    public class UserDataService
+    public class UserDataService : IUserDataService
     {
         public UserDataService()
         {
@@ -41,7 +42,16 @@ namespace DataService.Services
                 .ToList(); 
             return x;
         }
-        
+
+        /*public IList<Person_Bookmark_list> GetPersonBookmarksInList(int userid, string listname)
+        {
+            using var ctx = new ImdbContext();
+            var x  = from pbList in ctx.person_bookmark_list
+                join pb in ctx.person_bookmarks on pbList equals listname
+                select new {}
+            
+        }*/
+
 
     }
 }

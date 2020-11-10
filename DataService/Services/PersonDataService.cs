@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
 {
-    public class PersonDataService
+    public class PersonDataService : IPersonDataService
     {
         public PersonDataService()
         {

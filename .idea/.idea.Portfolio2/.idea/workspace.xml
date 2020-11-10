@@ -14,22 +14,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="akas akas type type akas type">
-      <change afterPath="$PROJECT_DIR$/WebService/Middleware/RequestLoggerMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Models/Profile/PersonBookmarkProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_43__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_43__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_47__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_47__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_47__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/shelf/Uncommitted_changes_before_Update_at_05-11-2020_11_47__Default_Changelist_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestQueryConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestQueryConsole/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/WebService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/WebService.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -61,7 +65,6 @@
         <option value="$PROJECT_DIR$/DataService/Services/Person.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/PeronDataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
         <option value="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Akas_Type.cs" />
@@ -79,15 +82,23 @@
         <option value="$PROJECT_DIR$/DataService/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/DataService/PostgresSQL_Connect_String.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
         <option value="$PROJECT_DIR$/UnitTest/UserDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title_Genre.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Title_Person.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Person_Known_Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" />
+        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />
-        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
+        <option value="$PROJECT_DIR$/TestQueryConsole/Program.cs" />
+        <option value="$PROJECT_DIR$/WebService/Program.cs" />
+        <option value="$PROJECT_DIR$/WebService/Models/Profile/UserProfile.cs" />
+        <option value="$PROJECT_DIR$/WebService/Models/Profile/PersonBookmarkProfile.cs" />
+        <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/IPersonDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
       </list>
     </option>
   </component>
@@ -285,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604583248820</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="MiddlewareLogger">
+      <created>1605004824055</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605004824055</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +344,8 @@
     <MESSAGE value="Akas attribute" />
     <MESSAGE value="Akas" />
     <MESSAGE value="Title bookmark and list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Title bookmark and list" />
+    <MESSAGE value="MiddlewareLogger" />
+    <option name="LAST_COMMIT_MESSAGE" value="MiddlewareLogger" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -337,25 +356,29 @@
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="771" y="445" width="497" height="198" key="Github.ShareDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402239002" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1605004003700">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1605019710356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004003700" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
     <state width="1125" height="518" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050330" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1605004003699">
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1605019710356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004003699" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
     <state width="1125" height="518" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1605004003699">
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1605019710356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004003699" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
     <state width="1125" height="518" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050328" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1605004003699">
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1605019710356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004003699" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019710356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
     <state width="1125" height="518" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1604576050330" />
     <state width="1125" height="518" key="GridCell.Tab.1.bottom" timestamp="1604576050331">
       <screen x="0" y="0" width="3440" height="1400" />
@@ -430,21 +453,26 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1604583663526">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604572803939" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604583663526" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
-    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605004798180">
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605004867898">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004798180" />
+    <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605004867898" />
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604583663526" />
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1604402167300" />
+    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605022434402">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022434402" />
+    <state x="3275" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016870314" />
     <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604999572823" />
     <state x="2081" y="101" width="1264" height="1200" key="dock-window-1" timestamp="1604999985033">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2081" y="101" width="1264" height="1200" key="dock-window-1/0.0.3440.1400@0.0.3440.1400" timestamp="1604999985033" />
+    <state x="637" y="81" width="646" height="888" key="find.popup" timestamp="1605019583040">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="637" y="81" width="646" height="888" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019583040" />
     <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup" timestamp="1604576629968">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
