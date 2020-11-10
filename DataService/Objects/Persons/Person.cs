@@ -6,8 +6,6 @@ namespace DataService.Objects
 {
     public class Person
     {
-        
-        [Key]
         public string Id { get; set; }
         public string Name { get; set; }
         public string BirthYear { get; set; }

@@ -30,6 +30,7 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.PersonKnownTitles.Find(id);
         }
+        
 
         public Person_Person_Known_Title GetPersonPersonKnownTitle(int id)
         {
@@ -47,6 +48,18 @@ namespace DataService.Services
                 .FirstOrDefault(c => c.Id == id);
             return query;
         }
+        
+        public Person GetPersonKnownTitles(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.Person
+                .Include(x => x.PersonPersonKnownTitles)
+                .ThenInclude(x => x.PersonKnownTitles)
+                .AsSingleQuery()
+                .FirstOrDefault(x => x.Id == id);
+            return query;
+        }
+
         
         public Profession GetPersonAmountByProfession (string profession)
         {

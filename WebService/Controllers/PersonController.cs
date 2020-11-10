@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
@@ -33,10 +34,23 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
+            
+            PersonDTO personDto1 = new PersonDTO();
+            personDto1.Id = person.Id;
+            personDto1.Name = person.Name;
+            personDto1.BirthYear = person.BirthYear;
+            personDto1.DeathYear = person.DeathYear;
+            
+            ProfessionDTO professionDto1 = new ProfessionDTO();
+            
+            foreach (var value in profession.PersonProfessions)
+            {
+                professionDto1.Id = value.ProfessionId;
+                professionDto1.ProfessionName = value.Profession.ProfessionName;
+                Console.WriteLine(professionDto1.ProfessionName);
+            }
 
-            var content = new {professionDto = profession, personDto = person};
-
-            return Ok(content);
+            return Ok(new {professionDto1, personDto1});
         }
         
         [HttpGet]
@@ -49,9 +63,10 @@ namespace WebService.Controllers
                 Id = x.Id,
                 Name = x.Name,
                 BirthYear = x.BirthYear,
-                DeathYear = x.DeathYear
+                DeathYear = x.DeathYear,
+                Url = "http://localhost:5001/api/name/" + x.Id
             }).ToList();
-
+            
             return Ok(newPersonDTO);
         }
 

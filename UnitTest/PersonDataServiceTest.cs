@@ -67,6 +67,13 @@ namespace PortFolio2.Tests
         }
 
         [Fact]
+        public void GetPersonKnownTitles()
+        {
+            var service = _personDataService.GetPersonKnownTitles("nm0000001");
+            Assert.Equal("tt0031983", service.PersonPersonKnownTitles.First().PersonKnownTitles.TitleName);
+        }
+
+        [Fact]
         public void GetPersonsByProfession()
         {
             var service = _personDataService.GetPersonAmountByProfession("soundtrack");
