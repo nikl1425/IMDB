@@ -44,10 +44,8 @@ namespace WebService.Controllers
             return Created("New user: ", user);
 
         }
-        
-        
-        //Update username
-        //[httpput] https://sookocheff.com/post/api/when-to-use-http-put-and-http-post/
+
+        //Update user
         [HttpPut("{id}")]
         public IActionResult updateUser(int id, UserDto userDto)
         {
@@ -55,11 +53,21 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
-
+            // If all is getting updated:
             var updateUser = _dataService.UpdateUser(id, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
             return Ok(updateUser);
         }
-
-
+        
+        //Delete user
+        [HttpDelete("{id}")]
+        public IActionResult deleteUser(int id)
+        {
+            var delete = _dataService.DeleteUser(id);
+            if (id <= 0)
+            {
+                return NotFound();
+            }
+            return Ok(delete);
+        }
     }
 }

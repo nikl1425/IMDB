@@ -23,6 +23,7 @@ namespace DataService.Services
 
         public User CreateUser(string surname, string lastname, int age, string email)
         {
+            // TODO : check if names is names and email is email
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             ctx.users.Add(new User {Id = maxId + 1, Age = age, Surname = surname, Last_Name = lastname, Email = email});
@@ -31,15 +32,36 @@ namespace DataService.Services
         }
         public bool UpdateUser(int id, string surname, string lastname, int age, string email)
         {
+            //TODO : check if strings is not containing numbers & email is an email
             using var ctx = new ImdbContext();
             if (id <= 0) return false;
-            ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
-            ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
-            ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
-            ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
+            if(surname != null)
+                ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
+            if(lastname != null)
+                ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
+            if(age != 0)
+                ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
+            if(email != null)
+                ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
+            
             ctx.SaveChanges();
 
-            return GetUser(id).Email == email;
+            return true;
+        }
+
+        public bool DeleteUser(int id)
+        {
+            using var ctx = new ImdbContext();
+            var dbUser = GetUser(id);
+            if (dbUser == null)
+            {
+                return false;
+            }
+
+            ctx.users.Remove(dbUser);
+            ctx.SaveChanges();
+            
+            return true;
         }
         
 
@@ -65,16 +87,6 @@ namespace DataService.Services
                 .ToList(); 
             return x;
         }
-
-        /*public IList<Person_Bookmark_list> GetPersonBookmarksInList(int userid, string listname)
-        {
-            using var ctx = new ImdbContext();
-            var x  = from pbList in ctx.person_bookmark_list
-                join pb in ctx.person_bookmarks on pbList equals listname
-                select new {}
-            
-        }*/
-
 
     }
 }
