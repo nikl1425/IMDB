@@ -92,7 +92,7 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             var dbUser = GetUser(userid).Id;
-            var newPersonBookmarkList = ctx.person_bookmark_list
+            ctx.person_bookmark_list
                 .Add(new Person_Bookmark_list
                 {Id = maxId + 1, List_Name = listName, User_Id = dbUser});
 
@@ -103,10 +103,9 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             var dbUser = GetUser(userid).Id;
-            var newTitleBookmarkList = ctx.title_bookmark_list
+            ctx.title_bookmark_list
                 .Add(new Title_Bookmark_List()
                     {Id = maxId + 1, ListName = listName, UserId = dbUser});
-
             return ctx.title_bookmark_list.Find(maxId+1);
         }
         

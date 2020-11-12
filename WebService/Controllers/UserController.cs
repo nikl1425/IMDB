@@ -71,14 +71,14 @@ namespace WebService.Controllers
         }
         
         //new personbookmarklist
-        [HttpPost("user/{id}/lists/")] 
-        public IActionResult newPersonBookmarkList(int userid, string listName)
+        [HttpPost("user/{userid}/plists/")] 
+        public IActionResult newPersonBookmarkList(PersonBookmarkListDto pblDto)
         {
-            var list = _dataService.NewPersonBookmarkList(userid, listName);
+            var list = _dataService.NewPersonBookmarkList(pblDto.User_Id, pblDto.List_Name);
             return Created("New list: ", list);
         }
         //new titlebookmarklist
-        [HttpPost("user/{id}/lists/")] 
+        [HttpPost("user/{userid}/tlists/")] 
         public IActionResult newTitleBookmarkList(int userid, string listName)
         {
             var list = _dataService.NewTitleBookmarkList(userid, listName);

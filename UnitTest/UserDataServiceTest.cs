@@ -38,8 +38,6 @@ namespace PortFolio2.Tests
             Assert.Equal("My test list1", personBookmarkList.First().List_Name);
             Assert.Equal("My test list2321", personBookmarkList.Last().List_Name);
         }
-
-        
         
         [Fact]
         public void GetPersonBookmark()
@@ -67,6 +65,15 @@ namespace PortFolio2.Tests
         {
             var service = new UserDataService();
             
+        }
+
+        [Fact]
+        public void newPersonBookmarkList()
+        {
+            var service = new UserDataService();
+            var newbooklist = service.NewPersonBookmarkList(1, "hejsatest");
+            Assert.Equal(1,newbooklist.User_Id);
+            Assert.Equal("hejsatest",newbooklist.List_Name);
         }
         
     }
