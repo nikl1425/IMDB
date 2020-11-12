@@ -20,6 +20,7 @@ namespace WebService.Controllers
             _dataService = dataService;
             _mapper = mapper;
         }
+        
 
         [HttpGet("list/{listid}")]
         public IActionResult GetPersonBookMarkList(int listid)
@@ -34,7 +35,8 @@ namespace WebService.Controllers
                 List_Name = x.List_Name,
                 Url = ""
             }).ToList();
-            
+
+
             IList<PersonBookmarkDto> bookmarkDtos = getbookmarks.Select(x => new PersonBookmarkDto
             {
                 Id = x.Id,
@@ -42,9 +44,14 @@ namespace WebService.Controllers
                 Person_Id = x.Person_Id,
                 Url = ""
             }).ToList();
-
+            
+            
             return Ok(new {listDto, bookmarkDtos});
         }
+        
+        /*
+        ;*/
+
 
     }
 }

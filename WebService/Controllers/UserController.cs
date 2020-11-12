@@ -10,7 +10,7 @@ using WebService.ObjectDto;
 namespace WebService.Controllers
 {
     [ApiController]
-    [Route("api/user")]
+    [Route("api/")]
     public class UserController : ControllerBase
     {
         private IUserDataService _dataService;
@@ -22,7 +22,7 @@ namespace WebService.Controllers
         }
 
         //Enter a userprofile. 
-        [HttpGet ("{id}", Name = nameof(getUser))]
+        [HttpGet ("user/{id}", Name = nameof(getUser))]
         public IActionResult getUser(int id)
         {
             var user = _dataService.GetUser(id);
@@ -46,7 +46,7 @@ namespace WebService.Controllers
         }
 
         //Update user
-        [HttpPut("{id}")]
+        [HttpPut("user/{id}")]
         public IActionResult updateUser(int id, UserDto userDto)
         {
             if (id <= 0)
@@ -59,7 +59,7 @@ namespace WebService.Controllers
         }
         
         //Delete user
-        [HttpDelete("{id}")]
+        [HttpDelete("user/{id}")]
         public IActionResult deleteUser(int id)
         {
             var delete = _dataService.DeleteUser(id);
@@ -71,16 +71,31 @@ namespace WebService.Controllers
         }
         
         //new personbookmarklist
-        [HttpPost("{id}/lists/")] 
+        [HttpPost("user/{id}/lists/")] 
         public IActionResult newPersonBookmarkList(int userid, string listName)
         {
             var list = _dataService.NewPersonBookmarkList(userid, listName);
             return Created("New list: ", list);
         }
         
+        //Delete Users personbookmarklist
+        [HttpDelete("list/{listid}")] 
+        public IActionResult deletePersonBookmarkList(int listid)
+        {
+            var delete = _dataService.deletePersonBookmarkList(listid);
+            return Ok(delete);
+        }
         
-        //DONE
-        [HttpGet("{id}/lists")]
+        //Delete Users Person Bookmarks
+        [HttpDelete("list/{listid}/")]
+        public IActionResult deletePersonBookmark(int bookmarkid)
+        {
+            var delete = _dataService.deleteBookmark(bookmarkid);
+            return Ok(delete);
+        }
+
+        //Get Users lists
+        [HttpGet("user/{id}/lists")]
         public IActionResult getPersonBookmarkLists(int id)
         {
             var bookmarklist = _dataService.GetUsersPersonBookmarkLists(id);
@@ -94,11 +109,6 @@ namespace WebService.Controllers
             }).ToList();
             return Ok(professionDtos);
         }
-        
-        
-        
-        
-        
         
         
     }

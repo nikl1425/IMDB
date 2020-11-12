@@ -87,7 +87,6 @@ namespace DataService.Services
             return x;
         }
         
-        
         public Person_Bookmark_list NewPersonBookmarkList(int userid, string listName)
         {
             using var ctx = new ImdbContext();
@@ -106,21 +105,68 @@ namespace DataService.Services
             var x = ctx.person_bookmark_list.Where(x => x.Id == id);
             return x.ToList();
         }
+
+        public bool deletePersonBookmarkList(int listid)
+        {
+            using var ctx = new ImdbContext();
+            var dbList = GetPersonBookmarkList(listid).FirstOrDefault();
+            if (dbList == null)
+            {
+                return false;
+            }
+
+            deleteBookmarks(listid);
+            ctx.person_bookmark_list.Remove(dbList);
+            ctx.SaveChanges();
+            
+            return true;
+        }
         
-        public Person_Bookmark GetBookmark(int id)
+       public Person_Bookmark GetBookmark(int id)
         {
             using var ctx = new ImdbContext();
             return ctx.person_bookmarks.Find(id);
         }
+       public IList<Person_Bookmark> GetBookmarks(int listid)
+       {
+           using var ctx = new ImdbContext();
+           var x = ctx.person_bookmarks
+               .Where(x => x.List_Id == listid)
+               .ToList();
+           return x;
+       }
 
-        public IList<Person_Bookmark> GetBookmarks(int listid)
+        public bool deleteBookmarks(int id)
         {
             using var ctx = new ImdbContext();
-            var x = ctx.person_bookmarks
-                .Where(x => x.List_Id == listid)
-                .ToList();
-            return x;
+            var dbBookmark = GetBookmarks(id);
+            if (dbBookmark == null)
+            {
+                return false;
+            }
+
+            foreach (var x in ctx.person_bookmarks.Where(x=>x.List_Id == id))
+            {
+                ctx.person_bookmarks.Remove(x);
+            }
+            ctx.SaveChanges();
+            return true;
         }
+        public bool deleteBookmark(int id)
+        {
+            using var ctx = new ImdbContext();
+            var dbBookmark = GetBookmark(id);
+            if (dbBookmark == null)
+            {
+                return false;
+            }
+
+            ctx.person_bookmarks.Remove(dbBookmark);
+            ctx.SaveChanges();
+            return true;
+        }
+
+        
 
     }
 }
