@@ -69,9 +69,7 @@ namespace DataService.Services
                 .ThenInclude(o => o.Genre)
                 .AsSingleQuery()
                 .FirstOrDefault(o => o.Id == id);
-
-           
-
+            
             return query;
         }
 

@@ -119,7 +119,7 @@
             <e p="ProfessionDTO.cs" t="Include" />
             <e p="TitleDTOs" t="Include">
               <e p="NameOfTitleDTO.cs" t="Include" />
-              <e p="TitleDto.cs" t="Include" />
+              <e p="TitleListDto.cs" t="Include" />
             </e>
             <e p="UserDto.cs" t="Include" />
           </e>

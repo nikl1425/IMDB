@@ -75,7 +75,7 @@ namespace PortFolio2.Tests
         {
             var service = new TitleDataService();
             var titles = service.GetTitles();
-            Assert.Equal(45, service.GetTitles().Count);
+            Assert.Equal(55076, service.GetTitles().Count);
         }
     }
 }

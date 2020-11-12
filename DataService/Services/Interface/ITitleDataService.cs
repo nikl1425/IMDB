@@ -16,5 +16,7 @@ namespace DataService.Services
         List<Genre> GetGenres();
 
         List<Genre> getGenreTitles(int id);
+
+        public IList<Title> GetTitles();
     }
 }
