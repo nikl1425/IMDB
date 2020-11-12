@@ -40,9 +40,14 @@ namespace TestQueryConsole
                     .AsSingleQuery()
                     .FirstOrDefault(x => x.Id == id);
                 return query;
+
+
             }
 
-            GetPersonPersonKnownTitles("nm0000035");
+         
+
+
+
 
         }
     }

@@ -114,8 +114,6 @@ namespace DataService
             modelBuilder.Entity<Title>().Property(x => x.StartYear).HasColumnName("start_year");
             modelBuilder.Entity<Title>().Property(x => x.EndYear).HasColumnName("end_year");
             modelBuilder.Entity<Title>().Property(x => x.RunTimeMinutes).HasColumnName("runtimeminutes");
-            modelBuilder.Entity<Title>().HasMany(x => x.PersonKnownTitles).WithOne(c => c.title)
-                .HasForeignKey(v => v.TitleId);
             
             //Type
             modelBuilder.Entity<Type>().ToTable("type");
@@ -144,10 +142,6 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
             modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("death_year");
-            modelBuilder.Entity<Person>().HasMany(c => c.PersonKnownTitles).WithOne(v => v.person)
-                .HasForeignKey(x => x.Id);
-
-
 
             modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
@@ -188,18 +182,10 @@ namespace DataService
             
             //Person_title_id
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
-            modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_id");
-            modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_title_id");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_name");
             
-            //FIKS RELATIONER I DB FØRST
-            modelBuilder.Entity<Person_known_title>().HasKey(c => new {c.Id, TitleName = c.TitleId});
-            modelBuilder.Entity<Person_known_title>().HasOne(c => c.person).WithMany(v => v.PersonKnownTitles)
-                .HasForeignKey(x => x.Id);
-            modelBuilder.Entity<Person_known_title>().HasOne(c => c.title).WithMany(v => v.PersonKnownTitles)
-                .HasForeignKey(x => x.TitleId);
-            
-
-
+           
 
             //Person_profession
             modelBuilder.Entity<Person_Profession>().ToTable("person_profession");

@@ -23,12 +23,12 @@ namespace DataService.Objects
         public Title_Episode TitleEpisode { get; set; }
         public Type Type { get; set; }
         public IList<Title_Person> TitlePersons { get; set; }
-        
-        public IList<Person_known_title> PersonKnownTitles { get; set; }
 
         //Måske skal ændres
         public IList<Title_Bookmark> TitleBookmarks { get; set; }
         public IList<Person_Bookmark> PersonBookmarks { get; set; }
+        
+        public IList<Person_known_title> PersonKnownTitles { get; set; }
         
         
     }
