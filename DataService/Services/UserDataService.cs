@@ -95,6 +95,7 @@ namespace DataService.Services
             ctx.person_bookmark_list
                 .Add(new Person_Bookmark_list
                 {Id = maxId + 1, List_Name = listName, User_Id = dbUser});
+            ctx.SaveChanges();
 
             return ctx.person_bookmark_list.Find(maxId+1);
         }
@@ -106,6 +107,7 @@ namespace DataService.Services
             ctx.title_bookmark_list
                 .Add(new Title_Bookmark_List()
                     {Id = maxId + 1, ListName = listName, UserId = dbUser});
+            ctx.SaveChanges();
             return ctx.title_bookmark_list.Find(maxId+1);
         }
         
