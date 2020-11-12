@@ -20,6 +20,13 @@ namespace PortFolio2.Tests
         }
 
         [Fact]
+        public void CreateUser()
+        {
+            var service = new UserDataService();
+            
+        }
+
+        [Fact]
         public void GetRatingFromUser()
         {
             var service = new UserDataService();
