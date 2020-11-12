@@ -27,20 +27,34 @@ namespace WebService.Controllers
 
             var titles = _dataService.GetTitles();
 
-            IList<TitleListDto> titleDto = titles.Select(x => new TitleListDto
-            {
-                Id = x.Id,
-                PrimaryTitle = x.PrimaryTitle,
-                OriginalTitle = x.OriginalTitle,
-                IsAdult = x.IsAdult,
-                StartYear = x.StartYear,
-                EndYear = x.EndYear
-            }).ToList();
+            var items = titles.Select(CreateObjectOfTitle);
 
-            var items = _mapper.Map<IEnumerable<TitleListDto>>(titleDto);
-            
-            
+
             return Ok(items);
+        }
+
+        [HttpGet ("{id}", Name = nameof(GetTitle))]
+        public IActionResult GetTitle(string id)
+        {
+            var title = _dataService.getTitle(id);
+
+            if (title == null)
+            {
+                return NotFound();
+            }
+
+            var dto = _mapper.Map<TitleDto>(title);
+
+            dto.Url = Url.Link(nameof(GetTitle), new {id});
+
+            return Ok(dto);
+        }
+       
+        private TitleListDto CreateObjectOfTitle(Title title)
+        {
+            var dto = _mapper.Map<TitleListDto>(title);
+            dto.Url = Url.Link(nameof(GetTitle), new {title.Id});
+            return dto;
         }
         
     }
