@@ -70,10 +70,10 @@ namespace WebService.Controllers
         }
 
 
-        [HttpGet(Name = nameof(GetPersonsByProfession))]
+        [HttpGet("{profession}")]
         public IActionResult GetPersonsByProfession(string profession)
         {
-            var persons = _dataService.GetPersonsByProfession(profession);
+            var persons = _dataService.GetPersonsByProfession(profession).GetRange(0, 500);
             
             IList<PersonDTO> newPersonDTO = persons.Select(x => new PersonDTO
             {
@@ -91,7 +91,7 @@ namespace WebService.Controllers
         [HttpGet("name/")]
         public IActionResult GetPersons()
         {
-            var person = _dataService.GetPersons();
+            var person = _dataService.GetPersons().GetRange(0, 500);
 
             IList<PersonDTO> newPersonDTO = person.Select(x => new PersonDTO
             {
