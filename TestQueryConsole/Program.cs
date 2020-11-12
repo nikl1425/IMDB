@@ -43,9 +43,15 @@ namespace TestQueryConsole
 
                 return query.ToList();
             }
+            
+            Person_Bookmark GetBookmark(int id)
+            {
+                using var ctx = new ImdbContext();
+                return ctx.person_bookmarks.Find(id);
+            }
 
 
-            Console.WriteLine(GetProfessionByPersonId("nm0000001").Count);
+            Console.WriteLine(GetBookmark(1));
 
 
 

@@ -54,18 +54,6 @@ namespace WebService.Controllers
                 Url = "http://localhost:5001/api/title/" + x.TitleId
             }).ToList();
 
-
-            /*
-            ProfessionDTO professionDtoFinal()
-            {
-                ProfessionDTO professionDto = new ProfessionDTO();
-                foreach (var value in profession.PersonProfessions)
-                {
-                }
-                return professionDto;
-            }
-            */
-
             return Ok(new {personDtos, professionDtos, personKnownTitleDtos});
         }
 
@@ -112,21 +100,5 @@ namespace WebService.Controllers
             return Ok(personProfessions);
         }
 
-       /* [HttpGet("genreTitle/{id}", Name = nameof(getGenreTitles))]
-        public IActionResult getGenreTitles(int id)
-        {
-            var genreTitle = _dataService.getGenreTitles(id);
-            IList<GenreTitleNameDTO> genreTitleNameDto = genreTitle.Select(x => new GenreTitleNameDTO
-            {
-                Id = x.Id,
-                Name = x.Name,
-                TitleNames = x.TitleGenres.Select(x => new TitleDto
-                {
-                    Name = x.Title.PrimaryTitle
-                }).ToList()
-            }).ToList();
-
-            return Ok(genreTitleNameDto);
-        }*/
     }
 }

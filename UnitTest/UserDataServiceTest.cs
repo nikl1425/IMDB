@@ -39,12 +39,12 @@ namespace PortFolio2.Tests
         }
 
         [Fact]
-        public void GetBookmarks()
+        public void GetBookmark()
         {
             var service = new UserDataService();
-            var personBookmark = service.GetBookmarks(1);
-            Assert.Equal(1,personBookmark.First().Id);
-            Assert.Equal("nm0000001",personBookmark.First().Person_Id);
+            var personBookmark = service.GetBookmark(1);
+            Assert.Equal(1,personBookmark.Id);
+            Assert.Equal("nm0000001",personBookmark.Person_Id);
         }
     }
 }
