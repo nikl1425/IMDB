@@ -44,14 +44,15 @@ namespace TestQueryConsole
                 return query.ToList();
             }
             
-            Person_Bookmark GetBookmark(int id)
+            List<Title_Bookmark> GetTitleBookmarks(int id)
             {
                 using var ctx = new ImdbContext();
-                return ctx.person_bookmarks.Find(id);
+                var query = ctx.title_bookmarks.Where(x => x.Id == id);
+                return query.ToList();
             }
 
 
-            Console.WriteLine(GetBookmark(1));
+            Console.WriteLine(GetTitleBookmarks(1));
 
 
 

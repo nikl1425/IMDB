@@ -78,7 +78,7 @@ namespace DataService
             modelBuilder.Entity<User>().Property(x => x.Email).HasColumnName("email");
             
             //Title_bookmark
-            modelBuilder.Entity<Title_Bookmark>().ToTable("title_booksmarks");
+            modelBuilder.Entity<Title_Bookmark>().ToTable("title_bookmarks");
             modelBuilder.Entity<Title_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
             modelBuilder.Entity<Title_Bookmark>().Property(x => x.ListId).HasColumnName("list_id");
             modelBuilder.Entity<Title_Bookmark>().Property(x => x.TitleId).HasColumnName("title_id");
