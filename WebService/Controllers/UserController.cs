@@ -78,16 +78,21 @@ namespace WebService.Controllers
             return Created("New list: ", list);
         }
         
-        //get personbookmarklists
-        [HttpGet("{id}/lists", Name = nameof(getPersonBookmarkLists))]
+        
+        //DONE
+        [HttpGet("{id}/lists")]
         public IActionResult getPersonBookmarkLists(int id)
         {
-            var list = _dataService.GetUsersPersonBookmarkLists(id);
-            if (list == null)
+            var bookmarklist = _dataService.GetUsersPersonBookmarkLists(id);
+            
+            IList<PersonBookmarkListDto> professionDtos = bookmarklist.Select(x => new PersonBookmarkListDto
             {
-                return NotFound();
-            }
-            return Ok(list);
+                Id = x.Id,
+                User_Id = x.User_Id,
+                List_Name = x.List_Name,
+                Url = ""
+            }).ToList();
+            return Ok(professionDtos);
         }
         
         

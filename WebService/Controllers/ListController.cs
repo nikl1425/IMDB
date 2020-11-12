@@ -9,7 +9,7 @@ using WebService.ObjectDto;
 namespace WebService.Controllers
 {
     [ApiController]
-    [Route("api/list")]
+    [Route("api/")]
     public class ListController : ControllerBase
     {
         private IUserDataService _dataService;
@@ -34,33 +34,36 @@ namespace WebService.Controllers
 
             return Ok(list);
         }*/
-        //Get a bookmark
-        [HttpGet("{id}", Name = nameof(getBookmark))]
-        public IActionResult getBookmark(int id)
-        {
-            var list = _dataService.GetBookmark(id);
-            //var bookmark = _dataService.GetBookmarks(id);
-            if (list == null /*&& bookmark == null*/)
-            {
-                return NotFound();
-            }
-            return Ok(list);
-        }
-        
-        [HttpGet("{listid}")]
+
+        [HttpGet("list/{listid}")]
         public IActionResult GetPersonBookMarkList(int listid)
         {
-            var bookmarklist = _dataService.GetUsersPersonBookmarkLists(listid);
-            
-            IList<PersonBookmarkListDto> professionDtos = bookmarklist.Select(x => new PersonBookmarkListDto
+            var bookmarklist = _dataService.GetPersonBookmarkList(listid);
+            var getbookmarks = _dataService.GetBookmarks(listid);
+                
+            IList<PersonBookmarkListDto> listDto = bookmarklist.Select(x => new PersonBookmarkListDto
             {
                 Id = x.Id,
                 User_Id = x.User_Id,
                 List_Name = x.List_Name,
                 Url = ""
             }).ToList();
-            return Ok(professionDtos);
+
+
+            IList<PersonBookmarkDto> bookmarkDtos = getbookmarks.Select(x => new PersonBookmarkDto
+            {
+                Id = x.Id,
+                List_Id = x.List_Id,
+                Person_Id = x.Person_Id,
+                Url = ""
+            }).ToList();
+            
+            
+            return Ok(new {listDto, bookmarkDtos});
         }
+        
+        /*
+        ;*/
 
 
     }

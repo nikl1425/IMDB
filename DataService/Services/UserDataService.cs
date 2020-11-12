@@ -86,6 +86,8 @@ namespace DataService.Services
                 .ToList();
             return x;
         }
+        
+        
         public Person_Bookmark_list NewPersonBookmarkList(int userid, string listName)
         {
             using var ctx = new ImdbContext();
@@ -98,11 +100,11 @@ namespace DataService.Services
             return ctx.person_bookmark_list.Find(maxId+1);
         }
         
-        public Person_Bookmark_list GetPersonBookmarkList(int id)
+        public List<Person_Bookmark_list> GetPersonBookmarkList(int id)
         {
             using var ctx = new ImdbContext();
-            var x = ctx.person_bookmark_list.Find(id);
-            return x;
+            var x = ctx.person_bookmark_list.Where(x => x.Id == id);
+            return x.ToList();
         }
         
         public Person_Bookmark GetBookmark(int id)
