@@ -127,6 +127,11 @@ namespace DataService.Services
             return ctx.title_bookmarks.Find(id);
         }
 
+        public bool UpdatePersonBookmark(int list_id, )
+        {
+            
+        }
+
 
         public bool deletePersonBookmarkList(int listid)
         {
