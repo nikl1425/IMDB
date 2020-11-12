@@ -77,6 +77,8 @@ namespace WebService.Controllers
             var list = _dataService.NewPersonBookmarkList(pblDto.User_Id, pblDto.List_Name);
             return Created("New list: ", list);
         }
+        
+        
         //new titlebookmarklist
         [HttpPost("user/{userid}/tlists/")] 
         public IActionResult newTitleBookmarkList(TitleBookmarkListDTO tblDto)
