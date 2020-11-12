@@ -13,20 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Person stuff">
-      <change afterPath="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonKnownTitleDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Persons/Person_Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Persons/Person_Profession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Persons/Profession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Persons/Profession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/Interface/IPersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/Interface/IPersonDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/PersonDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestQueryConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestQueryConsole/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controllers/PersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/PersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controllers/TitleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/TitleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Models/ObjectDto/ProfessionDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Models/ObjectDto/ProfessionDTO.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Person" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/30/4ccbedb9/TestRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EB067793-5C3F-4219-AEF1-3AB117C20649/81/bf0ca069/IList`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/WebService/Controllers/TitleController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/UnitTest/PersonDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/UnitTest/PersonDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -55,6 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/b4/f3f2d74c/TestCaseRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/PersonDataService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/760DCDFB-2F2B-4C8D-9D3B-A922FA70B507/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
@@ -371,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605036259842</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Person">
+      <created>1605190408702</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1605190408702</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +411,8 @@
     <MESSAGE value="MiddlewareLogger" />
     <MESSAGE value="Users Updated" />
     <MESSAGE value="Person stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Person stuff" />
+    <MESSAGE value="Person" />
+    <option name="LAST_COMMIT_MESSAGE" value="Person" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -547,12 +544,12 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1605036310411">
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1605190413804">
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022782551" />
     <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604583663526" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605036310411" />
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605190413804" />
     <state x="1265" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605040903144">
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
