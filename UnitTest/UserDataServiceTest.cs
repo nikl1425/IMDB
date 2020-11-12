@@ -38,13 +38,27 @@ namespace PortFolio2.Tests
             Assert.Equal("My test list1", personBookmarkList.Last().List_Name);
         }
 
+        
+        
         [Fact]
-        public void GetBookmark()
+        public void GetPersonBookmark()
         {
             var service = new UserDataService();
-            var personBookmark = service.GetBookmark(19);
+            var personBookmark = service.GetPersonBookmark(19);
             Assert.Equal(19,personBookmark.Id);
             Assert.Equal("nm0000001",personBookmark.Person_Id);
         }
+
+
+        [Fact]
+        public void GetTitleBookmarks()
+        {
+            var service = new UserDataService();
+            var titleBookmarks = service.GetTitleBookmarks(2);
+            Assert.Equal(2, titleBookmarks.First().Id);
+            Assert.Equal(1, titleBookmarks.First().ListId);
+            Assert.Equal("tt0734773", titleBookmarks.First().TitleId);
+        }
+        
     }
 }

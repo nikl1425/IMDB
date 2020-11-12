@@ -9,7 +9,8 @@ namespace DataService.Objects
         public int ListId { get; set; }
         
         public Title Title { get; set; }
-        public Title_Bookmark_List TitleBookmarkList { get; set; }
+        
+        //public Title_Bookmark_List TitleBookmarkList { get; set; }
 
     }
 }

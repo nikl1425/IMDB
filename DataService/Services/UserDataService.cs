@@ -14,6 +14,7 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
         }
 
+        //USER STUFF
         public User GetUser(int id)
         {
             using var ctx = new ImdbContext();
@@ -57,10 +58,8 @@ namespace DataService.Services
             {
                 return false;
             }
-
             ctx.users.Remove(dbUser);
             ctx.SaveChanges();
-            
             return true;
         }
         
@@ -99,12 +98,35 @@ namespace DataService.Services
             return ctx.person_bookmark_list.Find(maxId+1);
         }
         
+        
         public List<Person_Bookmark_list> GetPersonBookmarkList(int id)
         {
             using var ctx = new ImdbContext();
             var x = ctx.person_bookmark_list.Where(x => x.Id == id);
             return x.ToList();
         }
+
+        
+        public List<Title_Bookmark_List> GetTitleBookmarkLists(int id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.title_bookmark_list.Where(x => x.Id == id);
+            return query.ToList();
+        }
+
+        public List<Title_Bookmark> GetTitleBookmarks(int id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.title_bookmarks.Where(x => x.Id == id);
+            return query.ToList();
+        }
+
+        public Title_Bookmark GetTitleBookmark(int id)
+        {
+            using var ctx = new ImdbContext();
+            return ctx.title_bookmarks.Find(id);
+        }
+
 
         public bool deletePersonBookmarkList(int listid)
         {
@@ -122,11 +144,24 @@ namespace DataService.Services
             return true;
         }
         
-       public Person_Bookmark GetBookmark(int id)
+        
+        
+       public Person_Bookmark GetPersonBookmark(int id)
         {
             using var ctx = new ImdbContext();
             return ctx.person_bookmarks.Find(id);
         }
+        
+        public IList<Person_Bookmark> GetPersonBookmarks(int listid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.person_bookmarks
+                .Where(x => x.List_Id == listid)
+                .ToList();
+            return x;
+        }
+        
+        
        public IList<Person_Bookmark> GetBookmarks(int listid)
        {
            using var ctx = new ImdbContext();
@@ -155,7 +190,7 @@ namespace DataService.Services
         public bool deleteBookmark(int id)
         {
             using var ctx = new ImdbContext();
-            var dbBookmark = GetBookmark(id);
+            var dbBookmark = GetPersonBookmark(id);
             if (dbBookmark == null)
             {
                 return false;

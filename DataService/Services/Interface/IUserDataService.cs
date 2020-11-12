@@ -12,11 +12,14 @@ namespace DataService.Services
         bool DeleteUser(int id);
         Person_Bookmark_list NewPersonBookmarkList(int userid, string listName);
         IList<Rating> GetRatingFromUsers(int userid);
+        Title_Bookmark GetTitleBookmark(int id);
+        List<Title_Bookmark> GetTitleBookmarks(int id);
         IList<Search_History> GetSearchHistories(int userid);
         List<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid);
         List<Person_Bookmark_list> GetPersonBookmarkList(int id);
-        Person_Bookmark GetBookmark(int id);
-        IList<Person_Bookmark> GetBookmarks(int listid);
+        List<Title_Bookmark_List> GetTitleBookmarkLists(int id);
+        //Person_Bookmark GetPersonBookmark(int id);
+        IList<Person_Bookmark> GetPersonBookmarks(int listid);
         bool deletePersonBookmarkList(int listid);
         bool deleteBookmarks(int id);
         bool deleteBookmark(int id);

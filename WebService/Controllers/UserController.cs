@@ -99,7 +99,6 @@ namespace WebService.Controllers
         public IActionResult getPersonBookmarkLists(int id)
         {
             var bookmarklist = _dataService.GetUsersPersonBookmarkLists(id);
-            
             IList<PersonBookmarkListDto> professionDtos = bookmarklist.Select(x => new PersonBookmarkListDto
             {
                 Id = x.Id,

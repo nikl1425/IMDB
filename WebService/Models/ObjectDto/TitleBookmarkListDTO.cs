@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace DataService.Objects
+namespace WebService.ObjectDto
 {
-    public class Title_Bookmark_List
+    public class TitleBookmarkListDTO
     {
         public int Id { get; set; }
         public int UserId { get; set; }
         public string ListName { get; set; }
+        public string Url { get; set; }
     }
 }
