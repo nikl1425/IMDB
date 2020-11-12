@@ -98,15 +98,26 @@ namespace WebService.Controllers
         [HttpGet("user/{id}/lists")]
         public IActionResult getPersonBookmarkLists(int id)
         {
-            var bookmarklist = _dataService.GetUsersPersonBookmarkLists(id);
-            IList<PersonBookmarkListDto> professionDtos = bookmarklist.Select(x => new PersonBookmarkListDto
+            var personBookmarkList = _dataService.GetUsersPersonBookmarkLists(id);
+            var titleBookmarkList = _dataService.GetTitleBookmarkLists(id);
+            
+            IList<TitleBookmarkListDTO> titleList = titleBookmarkList.Select(x => new TitleBookmarkListDTO
+            {
+                Id = x.Id,
+                UserId = x.UserId,
+                ListName = x.ListName,
+                Url = ""
+            }).ToList();
+            
+            IList<PersonBookmarkListDto> personList = personBookmarkList.Select(x => new PersonBookmarkListDto
             {
                 Id = x.Id,
                 User_Id = x.User_Id,
                 List_Name = x.List_Name,
                 Url = ""
             }).ToList();
-            return Ok(professionDtos);
+            
+            return Ok(new {personList, titleList});
         }
         
         
