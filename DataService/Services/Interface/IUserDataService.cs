@@ -12,6 +12,8 @@ namespace DataService.Services
         bool DeleteUser(int id);
         Person_Bookmark_list NewPersonBookmarkList(int userid, string listName);
         Title_Bookmark_List NewTitleBookmarkList(int userid, string listName);
+        Person_Bookmark NewPersonBookmark(int listid, string personid);
+        Title_Bookmark NewTitleBookmark(int listid, string titleid);
         IList<Rating> GetRatingFromUsers(int userid);
         Title_Bookmark GetTitleBookmark(int id);
         List<Title_Bookmark> GetTitleBookmarks(int id);
@@ -22,7 +24,10 @@ namespace DataService.Services
         //Person_Bookmark GetPersonBookmark(int id);
         IList<Person_Bookmark> GetPersonBookmarks(int listid);
         bool deletePersonBookmarkList(int listid);
+        bool deleteTitleBookmarkList(int listid);
         bool deletePersonBookmarks(int id);
         bool deletePersonBookmark(int id);
+        bool deleteTitleBookmark(int id);
+        bool deleteTitleBookmarks(int id);
     }
 }

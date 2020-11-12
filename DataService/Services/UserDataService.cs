@@ -90,11 +90,11 @@ namespace DataService.Services
         public Person_Bookmark_list NewPersonBookmarkList(int userid, string listName)
         {
             using var ctx = new ImdbContext();
-            var maxId = ctx.users.Max(x => x.Id);
+            var maxId = ctx.person_bookmark_list.Max(x => x.Id);
             var dbUser = GetUser(userid).Id;
             ctx.person_bookmark_list
                 .Add(new Person_Bookmark_list
-                {Id = maxId + 1, List_Name = listName, User_Id = dbUser});
+                {List_Name = listName, User_Id = dbUser});
             ctx.SaveChanges();
 
             return ctx.person_bookmark_list.Find(maxId+1);
@@ -102,15 +102,35 @@ namespace DataService.Services
         public Title_Bookmark_List NewTitleBookmarkList(int userid, string listName)
         {
             using var ctx = new ImdbContext();
-            var maxId = ctx.users.Max(x => x.Id);
+            var maxId = ctx.person_bookmark_list.Max(x => x.Id);
             var dbUser = GetUser(userid).Id;
             ctx.title_bookmark_list
                 .Add(new Title_Bookmark_List()
-                    {Id = maxId + 1, ListName = listName, UserId = dbUser});
+                    {ListName = listName, UserId = dbUser});
             ctx.SaveChanges();
             return ctx.title_bookmark_list.Find(maxId+1);
         }
-        
+
+        public Person_Bookmark NewPersonBookmark(int listid, string personid)
+        {
+            using var ctx = new ImdbContext();
+            var maxId = ctx.person_bookmarks.Max(x => x.Id);
+            ctx.person_bookmarks
+                .Add(new Person_Bookmark()
+                    {List_Id = listid, Person_Id = personid});
+            ctx.SaveChanges();
+            return ctx.person_bookmarks.Find(maxId + 1);
+        }
+        public Title_Bookmark NewTitleBookmark(int listid, string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var maxId = ctx.title_bookmarks.Max(x => x.Id);
+            ctx.title_bookmarks
+                .Add(new Title_Bookmark()
+                    {ListId = listid, TitleId = titleid});
+            ctx.SaveChanges();
+            return ctx.title_bookmarks.Find(maxId + 1);
+        }
         
         public List<Person_Bookmark_list> GetPersonBookmarkList(int id)
         {
@@ -119,7 +139,6 @@ namespace DataService.Services
             return x.ToList();
         }
 
-        
         public List<Title_Bookmark_List> GetTitleBookmarkLists(int id)
         {
             using var ctx = new ImdbContext();
@@ -140,17 +159,6 @@ namespace DataService.Services
             return ctx.title_bookmarks.Find(id);
         }
         
-        public bool UpdatePersonBookmark(int id, int list_id, string person_id)
-        {
-            using var ctx = new ImdbContext();
-            if (list_id <= 0) return false;
-            ctx.person_bookmarks.Update(ctx.person_bookmarks.Find(id)).Entity.List_Id = list_id;
-            ctx.person_bookmarks.Update(ctx.person_bookmarks.Find(id)).Entity.Person_Id = person_id;
-            ctx.SaveChanges();
-            return GetPersonBookmark(id).List_Id == list_id && GetPersonBookmark(id).Person_Id == person_id;
-        }
-
-
         public bool deletePersonBookmarkList(int listid)
         {
             using var ctx = new ImdbContext();
@@ -162,6 +170,21 @@ namespace DataService.Services
 
             deletePersonBookmarks(listid);
             ctx.person_bookmark_list.Remove(dbList);
+            ctx.SaveChanges();
+            
+            return true;
+        }
+        public bool deleteTitleBookmarkList(int listid)
+        {
+            using var ctx = new ImdbContext();
+            var dbList = GetTitleBookmarkLists(listid).FirstOrDefault();
+            if (dbList == null)
+            {
+                return false;
+            }
+
+            deleteTitleBookmarks(listid);
+            ctx.title_bookmark_list.Remove(dbList);
             ctx.SaveChanges();
             
             return true;
@@ -207,6 +230,36 @@ namespace DataService.Services
             }
 
             ctx.person_bookmarks.Remove(dbBookmark);
+            ctx.SaveChanges();
+            return true;
+        }
+       
+        public bool deleteTitleBookmarks(int id)
+        {
+            using var ctx = new ImdbContext();
+            var dbBookmark = GetTitleBookmarks(id);
+            if (dbBookmark == null)
+            {
+                return false;
+            }
+
+            foreach (var x in ctx.title_bookmarks.Where(x=>x.ListId == id))
+            {
+                ctx.title_bookmarks.Remove(x);
+            }
+            ctx.SaveChanges();
+            return true;
+        }
+        public bool deleteTitleBookmark(int id)
+        {
+            using var ctx = new ImdbContext();
+            var dbBookmark = GetTitleBookmark(id);
+            if (dbBookmark == null)
+            {
+                return false;
+            }
+
+            ctx.title_bookmarks.Remove(dbBookmark);
             ctx.SaveChanges();
             return true;
         }

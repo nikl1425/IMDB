@@ -84,9 +84,11 @@ namespace WebService.Controllers
             var list = _dataService.NewTitleBookmarkList(tblDto.UserId, tblDto.ListName);
             return Created("New list: ", list);
         }
+        //new person bookmark
+        [HttpPost("us")]
         
         //Delete Users personbookmarklist
-        [HttpDelete("list/{listid}")] 
+        [HttpDelete("plist/{listid}")] 
         public IActionResult deletePersonBookmarkList(int listid)
         {
             var delete = _dataService.deletePersonBookmarkList(listid);
@@ -94,10 +96,26 @@ namespace WebService.Controllers
         }
         
         //Delete Users Person Bookmark
-        [HttpDelete("list/{listid}/{bookmarkid}")]
+        [HttpDelete("plist/{listid}/{bookmarkid}")]
         public IActionResult deletePersonBookmark(int bookmarkid)
         {
             var delete = _dataService.deletePersonBookmark(bookmarkid);
+            return Ok(delete);
+        }
+        
+        //Delete Users titlebookmarklist
+        [HttpDelete("tlist/{listid}")] 
+        public IActionResult deleteTitleBookmarkList(int listid)
+        {
+            var delete = _dataService.deleteTitleBookmarkList(listid);
+            return Ok(delete);
+        }
+        
+        //Delete Users title Bookmark
+        [HttpDelete("tlist/{listid}/{bookmarkid}")]
+        public IActionResult deleteTitleBookmark(int bookmarkid)
+        {
+            var delete = _dataService.deleteTitleBookmark(bookmarkid);
             return Ok(delete);
         }
 
