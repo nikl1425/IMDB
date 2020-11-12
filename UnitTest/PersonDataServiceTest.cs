@@ -27,19 +27,11 @@ namespace PortFolio2.Tests
         [Fact]
         public void GetPersonKnownTitle()
         {
-            var PersonKnownTitle = _personDataService.GetPersonKnownTitle(1);
-            Assert.Equal(1, PersonKnownTitle.Id);
-            Assert.Equal("tt3670036", PersonKnownTitle.TitleName);
+            var PersonKnownTitle = _personDataService.GetPersonKnownTitle("nm4517670", "tt5188450");
+            Assert.Equal("nm4517670", PersonKnownTitle.Id);
+            Assert.Equal("tt5188450", PersonKnownTitle.TitleId);
         }
-        
-        [Fact]
-        public void GetPersonPersonKnownTitles()
-        {
-            var PersonPersonKnownTitles = _personDataService.GetPersonPersonKnownTitle(1);
-            Assert.Equal(1, PersonPersonKnownTitles.Id);
-            Assert.Equal("nm10619296", PersonPersonKnownTitles.PersonId);
-            Assert.Equal(196263, PersonPersonKnownTitles.PersonTitleId);
-        }
+ 
         
         [Fact]
         public void GetPersonProfession()
@@ -62,6 +54,7 @@ namespace PortFolio2.Tests
         public void GetProfessionByPersonId()
         {
             var service = _personDataService.GetProfessionByPersonId("nm0000001");
+            Assert.Equal(3, service.PersonProfessions.Count);
             Assert.Equal("actor", service.PersonProfessions.First().Profession.ProfessionName);
             Assert.Equal("soundtrack", service.PersonProfessions.Last().Profession.ProfessionName);
         }
@@ -69,8 +62,8 @@ namespace PortFolio2.Tests
         [Fact]
         public void GetPersonKnownTitles()
         {
-            var service = _personDataService.GetPersonKnownTitles("nm0000001");
-            Assert.Equal("tt0031983", service.PersonPersonKnownTitles.First().PersonKnownTitles.TitleName);
+            var service = _personDataService.GetPersonKnownTitles("nm4517670");
+            Assert.Equal("tt5188450", service.PersonKnownTitles.First().TitleId);
         }
 
         [Fact]
@@ -79,13 +72,15 @@ namespace PortFolio2.Tests
             var service = _personDataService.GetPersonAmountByProfession("soundtrack");
             Assert.Equal(12507, service.PersonProfessions.Count);
         }
+        
+        
+        
 
         [Fact]
-        public void GetPersonRating()
+        public void GetPersonBySubstring()
         {
-            //var personRating = _personDataService.GetPersonRating(1);
-            //Assert.Equal(null, personRating.Id);
-            //Assert.Equal();
+            var service = _personDataService.GetPersonBySubstring("red");
+            Assert.Equal("Fred Astaire", service.First().Name);
         }
         
 

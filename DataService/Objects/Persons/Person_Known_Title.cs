@@ -1,16 +1,20 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataService.Objects
 {
     public class Person_known_title
     {
         
-        public int Id { get; set; }
-        public string TitleName { get; set; }
-
-        public Person_Person_Known_Title PersonPersonKnownTitles { get; set; }
         
-        //public Person_Person_Known_Title PersonPersonKnownTitle;
+        public string Id { get; set; }
+       
+        public string TitleId { get; set; }
+        
+        public Person person { get; set; }
+        
+        public Title title { get; set; }
+
     }
 }

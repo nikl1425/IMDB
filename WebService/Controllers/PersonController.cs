@@ -30,6 +30,7 @@ namespace WebService.Controllers
         {
             var person = _dataService.GetPerson(id);
             var profession = _dataService.GetProfessionByPersonId(id);
+            
             if (person == null && profession == null)
             {
                 return NotFound();
