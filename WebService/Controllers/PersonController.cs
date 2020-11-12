@@ -49,7 +49,8 @@ namespace WebService.Controllers
             IList<PersonKnownTitleDTO> personKnownTitleDtos = personKnownTitle.Select(x => new PersonKnownTitleDTO
             {
                 Id = x.Id,
-                TitleId = x.TitleId
+                TitleId = x.TitleId,
+                Url = "http://localhost:5001/api/title/" + x.TitleId
             }).ToList();
 
 

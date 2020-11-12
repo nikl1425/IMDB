@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using DataService.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -77,13 +78,10 @@ namespace PortFolio2.Tests
         [Fact]
         public void GetPersonsByProfession()
         {
-            var service = _personDataService.GetPersonAmountByProfession("soundtrack");
-            Assert.Equal(12507, service.PersonProfessions.Count);
+            var service = _personDataService.GetPersonsByProfession("actor");
+            Assert.Equal(70804, service.Count);
         }
         
-        
-        
-
         [Fact]
         public void GetPersonBySubstring()
         {

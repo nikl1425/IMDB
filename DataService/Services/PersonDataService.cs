@@ -90,15 +90,14 @@ namespace DataService.Services
         }
 
 
-        public Profession GetPersonAmountByProfession (string profession)
+        public List<Person_Profession> GetPersonsByProfession (string profession)
         {
             var ctx = new ImdbContext();
-            var personList = ctx.Professions
-                .Include(x => x.PersonProfessions)
-                .AsSingleQuery()
-                .FirstOrDefault(v => v.ProfessionName == profession);
-
-            return personList;
+            var personList = ctx.PersonProfessions
+                .Include(x => x.person)
+                .Include(c => c.Profession)
+                .Where(personProfession => personProfession.Profession.ProfessionName == profession);
+            return personList.ToList();
         }
         
         public Person_Profession GetPersonProfession(int id)
