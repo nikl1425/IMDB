@@ -9,11 +9,7 @@ namespace WebService.Models
         public UserProfile()
         {
             CreateMap<User, UserDto>();
-            //CreateMap<User, PersonBookmarkDto>();
-            //CreateMap<User, PersonBookmarkListDto>();
-            //CreateMap<User, x>();
-            //CreateMap<User, x>();
-            //CreateMap<User, x>();
+       
         }
     }
 }

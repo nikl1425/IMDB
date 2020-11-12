@@ -134,8 +134,7 @@ namespace DataService
             modelBuilder.Entity<Rating>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Rating>().Property(x => x.Title_Id).HasColumnName("title_id");
             modelBuilder.Entity<Rating>().Property(x => x.Rating_).HasColumnName("rating");
-            modelBuilder.Entity<Rating>().HasKey(r => new {r.User_Id});
-            
+
             //Person
             modelBuilder.Entity<Person>().ToTable("person");
             modelBuilder.Entity<Person>().Property(x => x.Id).HasColumnName("person_id");
@@ -184,8 +183,6 @@ namespace DataService
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
             modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_title_id");
             modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_name");
-            
-           
 
             //Person_profession
             modelBuilder.Entity<Person_Profession>().ToTable("person_profession");

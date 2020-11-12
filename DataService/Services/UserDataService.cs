@@ -64,7 +64,6 @@ namespace DataService.Services
             return true;
         }
         
-
         public IList<Rating> GetRatingFromUsers(int userid)
         {
             using var ctx = new ImdbContext();
@@ -79,12 +78,34 @@ namespace DataService.Services
             return x.ToList();
         }
 
-        public IList<Person_Bookmark_list> GetPersonBookmarkLists(int userid)
+        public IList<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid)
         {
             using var ctx = new ImdbContext();
             var x = ctx.person_bookmark_list
                 .Where(b => b.User_Id == userid)
-                .ToList(); 
+                .ToList();
+            return x;
+        }
+        public Person_Bookmark_list NewPersonBookmarkList(int userid, string listName)
+        {
+            using var ctx = new ImdbContext();
+            var maxId = ctx.users.Max(x => x.Id);
+            var dbUser = GetUser(userid).Id;
+            var newPersonBookmarkList = ctx.person_bookmark_list
+                .Add(new Person_Bookmark_list
+                {Id = maxId + 1, List_Name = listName, User_Id = dbUser});
+
+            return ctx.person_bookmark_list.Find(maxId+1);
+        }
+        
+        public Person_Bookmark_list GetPersonBookmarkList(int id)
+        {
+            using var ctx = new ImdbContext();
+            //var x = ctx.person_bookmark_list.Find(id);
+            var x = ctx.person_bookmark_list
+                .Include(x => x.PersonBookmarks)
+                .AsSingleQuery()
+                .FirstOrDefault(y => y.Id == id);
             return x;
         }
 

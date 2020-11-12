@@ -14,8 +14,6 @@ namespace WebService.Controllers
     {
         private IUserDataService _dataService;
         private readonly IMapper _mapper;
-
-       
         public UserController(IUserDataService dataService, IMapper mapper)
         {
             _dataService = dataService;
@@ -31,6 +29,7 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
+            //to implement; show users bookmarklists & their link
             return Ok(user);
         }
         
@@ -69,5 +68,30 @@ namespace WebService.Controllers
             }
             return Ok(delete);
         }
+        
+        //new personbookmarklist
+        [HttpPost("{id}/lists/")] 
+        public IActionResult newPersonBookmarkList(int userid, string listName)
+        {
+            var list = _dataService.NewPersonBookmarkList(userid, listName);
+            return Created("New list: ", list);
+        }
+        
+        //get personbookmarklists
+        [HttpGet("{id}/lists", Name = nameof(getPersonBookmarkLists))]
+        public IActionResult getPersonBookmarkLists(int id)
+        {
+            var list = _dataService.GetUsersPersonBookmarkLists(id);
+            if (list == null)
+            {
+                return NotFound();
+            }
+            return Ok(list);
+        }
+        
+        
+        
+        
+        
     }
 }
