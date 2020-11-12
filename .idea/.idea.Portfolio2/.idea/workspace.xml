@@ -40,29 +40,35 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/PersonDataService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/760DCDFB-2F2B-4C8D-9D3B-A922FA70B507/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/59/5b106b0e/XunitTestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/31/7aeb5dd7/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e6/4e9f7a77/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/30/4ccbedb9/TestRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EB067793-5C3F-4219-AEF1-3AB117C20649/81/bf0ca069/IList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/WebService/Controllers/TitleController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/UnitTest/PersonDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/UnitTest/PersonDataServiceTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/7b/a15d2076/XunitTestCaseRunner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/b4/f3f2d74c/TestCaseRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/PersonDataService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/760DCDFB-2F2B-4C8D-9D3B-A922FA70B507/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/TestQueryConsole/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/PersonDataService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/59/5b106b0e/XunitTestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/Mapping/ImdbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/31/7aeb5dd7/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e6/4e9f7a77/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Objects/Persons/Person_Known_Title.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/jesper/Documents/Skole/RAWDATA/Portfolio2/DataService/Services/Mapping/ImdbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -113,12 +119,12 @@
         <option value="$PROJECT_DIR$/DataService/Services/Mapping/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark_list.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Movies/Title.cs" />
-        <option value="$PROJECT_DIR$/UnitTest/UserDataServiceTest.cs" />
         <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Controllers/ListController.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/UserDataServiceTest.cs" />
       </list>
     </option>
   </component>

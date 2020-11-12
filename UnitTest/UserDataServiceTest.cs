@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using DataService.Services;
+using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 
@@ -58,6 +59,14 @@ namespace PortFolio2.Tests
             Assert.Equal(1, titleBookmarks.First().Id);
             Assert.Equal(1, titleBookmarks.First().ListId);
             Assert.Equal("tt0734773", titleBookmarks.First().TitleId);
+        }
+
+
+        [Fact]
+        public void UpdatePersonBookmark()
+        {
+            var service = new UserDataService();
+            
         }
         
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DataService.Objects;
+using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataService.Services
@@ -126,11 +127,16 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             return ctx.title_bookmarks.Find(id);
         }
-
-        /*public bool UpdatePersonBookmark(int list_id, )
+        
+        public bool UpdatePersonBookmark(int id, int list_id, string person_id)
         {
-            
-        }*/
+            using var ctx = new ImdbContext();
+            if (list_id <= 0) return false;
+            ctx.person_bookmarks.Update(ctx.person_bookmarks.Find(id)).Entity.List_Id = list_id;
+            ctx.person_bookmarks.Update(ctx.person_bookmarks.Find(id)).Entity.Person_Id = person_id;
+            ctx.SaveChanges();
+            return GetPersonBookmark(id).List_Id == list_id && GetPersonBookmark(id).Person_Id == person_id;
+        }
 
 
         public bool deletePersonBookmarkList(int listid)
