@@ -9,6 +9,8 @@ namespace DataService.Objects
         public string PersonId { get; set; }
         public int ProfessionId { get; set; }
         [Required] public Profession Profession { get; set; }
+        
+        public Person person { get; set; }
 
     }
 }

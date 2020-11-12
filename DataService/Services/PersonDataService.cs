@@ -13,12 +13,12 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
         }
         
-        public Person GetPerson(string id)
+        public List<Person> GetPerson(string id)
         {
             using var ctx = new ImdbContext();
             //var smthing = ctx.Person.FirstOrDefault(t => t.Id.Trim().ToLower() == id.Trim().ToLower());
-
-            return ctx.Person.Find(id);
+            var query = ctx.Person.Where(person => person.Id == id);
+            return query.ToList();
         }
 
         public IQueryable<Person> GetPersonBySubstring(string substring)
@@ -42,7 +42,7 @@ namespace DataService.Services
         
 
 
-        
+        //Returns person with all the professions the person has
         public Person GetProfessionByPersonId(string id)
         {
             using var ctx = new ImdbContext();
@@ -54,6 +54,21 @@ namespace DataService.Services
             return query;
         }
         
+        //Returns only the professions of whoever we search
+        public List<Person_Profession> GetProfessionByPersonId2(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.PersonProfessions
+                .Include(c => c.person)
+                .Include(v => v.Profession)
+                .Where(p => p.person.Id == id)
+                .ToList();
+
+            ctx.SaveChanges();
+
+            return query.ToList();
+        }
+        
         public Person GetPersonKnownTitles(string id)
         {
             using var ctx = new ImdbContext();
@@ -62,6 +77,16 @@ namespace DataService.Services
                 .AsSingleQuery()
                 .FirstOrDefault(x => x.Id == id);
             return query;
+        }
+
+         
+        public List<Person_known_title> GetPersonKnownTitles2 (string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.PersonKnownTitles
+                .Include(x => x.person)
+                .Where(c => c.person.Id == id);
+            return query.ToList();
         }
 
 

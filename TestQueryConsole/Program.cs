@@ -28,23 +28,26 @@ namespace TestQueryConsole
                 return query;
             }
 
-            //GetPersonBySubstring("red ast");
-            
-            
-            
-            Person GetPersonPersonKnownTitles(string id)
+            //GetPersonBySubstring("red ast")
+
+
+            List<Person_Profession> GetProfessionByPersonId(string id)
             {
-                using var ctx = new ImdbContext();
-                var query = ctx.Person
-                    .Include(x => x.PersonKnownTitles)
-                    .AsSingleQuery()
-                    .FirstOrDefault(x => x.Id == id);
-                return query;
+                var query = ctx.PersonProfessions
+                    .Include(c => c.person)
+                    .Include(v => v.Profession)
+                    .Where(p => p.person.Id == id)
+                    .ToList();
 
+                ctx.SaveChanges();
 
+                return query.ToList();
             }
 
-         
+
+            Console.WriteLine(GetProfessionByPersonId("nm0000001").Count);
+
+
 
 
 

@@ -42,12 +42,7 @@ namespace WebService.Controllers
             
             return Ok(items);
         }
-
-        private TitleListDto CreateObjectOfTitle(Title title)
-        {
-            var dto = _mapper.Map<TitleListDto>(title);
-            dto.Url
-        }
+        
     }
     
 }

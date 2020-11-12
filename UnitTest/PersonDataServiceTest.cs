@@ -20,8 +20,8 @@ namespace PortFolio2.Tests
         public void GetPerson()
         {
             var person = _personDataService.GetPerson("nm0000001");
-            Assert.Equal("nm0000001", person.Id);
-            Assert.Equal("Fred Astaire", person.Name);
+            Assert.Equal("nm0000001", person.First().Id);
+            Assert.Equal("Fred Astaire", person.First().Name);
         }
 
         [Fact]
@@ -53,10 +53,10 @@ namespace PortFolio2.Tests
         [Fact]
         public void GetProfessionByPersonId()
         {
-            var service = _personDataService.GetProfessionByPersonId("nm0000001");
-            Assert.Equal(3, service.PersonProfessions.Count);
-            Assert.Equal("actor", service.PersonProfessions.First().Profession.ProfessionName);
-            Assert.Equal("soundtrack", service.PersonProfessions.Last().Profession.ProfessionName);
+            var service = _personDataService.GetProfessionByPersonId2("nm0000001");
+            Assert.Equal(3, service.Count);
+            Assert.Equal("actor", service.First().Profession.ProfessionName);
+            Assert.Equal("soundtrack", service.Last().Profession.ProfessionName);
         }
 
         [Fact]
@@ -64,6 +64,14 @@ namespace PortFolio2.Tests
         {
             var service = _personDataService.GetPersonKnownTitles("nm4517670");
             Assert.Equal("tt5188450", service.PersonKnownTitles.First().TitleId);
+        }
+        
+        
+        [Fact]
+        public void GetPersonKnownTitles2()
+        {
+            var service = _personDataService.GetPersonKnownTitles2("nm4517670");
+            Assert.Equal("tt5188450", service.First().TitleId);
         }
 
         [Fact]

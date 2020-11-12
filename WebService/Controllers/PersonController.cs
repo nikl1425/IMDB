@@ -29,29 +29,42 @@ namespace WebService.Controllers
         public IActionResult GetPerson(string id)
         {
             var person = _dataService.GetPerson(id);
-            var profession = _dataService.GetProfessionByPersonId(id);
-            
-            if (person == null && profession == null)
-            {
-                return NotFound();
-            }
-            
-            PersonDTO personDto1 = new PersonDTO();
-            personDto1.Id = person.Id;
-            personDto1.Name = person.Name;
-            personDto1.BirthYear = person.BirthYear;
-            personDto1.DeathYear = person.DeathYear;
-            
-            ProfessionDTO professionDto1 = new ProfessionDTO();
-            
-            foreach (var value in profession.PersonProfessions)
-            {
-                professionDto1.Id = value.ProfessionId;
-                professionDto1.ProfessionName = value.Profession.ProfessionName;
-                Console.WriteLine(professionDto1.ProfessionName);
-            }
+            var profession = _dataService.GetProfessionByPersonId2(id);
+            var personKnownTitle = _dataService.GetPersonKnownTitles2(id);
 
-            return Ok(new {professionDto1, personDto1});
+            IList<ProfessionDTO> professionDtos = profession.Select(x => new ProfessionDTO
+            {
+                ProfessionName = x.Profession.ProfessionName,
+                Id = x.Profession.Id
+            }).ToList();
+
+            IList<PersonDTO> personDtos = person.Select(x => new PersonDTO
+            {
+                Id = x.Id,
+                Name = x.Name,
+                BirthYear = x.BirthYear,
+                DeathYear = x.DeathYear
+            }).ToList();
+
+            IList<PersonKnownTitleDTO> personKnownTitleDtos = personKnownTitle.Select(x => new PersonKnownTitleDTO
+            {
+                Id = x.Id,
+                TitleId = x.TitleId
+            }).ToList();
+
+
+            /*
+            ProfessionDTO professionDtoFinal()
+            {
+                ProfessionDTO professionDto = new ProfessionDTO();
+                foreach (var value in profession.PersonProfessions)
+                {
+                }
+                return professionDto;
+            }
+            */
+
+            return Ok(new {personDtos, professionDtos, personKnownTitleDtos});
         }
         
         [HttpGet]
