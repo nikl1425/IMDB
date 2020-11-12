@@ -114,6 +114,8 @@ namespace DataService
             modelBuilder.Entity<Title>().Property(x => x.StartYear).HasColumnName("start_year");
             modelBuilder.Entity<Title>().Property(x => x.EndYear).HasColumnName("end_year");
             modelBuilder.Entity<Title>().Property(x => x.RunTimeMinutes).HasColumnName("runtimeminutes");
+            modelBuilder.Entity<Title>().HasMany(x => x.PersonKnownTitles).WithOne(c => c.title)
+                .HasForeignKey(v => v.TitleId);
             
             //Type
             modelBuilder.Entity<Type>().ToTable("type");
@@ -141,6 +143,8 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
             modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("death_year");
+            modelBuilder.Entity<Person>().HasMany(x => x.PersonKnownTitles).WithOne(c => c.person)
+                .HasForeignKey(v => v.Id);
 
             modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
@@ -158,6 +162,7 @@ namespace DataService
             modelBuilder.Entity<Search_History>().Property(x => x.Search_Name).HasColumnName("search_name");
             modelBuilder.Entity<Search_History>().Property(x => x.Timestamp).HasColumnName("timestamp");
             
+
             //Akas_type
             modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Id).HasColumnName("type_id");
@@ -181,8 +186,13 @@ namespace DataService
             
             //Person_title_id
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
-            modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_title_id");
-            modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_name");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_id");
+            modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_id");
+            modelBuilder.Entity<Person_known_title>().HasKey(x => new {x.Id, x.TitleId});
+            modelBuilder.Entity<Person_known_title>().HasOne(x => x.person).WithMany(c => c.PersonKnownTitles)
+                .HasForeignKey(v => v.Id);
+            modelBuilder.Entity<Person_known_title>().HasOne(x => x.title).WithMany(c => c.PersonKnownTitles)
+                .HasForeignKey(v => v.TitleId);
 
             //Person_profession
             modelBuilder.Entity<Person_Profession>().ToTable("person_profession");
