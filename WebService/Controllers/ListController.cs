@@ -22,14 +22,29 @@ namespace WebService.Controllers
         }
         
         //Get a list
-        [HttpGet("{id}", Name = nameof(getList))]
+        /*[HttpGet("{id}", Name = nameof(getList))]
         public IActionResult getList(int id)
         {
             var list = _dataService.GetPersonBookmarkList(id);
-            if (list == null)
+            //var bookmark = _dataService.GetBookmarks(id);
+            if (list == null && bookmark == null)
             {
                 return NotFound();
             }
+
+            return Ok(list);
+        }*/
+        //Get a bookmark
+        [HttpGet("{id}", Name = nameof(getBookmark))]
+        public IActionResult getBookmark(int id)
+        {
+            var list = _dataService.GetBookmark(id);
+            //var bookmark = _dataService.GetBookmarks(id);
+            if (list == null /*&& bookmark == null*/)
+            {
+                return NotFound();
+            }
+
             return Ok(list);
         }
 

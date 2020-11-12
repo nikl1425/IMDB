@@ -101,11 +101,22 @@ namespace DataService.Services
         public Person_Bookmark_list GetPersonBookmarkList(int id)
         {
             using var ctx = new ImdbContext();
-            //var x = ctx.person_bookmark_list.Find(id);
-            var x = ctx.person_bookmark_list
-                .Include(x => x.PersonBookmarks)
-                .AsSingleQuery()
-                .FirstOrDefault(y => y.Id == id);
+            var x = ctx.person_bookmark_list.Find(id);
+            return x;
+        }
+        
+        public Person_Bookmark GetBookmark(int id)
+        {
+            using var ctx = new ImdbContext();
+            return ctx.person_bookmarks.Find(id);
+        }
+
+        public IList<Person_Bookmark> GetBookmarks(int listid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.person_bookmarks
+                .Where(x => x.List_Id == listid)
+                .ToList();
             return x;
         }
 

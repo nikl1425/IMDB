@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using DataService.Objects;
 
 namespace DataService.Services
@@ -14,5 +15,7 @@ namespace DataService.Services
         IList<Search_History> GetSearchHistories(int userid);
         IList<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid);
         Person_Bookmark_list GetPersonBookmarkList(int id);
+        Person_Bookmark GetBookmark(int id);
+        IList<Person_Bookmark> GetBookmarks(int listid);
     }
 }

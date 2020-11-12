@@ -11,8 +11,7 @@ namespace DataService.Objects
         public string BirthYear { get; set; }
         public string DeathYear { get; set; }
 
-        public IList<Person_Bookmark> PersonBookmark { get; set; }
-        
+        public ICollection<Person_Bookmark> PersonBookmark { get; set; }
         public IList<Person_known_title> PersonKnownTitles { get; set; }
         
         public IList<Title_Person> TitlePersons { get; set; }

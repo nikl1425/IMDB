@@ -154,25 +154,43 @@ namespace DataService
             modelBuilder.Entity<Person>().Property(x => x.Name).HasColumnName("primary_name");
             modelBuilder.Entity<Person>().Property(x => x.BirthYear).HasColumnName("birth_year");
             modelBuilder.Entity<Person>().Property(x => x.DeathYear).HasColumnName("death_year");
-            modelBuilder.Entity<Person>().HasMany(x => x.PersonKnownTitles).WithOne(c => c.person)
-                .HasForeignKey(v => v.Id);
+            modelBuilder.Entity<Person>().HasMany(x => x.PersonKnownTitles)
+                .WithOne(c => c.person)
+                .HasForeignKey(v => v.Id); 
+            
+            modelBuilder.Entity<Person>().HasMany(x => x.PersonBookmark)
+                .WithOne(c => c.thisPerson)
+                .HasForeignKey(v => v.Person_Id);
 
+            //Person Bookmarks
             modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.List_Id).HasColumnName("list_id");
-            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id");
+            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id"); 
             
+            modelBuilder.Entity<Person_Bookmark>().HasOne(x => x.thisPerson)
+                .WithMany(c => c.PersonBookmark)
+                .HasForeignKey(v => v.Person_Id);
+            
+            modelBuilder.Entity<Person_Bookmark>().HasOne(x => x.PersonBookmarkList)
+                .WithMany(c => c.PersonBookmarks)
+                .HasForeignKey(v => v.List_Id);
+            
+            //Person Bookmarklist
             modelBuilder.Entity<Person_Bookmark_list>().ToTable("person_bookmark_list");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.Id).HasColumnName("list_id");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.List_Name).HasColumnName("list_name");
+            modelBuilder.Entity<Person_Bookmark_list>().HasMany(x => x.PersonBookmarks)
+                .WithOne(c => c.PersonBookmarkList)
+                .HasForeignKey(v => v.List_Id);
 
+            //Search History
             modelBuilder.Entity<Search_History>().ToTable("search_history");
             modelBuilder.Entity<Search_History>().Property(x => x.Id).HasColumnName("search_id");
             modelBuilder.Entity<Search_History>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Search_History>().Property(x => x.Search_Name).HasColumnName("search_name");
             modelBuilder.Entity<Search_History>().Property(x => x.Timestamp).HasColumnName("timestamp");
-            
 
             //Akas_type
             modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
@@ -195,7 +213,7 @@ namespace DataService
             modelBuilder.Entity<Akas>().Property(x => x.Language).HasColumnName("language");
             modelBuilder.Entity<Akas>().Property(x => x.IsOriginalTitle).HasColumnName("is_original_title");
             
-            //Person_title_id
+            //Person known title
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
             modelBuilder.Entity<Person_known_title>().Property(x => x.Id).HasColumnName("person_id");
             modelBuilder.Entity<Person_known_title>().Property(x => x.TitleId).HasColumnName("title_id");
@@ -216,8 +234,6 @@ namespace DataService
             modelBuilder.Entity<Profession>().Property(x => x.Id).HasColumnName("profession_id");
             modelBuilder.Entity<Profession>().Property(x => x.ProfessionName).HasColumnName("profession_name");
             
-
-            //Title_Rating
             //title_rating
             modelBuilder.Entity<Title_Rating>().ToTable("title_rating");
             modelBuilder.Entity<Title_Rating>().Property(x => x.Id).HasColumnName("title_rating_id");
