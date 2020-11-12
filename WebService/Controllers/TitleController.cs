@@ -9,7 +9,7 @@ using WebService.ObjectDto;
 namespace WebService.Controllers
 {
     [ApiController]
-    [Route("api/titles")]
+    [Route("api/title")]
     public class TitleController : ControllerBase
     {
         private ITitleDataService _dataService;

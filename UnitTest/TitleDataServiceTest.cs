@@ -69,5 +69,13 @@ namespace PortFolio2.Tests
             var genres = service.GetGenres();
             Assert.Equal(28, genres.Count);
         }
+
+        [Fact]
+        public void getTitles()
+        {
+            var service = new TitleDataService();
+            var titles = service.GetTitles();
+            Assert.Equal(45, service.GetTitles().Count);
+        }
     }
 }

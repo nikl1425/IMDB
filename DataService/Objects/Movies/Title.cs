@@ -12,7 +12,8 @@ namespace DataService.Objects
         public bool IsAdult { get; set; }
         public string StartYear { get; set; }
         public string EndYear { get; set; }
-        public int RunTimeMinutes { get; set; }
+        
+        
 
 
         //MANGLER ALLE KLASSER
@@ -29,6 +30,8 @@ namespace DataService.Objects
         public IList<Person_Bookmark> PersonBookmarks { get; set; }
         
         public IList<Person_known_title> PersonKnownTitles { get; set; }
+        
+        public TitleRuntime TitleRuntime { get; set; }
         
         
     }

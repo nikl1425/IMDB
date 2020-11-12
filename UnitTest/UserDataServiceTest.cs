@@ -37,6 +37,5 @@ namespace PortFolio2.Tests
             Assert.Equal("My fav. Actorz", personBookmarkList.First().List_Name);
             Assert.Equal("Worst Actorz Eveer", personBookmarkList.Last().List_Name);
         }
-
     }
 }

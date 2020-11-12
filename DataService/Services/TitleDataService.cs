@@ -49,6 +49,15 @@ namespace DataService.Services
             return query;
         }
 
+        
+        public IList<Title> GetTitles()
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.title.ToList();
+            
+            return query;
+        }
+
         public Title getTitleGenreName(string id)
         {
             using var ctx = new ImdbContext();
@@ -60,6 +69,8 @@ namespace DataService.Services
                 .ThenInclude(o => o.Genre)
                 .AsSingleQuery()
                 .FirstOrDefault(o => o.Id == id);
+
+           
 
             return query;
         }

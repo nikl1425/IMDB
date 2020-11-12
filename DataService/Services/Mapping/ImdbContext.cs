@@ -113,9 +113,13 @@ namespace DataService
             modelBuilder.Entity<Title>().Property(x => x.IsAdult).HasColumnName("is_adult");
             modelBuilder.Entity<Title>().Property(x => x.StartYear).HasColumnName("start_year");
             modelBuilder.Entity<Title>().Property(x => x.EndYear).HasColumnName("end_year");
-            modelBuilder.Entity<Title>().Property(x => x.RunTimeMinutes).HasColumnName("runtimeminutes");
             modelBuilder.Entity<Title>().HasMany(x => x.PersonKnownTitles).WithOne(c => c.title)
                 .HasForeignKey(v => v.TitleId);
+            
+            // Title Runtime
+            modelBuilder.Entity<TitleRuntime>().ToTable("title_runtime");
+            modelBuilder.Entity<TitleRuntime>().Property(x => x.Id).HasColumnName("title_id");
+            modelBuilder.Entity<TitleRuntime>().Property(x => x.Runtime).HasColumnName("runtime_minut");
             
             //Type
             modelBuilder.Entity<Type>().ToTable("type");
