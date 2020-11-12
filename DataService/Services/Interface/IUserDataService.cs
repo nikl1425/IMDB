@@ -13,7 +13,7 @@ namespace DataService.Services
         Person_Bookmark_list NewPersonBookmarkList(int userid, string listName);
         IList<Rating> GetRatingFromUsers(int userid);
         IList<Search_History> GetSearchHistories(int userid);
-        IList<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid);
+        List<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid);
         Person_Bookmark_list GetPersonBookmarkList(int id);
         Person_Bookmark GetBookmark(int id);
         IList<Person_Bookmark> GetBookmarks(int listid);

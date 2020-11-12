@@ -44,11 +44,24 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
-
             return Ok(list);
+        }
+        
+        [HttpGet("{listid}")]
+        public IActionResult GetPersonBookMarkList(int listid)
+        {
+            var bookmarklist = _dataService.GetUsersPersonBookmarkLists(listid);
+            
+            IList<PersonBookmarkListDto> professionDtos = bookmarklist.Select(x => new PersonBookmarkListDto
+            {
+                Id = x.Id,
+                User_Id = x.User_Id,
+                List_Name = x.List_Name,
+                Url = ""
+            }).ToList();
+            return Ok(professionDtos);
         }
 
 
-       
     }
 }

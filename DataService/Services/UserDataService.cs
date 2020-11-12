@@ -78,7 +78,7 @@ namespace DataService.Services
             return x.ToList();
         }
 
-        public IList<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid)
+        public List<Person_Bookmark_list> GetUsersPersonBookmarkLists(int userid)
         {
             using var ctx = new ImdbContext();
             var x = ctx.person_bookmark_list

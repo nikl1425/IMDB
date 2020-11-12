@@ -13,17 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Person">
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Fixed everything">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Movies/Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Movies/Title.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Persons/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Persons/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark_list.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark_list.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/Services/Mapping/ImdbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/Mapping/ImdbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio2.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestQueryConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestQueryConsole/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest/UserDataServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest/UserDataServiceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controllers/PersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/PersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Controllers/ListController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/ListController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DataService/Objects/Genre.cs" />
-        <option value="$PROJECT_DIR$/DataService/Objects/Akas_Type.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Akas_Akas_Type.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Akas.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Akas_Attribute.cs" />
@@ -95,8 +88,6 @@
         <option value="$PROJECT_DIR$/WebService/Models/Profile/PersonBookmarkProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/IPersonDataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/WebService/Startup.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Persons/Person_Known_Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Persons/Person_Person_Known_Title.cs" />
@@ -121,6 +112,10 @@
         <option value="$PROJECT_DIR$/DataService/Services/Mapping/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark_list.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Movies/Title.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controllers/ListController.cs" />
       </list>
     </option>
   </component>
@@ -392,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605191534297</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed everything">
+      <created>1605196940647</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1605196940647</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +439,8 @@
     <MESSAGE value="Users Updated" />
     <MESSAGE value="Person stuff" />
     <MESSAGE value="Person" />
-    <option name="LAST_COMMIT_MESSAGE" value="Person" />
+    <MESSAGE value="Fixed everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed everything" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -569,12 +572,12 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1605191538015">
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2" timestamp="1605196944665">
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022782551" />
     <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604583663526" />
-    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605191538015" />
+    <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605196944665" />
     <state x="1265" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605190676376">
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
