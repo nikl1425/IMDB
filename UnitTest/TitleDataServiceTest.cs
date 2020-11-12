@@ -59,7 +59,7 @@ namespace PortFolio2.Tests
             //test midlertidligt unpassable :P
             var service = new TitleDataService();
             var names = service.getTitlePersonName("tt0098286");
-            Assert.Equal("Leland Gray", names.TitlePersons.First().Person.Name);
+            Assert.Equal("George La Fountaine Sr.", names.TitlePersons.First().Person.Name);
         }
 
         [Fact]
