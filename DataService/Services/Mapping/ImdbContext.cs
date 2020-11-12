@@ -150,7 +150,7 @@ namespace DataService
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.List_Id).HasColumnName("list_id");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id");
-
+            
             modelBuilder.Entity<Person_Bookmark_list>().ToTable("person_bookmark_list");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.Id).HasColumnName("list_id");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.User_Id).HasColumnName("user_id");
