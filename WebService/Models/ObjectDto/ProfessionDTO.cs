@@ -8,5 +8,7 @@ namespace WebService.ObjectDto
         public int Id { get; set; }
         
         public string ProfessionName { get; set; }
+        
+        public string Url { get; set; }
     }
 }

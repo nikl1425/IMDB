@@ -12,7 +12,7 @@ namespace DataService.Services
         Person GetProfessionByPersonId(string id);
         List<Person_Profession> GetProfessionByPersonId2(string id);
         List<Person_known_title> GetPersonKnownTitles2(string id);
-        Profession GetPersonAmountByProfession (string profession);
+        List<Person_Profession> GetPersonsByProfession (string profession);
         Person_Profession GetPersonProfession(int id);
         Profession GetProfession(int id);
     }
