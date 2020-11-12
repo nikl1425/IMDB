@@ -137,14 +137,12 @@ namespace DataService.Services
                 return false;
             }
 
-            deleteBookmarks(listid);
+            deletePersonBookmarks(listid);
             ctx.person_bookmark_list.Remove(dbList);
             ctx.SaveChanges();
             
             return true;
         }
-        
-        
         
        public Person_Bookmark GetPersonBookmark(int id)
         {
@@ -160,21 +158,10 @@ namespace DataService.Services
                 .ToList();
             return x;
         }
-        
-        
-       public IList<Person_Bookmark> GetBookmarks(int listid)
-       {
-           using var ctx = new ImdbContext();
-           var x = ctx.person_bookmarks
-               .Where(x => x.List_Id == listid)
-               .ToList();
-           return x;
-       }
-
-        public bool deleteBookmarks(int id)
+        public bool deletePersonBookmarks(int id)
         {
             using var ctx = new ImdbContext();
-            var dbBookmark = GetBookmarks(id);
+            var dbBookmark = GetPersonBookmarks(id);
             if (dbBookmark == null)
             {
                 return false;
@@ -187,7 +174,7 @@ namespace DataService.Services
             ctx.SaveChanges();
             return true;
         }
-        public bool deleteBookmark(int id)
+        public bool deletePersonBookmark(int id)
         {
             using var ctx = new ImdbContext();
             var dbBookmark = GetPersonBookmark(id);

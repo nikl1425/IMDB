@@ -86,11 +86,11 @@ namespace WebService.Controllers
             return Ok(delete);
         }
         
-        //Delete Users Person Bookmarks
-        [HttpDelete("list/{listid}/")]
+        //Delete Users Person Bookmark
+        [HttpDelete]
         public IActionResult deletePersonBookmark(int bookmarkid)
         {
-            var delete = _dataService.deleteBookmark(bookmarkid);
+            var delete = _dataService.deletePersonBookmark(bookmarkid);
             return Ok(delete);
         }
 

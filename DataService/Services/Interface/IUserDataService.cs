@@ -21,7 +21,7 @@ namespace DataService.Services
         //Person_Bookmark GetPersonBookmark(int id);
         IList<Person_Bookmark> GetPersonBookmarks(int listid);
         bool deletePersonBookmarkList(int listid);
-        bool deleteBookmarks(int id);
-        bool deleteBookmark(int id);
+        bool deletePersonBookmarks(int id);
+        bool deletePersonBookmark(int id);
     }
 }
