@@ -87,7 +87,7 @@ namespace WebService.Controllers
         }
         
         //Delete Users Person Bookmark
-        [HttpDelete]
+        [HttpDelete("list/{listid}/{bookmarkid}")]
         public IActionResult deletePersonBookmark(int bookmarkid)
         {
             var delete = _dataService.deletePersonBookmark(bookmarkid);
