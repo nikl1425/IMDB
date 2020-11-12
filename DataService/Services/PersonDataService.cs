@@ -28,7 +28,7 @@ namespace DataService.Services
             return query;
         }
         
-        public IList<Person> GetPersons()
+        public List<Person> GetPersons()
         {
             using var ctx = new ImdbContext();
             return ctx.Person.ToList();
