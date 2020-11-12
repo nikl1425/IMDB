@@ -1,6 +1,6 @@
 ﻿namespace WebService.ObjectDto
 {
-    public class TitleDto
+    public class NameOfTitleDTO
     {
         public string Name { get; set; }
     }

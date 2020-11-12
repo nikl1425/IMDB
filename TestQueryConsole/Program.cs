@@ -16,10 +16,24 @@ namespace TestQueryConsole
         {
             using var ctx = new ImdbContext();
 
-           
-            PersonDataService personDataService = new PersonDataService();
 
-            
+            Title getFullTitle()
+            {
+                using var ctx = new ImdbContext();
+
+                var query = ctx.title
+                    .Include(x => x.Akases)
+                    .FirstOrDefault();
+               
+
+                return query;
+
+
+            }
+
+            getFullTitle();
+
+
 
 
         }

@@ -44,7 +44,6 @@ namespace DataService.Services
             var query = ctx.Person
                 .Include(x => x.PersonProfessions)
                 .ThenInclude(z => z.Profession)
-                .AsSingleQuery()
                 .FirstOrDefault(c => c.Id == id);
             return query;
         }
@@ -55,8 +54,8 @@ namespace DataService.Services
             var query = ctx.Person
                 .Include(x => x.PersonPersonKnownTitles)
                 .ThenInclude(x => x.PersonKnownTitles)
-                .AsSingleQuery()
                 .FirstOrDefault(x => x.Id == id);
+
             return query;
         }
 

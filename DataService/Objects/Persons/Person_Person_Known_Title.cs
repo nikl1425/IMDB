@@ -10,7 +10,7 @@ namespace DataService.Objects
         public string PersonId { get; set; }
         public int PersonTitleId { get; set; }
 
-        [Required] public Person_known_title PersonKnownTitles { get; set; }
+        public ICollection<Person_known_title> PersonKnownTitles { get; set; }
         
         public Person person { get; set; }
     }

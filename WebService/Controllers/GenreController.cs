@@ -72,9 +72,9 @@ namespace WebService.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                TitleNames = x.TitleGenres.Select(x => new TitleDto
+                TitleNames = x.TitleGenres.Select(x => new NameOfTitleDTO
                 {
-                    Name = x.Title.PrimaryTitle
+                     Name = x.Title.PrimaryTitle
                 }).ToList()
             }).ToList();
 

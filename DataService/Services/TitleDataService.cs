@@ -94,6 +94,20 @@ namespace DataService.Services
                 .ToList();
             return query;
         }
+
+        public Title getFullTitle()
+        {
+            using var ctx = new ImdbContext();
+            
+            var query = ctx.title
+                .Include(x => x.Akases)
+                .Include(x => x.TitleGenres)
+                .Include(x => x.TitlePersons)
+                .ThenInclude(x => x.Person)
+                .FirstOrDefault();
+
+            return query;
+        }
         
     }
 }
