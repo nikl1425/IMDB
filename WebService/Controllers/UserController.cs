@@ -35,7 +35,7 @@ namespace WebService.Controllers
         }
         
         //New user
-        [HttpPost]
+        [HttpPost("user")]
         public IActionResult createUser(UserDto userDto)
         {
             //string surname, string lastname, int age, string email
@@ -87,7 +87,19 @@ namespace WebService.Controllers
             return Created("New list: ", list);
         }
         //new person bookmark
-        [HttpPost("us")]
+        [HttpPost("user/{userid}/plist/{list_id}/{person_id}/create")] //name/{person_id}/
+        public IActionResult newPersonBookmark(PersonBookmarkDto pbDto)
+        {
+            var newBookmark = _dataService.NewPersonBookmark(pbDto.Person_Id, pbDto.List_Id);
+            return Created("New bookmark: ",newBookmark);
+        }
+        //new title bookmark
+        [HttpPost("title/{titleid}/{listid}")]
+        public IActionResult newTitleBookmark(TitleBookmarkDTO pbDto)
+        {
+            var newBookmark = _dataService.NewTitleBookmark(pbDto.TitleId, pbDto.ListId);
+            return Created("",newBookmark);
+        }
         
         //Delete Users personbookmarklist
         [HttpDelete("plist/{listid}")] 

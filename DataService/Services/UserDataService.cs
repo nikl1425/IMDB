@@ -111,7 +111,7 @@ namespace DataService.Services
             return ctx.title_bookmark_list.Find(maxId+1);
         }
 
-        public Person_Bookmark NewPersonBookmark(int listid, string personid)
+        public Person_Bookmark NewPersonBookmark(string personid, int listid)
         {
             using var ctx = new ImdbContext();
             var maxId = ctx.person_bookmarks.Max(x => x.Id);
@@ -121,7 +121,7 @@ namespace DataService.Services
             ctx.SaveChanges();
             return ctx.person_bookmarks.Find(maxId + 1);
         }
-        public Title_Bookmark NewTitleBookmark(int listid, string titleid)
+        public Title_Bookmark NewTitleBookmark(string titleid, int listid)
         {
             using var ctx = new ImdbContext();
             var maxId = ctx.title_bookmarks.Max(x => x.Id);
