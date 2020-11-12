@@ -77,6 +77,13 @@ namespace WebService.Controllers
             var list = _dataService.NewPersonBookmarkList(userid, listName);
             return Created("New list: ", list);
         }
+        //new titlebookmarklist
+        [HttpPost("user/{id}/lists/")] 
+        public IActionResult newTitleBookmarkList(int userid, string listName)
+        {
+            var list = _dataService.NewTitleBookmarkList(userid, listName);
+            return Created("New list: ", list);
+        }
         
         //Delete Users personbookmarklist
         [HttpDelete("list/{listid}")] 

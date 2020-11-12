@@ -9,8 +9,9 @@ namespace DataService.Objects
         public int Id { get; set; }
         public int User_Id { get; set; }
         public string List_Name { get; set; }
+        [Required] public IList<Person_Bookmark> PersonBookmarks { get; set; }
         
-        //public IList<Person_Bookmark> PersonBookmarks { get; set; }
+        //public User user { get; set; }
 
 
     }

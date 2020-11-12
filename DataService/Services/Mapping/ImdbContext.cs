@@ -121,15 +121,12 @@ namespace DataService
                 .HasOne(x => x.TitleRuntime)
                 .WithOne(o => o.Title)
                 .HasForeignKey<TitleRuntime>(x => x.Id);
-                
-                
-                
+            
             // Title Runtime
             modelBuilder.Entity<TitleRuntime>().ToTable("title_runtime");
             modelBuilder.Entity<TitleRuntime>().Property(x => x.Id).HasColumnName("title_id");
             modelBuilder.Entity<TitleRuntime>().Property(x => x.Runtime).HasColumnName("runtime_minut");
-
-
+            
             //Type
             modelBuilder.Entity<Type>().ToTable("type");
             modelBuilder.Entity<Type>().Property(x => x.Id).HasColumnName("type_id");
@@ -142,7 +139,6 @@ namespace DataService
             modelBuilder.Entity<User>().Property(x => x.Last_Name).HasColumnName("last_name");
             modelBuilder.Entity<User>().Property(x => x.Age).HasColumnName("age");
             modelBuilder.Entity<User>().Property(x => x.Email).HasColumnName("email");
-            
             
             //Rating
             modelBuilder.Entity<Rating>().ToTable("rating");
@@ -160,35 +156,32 @@ namespace DataService
             modelBuilder.Entity<Person>().HasMany(x => x.PersonKnownTitles)
                 .WithOne(c => c.person)
                 .HasForeignKey(v => v.Id);
-
-            modelBuilder.Entity<Person>().HasMany(x => x.PersonBookmark).WithOne(c => c.Persons)
-                .HasForeignKey(v => v.Id);
-            
-            
-            /*
             modelBuilder.Entity<Person>().HasMany(x => x.PersonBookmark)
-                .WithOne(c => c.thisPerson)
+                .WithOne(c => c.Persons)
                 .HasForeignKey(v => v.Person_Id);
-*/
+
             //Person Bookmarks
             modelBuilder.Entity<Person_Bookmark>().ToTable("person_bookmarks");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.Id).HasColumnName("bookmark_id");
             modelBuilder.Entity<Person_Bookmark>().Property(x => x.List_Id).HasColumnName("list_id");
-            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id");
-            modelBuilder.Entity<Person_Bookmark>().HasKey(x => x.Id);
-
-
-            modelBuilder.Entity<Person_Bookmark>().HasOne(x => x.Persons).WithMany(c => c.PersonBookmark)
-                .HasForeignKey(v => v.Person_Id);
-                
+            modelBuilder.Entity<Person_Bookmark>().Property(x => x.Person_Id).HasColumnName("person_id"); 
             
-           
+            modelBuilder.Entity<Person_Bookmark>().HasOne(x => x.Persons)
+                .WithMany(c => c.PersonBookmark)
+                .HasForeignKey(v => v.Person_Id);
+            
+            modelBuilder.Entity<Person_Bookmark>().HasOne(x => x.PersonBookmarkList)
+                .WithMany(c => c.PersonBookmarks)
+                .HasForeignKey(v => v.List_Id);
+            
             //Person Bookmarklist
             modelBuilder.Entity<Person_Bookmark_list>().ToTable("person_bookmark_list");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.Id).HasColumnName("list_id");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.User_Id).HasColumnName("user_id");
             modelBuilder.Entity<Person_Bookmark_list>().Property(x => x.List_Name).HasColumnName("list_name");
-   
+            modelBuilder.Entity<Person_Bookmark_list>().HasMany(x => x.PersonBookmarks)
+                .WithOne(c => c.PersonBookmarkList)
+                .HasForeignKey(v => v.List_Id);
 
             //Search History
             modelBuilder.Entity<Search_History>().ToTable("search_history");

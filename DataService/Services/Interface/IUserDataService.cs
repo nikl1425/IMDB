@@ -11,6 +11,7 @@ namespace DataService.Services
         bool UpdateUser(int id, string surname, string lastname, int age, string email);
         bool DeleteUser(int id);
         Person_Bookmark_list NewPersonBookmarkList(int userid, string listName);
+        Title_Bookmark_List NewTitleBookmarkList(int userid, string listName);
         IList<Rating> GetRatingFromUsers(int userid);
         Title_Bookmark GetTitleBookmark(int id);
         List<Title_Bookmark> GetTitleBookmarks(int id);

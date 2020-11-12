@@ -97,6 +97,17 @@ namespace DataService.Services
 
             return ctx.person_bookmark_list.Find(maxId+1);
         }
+        public Title_Bookmark_List NewTitleBookmarkList(int userid, string listName)
+        {
+            using var ctx = new ImdbContext();
+            var maxId = ctx.users.Max(x => x.Id);
+            var dbUser = GetUser(userid).Id;
+            var newTitleBookmarkList = ctx.title_bookmark_list
+                .Add(new Title_Bookmark_List()
+                    {Id = maxId + 1, ListName = listName, UserId = dbUser});
+
+            return ctx.title_bookmark_list.Find(maxId+1);
+        }
         
         
         public List<Person_Bookmark_list> GetPersonBookmarkList(int id)
