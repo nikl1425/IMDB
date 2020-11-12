@@ -6,6 +6,7 @@ namespace DataService.Objects
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<Akas_Akas_Type> AkasAkasTypes { get; set; }
+        
+        public List<Akas> Akases { get; set; }
     }
 }

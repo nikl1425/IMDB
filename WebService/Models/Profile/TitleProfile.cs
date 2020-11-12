@@ -9,6 +9,7 @@ namespace WebService.Models
         public TitleProfile()
         {
             CreateMap<Title, TitleDto>();
+            CreateMap<Title, NameOfTitleDTO>();
         }
     }
 }

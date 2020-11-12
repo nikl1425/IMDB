@@ -7,7 +7,7 @@
         public int Id { get; set; }
         public int TitleId { get; set; }
         public string AttributeName { get; set; }
-        public Akas Akas { get; set; }
+        
         
     }
 }
