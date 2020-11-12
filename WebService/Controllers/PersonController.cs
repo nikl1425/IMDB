@@ -12,7 +12,7 @@ using WebService.ObjectDto;
 namespace WebService.Controllers
 {
     [ApiController]
-    [Route("api/name")]
+    [Route("api/")]
     public class PersonController : ControllerBase
     {
         private IPersonDataService _dataService;
@@ -25,7 +25,7 @@ namespace WebService.Controllers
         }
 
 
-        [HttpGet("{id}", Name = nameof(GetPerson))]
+        [HttpGet("name/{id}", Name = nameof(GetPerson))]
         public IActionResult GetPerson(string id)
         {
             var person = _dataService.GetPerson(id);
@@ -35,7 +35,8 @@ namespace WebService.Controllers
             IList<ProfessionDTO> professionDtos = profession.Select(x => new ProfessionDTO
             {
                 ProfessionName = x.Profession.ProfessionName,
-                Id = x.Profession.Id
+                Id = x.Profession.Id,
+                Url = "http://localhost:5001/api/" + x.Profession.ProfessionName
             }).ToList();
 
             IList<PersonDTO> personDtos = person.Select(x => new PersonDTO
@@ -67,8 +68,27 @@ namespace WebService.Controllers
 
             return Ok(new {personDtos, professionDtos, personKnownTitleDtos});
         }
+
+
+        [HttpGet(Name = nameof(GetPersonsByProfession))]
+        public IActionResult GetPersonsByProfession(string profession)
+        {
+            var persons = _dataService.GetPersonsByProfession(profession);
+            
+            IList<PersonDTO> newPersonDTO = persons.Select(x => new PersonDTO
+            {
+                Id = x.person.Id,
+                Name = x.person.Name,
+                BirthYear = x.person.BirthYear,
+                DeathYear = x.person.DeathYear,
+                Url = "http://localhost:5001/api/name/" + x.person.Id
+            }).ToList();
+
+            return Ok(newPersonDTO);
+
+        }
         
-        [HttpGet]
+        [HttpGet("name/")]
         public IActionResult GetPersons()
         {
             var person = _dataService.GetPersons();
@@ -85,7 +105,7 @@ namespace WebService.Controllers
             return Ok(newPersonDTO);
         }
 
-        [HttpGet("{id}/profession")]
+        [HttpGet("name/{id}/profession")]
         public IActionResult GetProfession(string id)
         {
             var personProfessions = _dataService.GetProfessionByPersonId(id);
