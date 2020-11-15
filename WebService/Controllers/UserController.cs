@@ -21,31 +21,32 @@ namespace WebService.Controllers
             _mapper = mapper;
         }
 
-        //Enter a userprofile. 
+        //GET USER PROFILE 
         [HttpGet ("user/{id}", Name = nameof(getUser))]
         public IActionResult getUser(int id)
         {
             var user = _dataService.GetUser(id);
+            var usersLists = getPersonBookmarkLists(id);
             if (user == null)
             {
                 return NotFound();
             }
-            //to implement; show users bookmarklists & their link
-            return Ok(user);
+            //return Ok(user);
+            return Ok(new {user, usersLists});
         }
         
-        //New user
+        //CREATE NEW USER
         [HttpPost("user")]
         public IActionResult createUser(UserDto userDto)
         {
             //string surname, string lastname, int age, string email
             var user = _dataService.CreateUser(userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
 
-            return Created("New user: ", user);
+            return Created(" ", user);
 
         }
 
-        //Update user
+        //UPDATE USER
         [HttpPut("user/{id}")]
         public IActionResult updateUser(int id, UserDto userDto)
         {
@@ -58,7 +59,7 @@ namespace WebService.Controllers
             return Ok(updateUser);
         }
         
-        //Delete user
+        //DELETE USER
         [HttpDelete("user/{id}")]
         public IActionResult deleteUser(int id)
         {
@@ -70,7 +71,7 @@ namespace WebService.Controllers
             return Ok(delete);
         }
         
-        //new personbookmarklist
+        //NEW PERSON BOOKMARK LIST
         [HttpPost("user/{userid}/plists/")] 
         public IActionResult newPersonBookmarkList(PersonBookmarkListDto pblDto)
         {
@@ -78,30 +79,16 @@ namespace WebService.Controllers
             return Created("New list: ", list);
         }
         
-        
-        //new titlebookmarklist
-        [HttpPost("user/{userid}/tlists/")] 
-        public IActionResult newTitleBookmarkList(TitleBookmarkListDTO tblDto)
-        {
-            var list = _dataService.NewTitleBookmarkList(tblDto.UserId, tblDto.ListName);
-            return Created("New list: ", list);
-        }
-        //new person bookmark
-        [HttpPost("user/{userid}/plist/{list_id}/{person_id}/create")] //name/{person_id}/
+        //ADD PERSON BOOKMARK TO LIST
+        [HttpPost("user/{userid}/plist/bookmark")] 
+        //[HttpPost("name/{personid}/bookmark/")] 
         public IActionResult newPersonBookmark(PersonBookmarkDto pbDto)
         {
             var newBookmark = _dataService.NewPersonBookmark(pbDto.Person_Id, pbDto.List_Id);
-            return Created("New bookmark: ",newBookmark);
-        }
-        //new title bookmark
-        [HttpPost("title/{titleid}/{listid}")]
-        public IActionResult newTitleBookmark(TitleBookmarkDTO pbDto)
-        {
-            var newBookmark = _dataService.NewTitleBookmark(pbDto.TitleId, pbDto.ListId);
             return Created("",newBookmark);
         }
         
-        //Delete Users personbookmarklist
+        //DELETE USERS BOOKMARK LIST
         [HttpDelete("plist/{listid}")] 
         public IActionResult deletePersonBookmarkList(int listid)
         {
@@ -109,7 +96,7 @@ namespace WebService.Controllers
             return Ok(delete);
         }
         
-        //Delete Users Person Bookmark
+        //DELETE PERSON BOOKMARK FROM LIST
         [HttpDelete("plist/{listid}/{bookmarkid}")]
         public IActionResult deletePersonBookmark(int bookmarkid)
         {
@@ -117,7 +104,24 @@ namespace WebService.Controllers
             return Ok(delete);
         }
         
-        //Delete Users titlebookmarklist
+        //NEW TITLE BOOKMARK LIST
+        [HttpPost("user/{userid}/tlists/")] 
+        public IActionResult newTitleBookmarkList(TitleBookmarkListDTO tblDto)
+        {
+            var list = _dataService.NewTitleBookmarkList(tblDto.UserId, tblDto.ListName);
+            return Created("New list: ", list);
+        }
+        
+        //ADD TITLE BOOKMARK TO LIST
+        [HttpPost("user/{userid}/tlist/bookmark")]
+        //[HttpPost("title/{titleid}/bookmark/")]
+        public IActionResult newTitleBookmark(TitleBookmarkDTO tbDto)
+        {
+            var newBookmark = _dataService.NewTitleBookmark(tbDto.TitleId, tbDto.ListId);
+            return Created("",newBookmark);
+        }
+        
+        //DELETE USERS TITLE BOOKMARK LIST
         [HttpDelete("tlist/{listid}")] 
         public IActionResult deleteTitleBookmarkList(int listid)
         {
@@ -125,7 +129,7 @@ namespace WebService.Controllers
             return Ok(delete);
         }
         
-        //Delete Users title Bookmark
+        //DELETE TITLE BOOKMARK FROM LIST
         [HttpDelete("tlist/{listid}/{bookmarkid}")]
         public IActionResult deleteTitleBookmark(int bookmarkid)
         {
@@ -133,7 +137,7 @@ namespace WebService.Controllers
             return Ok(delete);
         }
 
-        //Get Users lists
+        //GET A USERS BOOKMARK LISTS
         [HttpGet("user/{id}/lists")]
         public IActionResult getPersonBookmarkLists(int id)
         {
@@ -145,7 +149,7 @@ namespace WebService.Controllers
                 Id = x.Id,
                 UserId = x.UserId,
                 ListName = x.ListName,
-                Url = ""
+                Url = "http://localhost:5001/api/tlist/"+x.Id
             }).ToList();
             
             IList<PersonBookmarkListDto> personList = personBookmarkList.Select(x => new PersonBookmarkListDto
@@ -153,7 +157,7 @@ namespace WebService.Controllers
                 Id = x.Id,
                 User_Id = x.User_Id,
                 List_Name = x.List_Name,
-                Url = ""
+                Url = "http://localhost:5001/api/plist/"+x.Id
             }).ToList();
             
             return Ok(new {personList, titleList});
