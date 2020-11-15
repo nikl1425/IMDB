@@ -66,14 +66,6 @@ namespace PortFolio2.Tests
             Assert.Equal("tt0734773", titleBookmarks.First().TitleId);
         }
 
-
-        [Fact]
-        public void UpdatePersonBookmark()
-        {
-            var service = new UserDataService();
-            
-        }
-
         [Fact]
         public void newPersonBookmarkList()
         {

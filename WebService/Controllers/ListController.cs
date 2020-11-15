@@ -32,7 +32,7 @@ namespace WebService.Controllers
                 Id = x.Id,
                 User_Id = x.User_Id,
                 List_Name = x.List_Name,
-                Url = ""
+                Url = "http://localhost:5001/api/user/"+x.User_Id //URL to user
             }).ToList();
             
             IList<PersonBookmarkDto> bookmarkDtos = getbookmarks.Select(x => new PersonBookmarkDto
@@ -40,7 +40,7 @@ namespace WebService.Controllers
                 Id = x.Id,
                 List_Id = x.List_Id,
                 Person_Id = x.Person_Id,
-                Url = ""
+                Url = "http://localhost:5001/api/name/"+x.Person_Id
             }).ToList();
 
             return Ok(new {listDto, bookmarkDtos});
@@ -58,7 +58,7 @@ namespace WebService.Controllers
                 Id = x.Id,
                 UserId = x.UserId,
                 ListName = x.ListName,
-                Url = ""
+                Url = "http://localhost:5001/api/user/"+x.UserId //URL to user
             }).ToList();
             
             //KEEP
@@ -66,13 +66,11 @@ namespace WebService.Controllers
             {
              Id = x.Id,
              TitleId = x.TitleId,
-             ListId = x.ListId
+             ListId = x.ListId,
+             Url = "http://localhost:5001/api/title/" + x.TitleId 
             }).ToList();
 
             return Ok(new {listDto, bookmarkDtos});
         }
-        
-        
-
     }
 }
