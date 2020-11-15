@@ -70,6 +70,9 @@
       <e p="Portfolio2.sln" t="IncludeFlat" />
       <e p="TestQueryConsole" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Diagrams" t="Include">
+          <e p="ClassDiagram1.cd" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -127,6 +130,7 @@
               <e p="NameOfTitleDTO.cs" t="Include" />
               <e p="TitleDto.cs" t="Include" />
               <e p="TitleGenreDTO.cs" t="Include" />
+              <e p="TitleGenreDTO.cs~" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
             </e>
             <e p="UserDto.cs" t="Include" />
