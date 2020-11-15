@@ -87,17 +87,19 @@ namespace WebService.Controllers
             return Created("New list: ", list);
         }
         //new person bookmark
-        [HttpPost("user/{userid}/plist/{list_id}/{person_id}/create")] //name/{person_id}/
+        [HttpPost("user/{userid}/plist/bookmark")]
+        //[HttpPost("name/{personid}/bookmark/")] 
         public IActionResult newPersonBookmark(PersonBookmarkDto pbDto)
         {
             var newBookmark = _dataService.NewPersonBookmark(pbDto.Person_Id, pbDto.List_Id);
-            return Created("New bookmark: ",newBookmark);
+            return Created("",newBookmark);
         }
         //new title bookmark
-        [HttpPost("title/{titleid}/{listid}")]
-        public IActionResult newTitleBookmark(TitleBookmarkDTO pbDto)
+        [HttpPost("user/{userid}/tlist/bookmark")]
+        //[HttpPost("title/{titleid}/bookmark/")]
+        public IActionResult newTitleBookmark(TitleBookmarkDTO tbDto)
         {
-            var newBookmark = _dataService.NewTitleBookmark(pbDto.TitleId, pbDto.ListId);
+            var newBookmark = _dataService.NewTitleBookmark(tbDto.TitleId, tbDto.ListId);
             return Created("",newBookmark);
         }
         

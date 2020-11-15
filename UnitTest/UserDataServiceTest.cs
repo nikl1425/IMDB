@@ -87,8 +87,8 @@ namespace PortFolio2.Tests
         public void newPersonBookmark()
         {
             var service = new UserDataService();
-            var newBookmark = service.NewPersonBookmark("nm0000001", 4);
-            Assert.Equal("nm0000001",newBookmark.Person_Id);
+            var newBookmark = service.NewPersonBookmark("nm0000002", 4);
+            Assert.Equal("nm0000002",newBookmark.Person_Id);
             Assert.Equal(4,newBookmark.List_Id);
             
         }
