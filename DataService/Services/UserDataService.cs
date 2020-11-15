@@ -30,7 +30,7 @@ namespace DataService.Services
             return ctx.users.Find(id);
         }
 
-        //CHECK IF A MAIL IS AN EMAIL && DOESNT EXISTS IN THE DB
+        //CHECK IF AN EMAIL IS AN EMAIL && DOESNT EXISTS IN THE DB
         private static bool IsValidEmail(string email)
         {
             using var ctx = new ImdbContext();
@@ -56,7 +56,7 @@ namespace DataService.Services
         //CREATE NEW USER
         public User CreateUser(string surname, string lastname, int age, string email)
         {
-            //TODO : check if names is names and email is email
+            //TODO : add security
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             
@@ -101,27 +101,7 @@ namespace DataService.Services
             ctx.SaveChanges();
             return true;
         }
-        
-        //IN THE MAKING..../////////
-        //GET LIST OF THE USERS RATED MOVIES
-        public IList<Rating> GetRatingFromUsers(int userid)
-        {
-            using var ctx = new ImdbContext();
-            var x = ctx.rating.Where(r => r.User_Id == userid);
-            return x.ToList();
-        }
-        ////////////////////////////
 
-        //IN THE MAKING....////////
-        //GET LIST OF THE USERS SEARCH HISTORY
-        public IList<Search_History> GetSearchHistories(int userid)
-        {
-            using var ctx = new ImdbContext();
-            var x = ctx.search_history.Where(s => s.User_Id == userid);
-            return x.ToList();
-        }
-        ////////////////////////////
-        
         //
         //        PERSON BOOKMARKS
         //
@@ -338,7 +318,74 @@ namespace DataService.Services
             ctx.SaveChanges();
             return true;
         }
+        
+        /////////////////////////////////////////////////////////////////////
+        /////////////// NOT YET IMPLEMENTED IN THE DATA SERVICE /////////////
+        /////////////////////////////////////////////////////////////////////
+        
+        //RATE MOVIE
+        public bool rateMovie(int userid, int thisRating, string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.rating.Where(x => x.User_Id == userid && x.Title_Id == titleid).ToList();
+            //if haven't been rated before then...
+            if (query.Count == 0)
+            {
 
+                //if rating is between 1 and 10... in the gui have drop down. 
+                //if user have not updated on this movie then... 
+                /*
+                ctx.rating
+                    .Add(new Rating
+                        {User_Id = userid, Rating_ = thisRating, Title_Id = titleid});
+                ctx.title_rating.Update(ctx.title_rating.Find().Title_Id == titleid).Entity.
+                */
+                //ctx.SaveChanges();
+                /*
+                update title_rating
+                set average_rating = ((num_votes*average_rating+thisRate)/(num_votes+1))
+                where title_id = titleid and thisRate between 1 and 10;
+                update title_rating
+                set num_votes = num_votes+1;
+                */
+            }
+            //if HAVE been rated before update rating
+            else
+            {
+                /*
+           select userid, titleid
+           from rating
+           where userid=user_id and titleid=title_id and thisRate between 1 and 10)
+           then update rating set rating = thisRate where userid=user_id and titleid=title_id and thisRate between 1 and 10;
+           --Opdater rating
+           update title_rating
+           set average_rating = ((num_votes*average_rating+thisRate)/(num_votes))
+           where title_id = titleid and thisRate between 1 and 10;
+                 */
+            }
+            
+            return true;
+
+        }
+        
+        //GET LIST OF THE USERS RATED MOVIES
+        public IList<Rating> GetRatingFromUsers(int userid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.rating.Where(r => r.User_Id == userid);
+            return x.ToList();
+        }
+
+        
+        //GET LIST OF THE USERS SEARCH HISTORY
+        public IList<Search_History> GetSearchHistories(int userid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.search_history.Where(s => s.User_Id == userid);
+            return x.ToList();
+        }
+        /////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////
         
 
     }
