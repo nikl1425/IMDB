@@ -43,6 +43,23 @@ namespace WebService.Controllers
             var user = _dataService.CreateUser(userDto.Username, userDto.Password, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
             return Created(" ", user);
         }
+        
+        //UPDATE PASSWORD
+        [HttpPut("user/changepassword/{id}")]
+        public IActionResult changeUserPassword(int id, UserDto userDto)
+        {
+            if (id <= 0)
+            {
+                return NotFound();
+            }
+            var updateUser = _dataService.ChangePassword(id, userDto.Username, userDto.Password, userDto.NewPassword);
+
+            if (updateUser)
+            {
+                return Ok(updateUser);
+            }
+            return NotFound();
+        }
 
         //UPDATE USER
         [HttpPut("user/{id}")]

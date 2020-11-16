@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using DataService.Objects;
 using DataService.Services.Utils;
 using Microsoft.AspNetCore.DataProtection.XmlEncryption;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -70,6 +71,25 @@ namespace DataService.Services
             ctx.SaveChanges();
             return ctx.users.Find(maxId + 1);
         }
+
+        public bool ChangePassword(int id, string username, string oldpassword, string newpassword)
+        {
+            using var ctx = new ImdbContext();
+            if (_userValidation.VerifyPassword(oldpassword, ctx.users.Find(id).Password, ctx.users.Find(id).Salt)
+                && ctx.users.Find(id).Username == username)
+            {
+                Hashing.HashSalt hashSalt = hashing.PasswordHash(16, newpassword);
+                ctx.users.Update(ctx.users.Find(id)).Entity.Password = hashSalt.Hash;
+                ctx.users.Update(ctx.users.Find(id)).Entity.Salt = hashSalt.Salt;
+                ctx.SaveChanges();
+            }
+            else
+            {
+                return false;
+            }
+
+            return true;
+        }
         
         
         //UPDATE USER PROFILE
@@ -81,10 +101,6 @@ namespace DataService.Services
             //PASSWORD
             if (_userValidation.VerifyPassword(password, ctx.users.Find(id).Password, ctx.users.Find(id).Salt))
             {
-                //PASSWORD
-                Hashing.HashSalt hashSalt = hashing.PasswordHash(16, password);
-                ctx.users.Find(id).Password = hashSalt.Hash;
-                ctx.users.Find(id).Salt = hashSalt.Salt;
                 //USERNAME
                 if (username != null && Regex.IsMatch(username, @"^[a-zA-Z]+$"))
                 {
