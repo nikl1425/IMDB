@@ -16,8 +16,6 @@ namespace WebService.ObjectDto
         
         public string Url { get; set; }
         
-    
-        
         public string AkasType { get; set; }
     }
 }

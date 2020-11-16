@@ -135,5 +135,30 @@ namespace DataService.Services
 
             return query;
         }
+
+        public Title_Episode GetTitleEpisode(string id)
+        {
+            using var  ctx = new ImdbContext();
+            var query = ctx.title_episode
+                .Where(x => x.TitleId == id)
+                .FirstOrDefault();
+            return query;
+        }
+
+        public IList<Title_Episode> GetMoreTitleEpisode(string id)
+        {
+            using var ctx = new ImdbContext();
+            
+            var query = ctx.title_episode
+                .Where(x => x.TitleId == id)
+                .ToList();
+            
+            var query2 = ctx.title_episode
+                .Where(x => x.ParentId == query.First().ParentId)
+                .Include(x => x.Title)
+                .ToList();
+
+            return query2;
+        }
     }
 }

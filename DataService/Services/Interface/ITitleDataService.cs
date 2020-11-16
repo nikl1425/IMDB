@@ -24,5 +24,9 @@ namespace DataService.Services
         public List<Akas> GetTitleAkas(string id);
 
         public Akas GetAkas(int id);
+
+        public Title_Episode GetTitleEpisode(string id);
+
+        public IList<Title_Episode> GetMoreTitleEpisode(string id);
     }
 }
