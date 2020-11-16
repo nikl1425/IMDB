@@ -20,5 +20,9 @@ namespace DataService.Services
         public IList<Title> GetTitles();
 
         IList<Title_Genre> GetTitleGenres(string id);
+
+        public List<Akas> GetTitleAkas(string id);
+
+        public Akas GetAkas(int id);
     }
 }

@@ -77,5 +77,13 @@ namespace PortFolio2.Tests
             var titles = service.GetTitles();
             Assert.Equal(55076, service.GetTitles().Count);
         }
+
+        [Fact]
+        public void getAkas()
+        {
+            var service = new TitleDataService();
+            var Akas = service.GetAkas(14);
+            Assert.Equal("tt7622836", Akas.TitleId);
+        }
     }
 }

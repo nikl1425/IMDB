@@ -119,22 +119,29 @@
               <e p="GenreListDto.cs" t="Include" />
               <e p="GenreTitleNameDTO.cs" t="Include" />
             </e>
-            <e p="PersonBookmarkDto.cs" t="Include" />
-            <e p="PersonBookmarkListDto.cs" t="Include" />
-            <e p="PersonDTO.cs" t="Include" />
-            <e p="PersonKnownTitleDTO.cs" t="Include" />
-            <e p="ProfessionDTO.cs" t="Include" />
-            <e p="TitleBookmarkDTO.cs" t="Include" />
-            <e p="TitleBookmarkListDTO.cs" t="Include" />
+            <e p="PersonDTOs" t="Include">
+              <e p="PersonBookmarkDto.cs" t="Include" />
+              <e p="PersonBookmarkListDto.cs" t="Include" />
+              <e p="PersonDTO.cs" t="Include" />
+              <e p="PersonKnownTitleDTO.cs" t="Include" />
+            </e>
             <e p="TitleDTOs" t="Include">
+              <e p="AkasDto.cs" t="Include" />
               <e p="NameOfTitleDTO.cs" t="Include" />
+              <e p="TitleAkasDTO.cs" t="Include" />
               <e p="TitleDto.cs" t="Include" />
               <e p="TitleGenreDTO.cs" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
             </e>
-            <e p="UserDto.cs" t="Include" />
+            <e p="UserDTOs" t="Include">
+              <e p="ProfessionDTO.cs" t="Include" />
+              <e p="TitleBookmarkDTO.cs" t="Include" />
+              <e p="TitleBookmarkListDTO.cs" t="Include" />
+              <e p="UserDto.cs" t="Include" />
+            </e>
           </e>
           <e p="Profile" t="Include">
+            <e p="AkasProfile.cs" t="Include" />
             <e p="GenreProfile.cs" t="Include" />
             <e p="PersonBookmarkListProfile.cs" t="Include" />
             <e p="PersonBookmarkProfile.cs" t="Include" />

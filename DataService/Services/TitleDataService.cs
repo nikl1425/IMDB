@@ -114,5 +114,26 @@ namespace DataService.Services
                 
             return query;
         }
+
+        public List<Akas> GetTitleAkas(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.akas
+                .Where(x => x.TitleId == id)
+                .ToList();
+
+            return query;
+        }
+
+        public Akas GetAkas(int id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.akas
+                .Where(x => x.Id == id)
+                .Include(x => x.AkasType)
+                .FirstOrDefault();
+
+            return query;
+        }
     }
 }

@@ -194,6 +194,10 @@ namespace DataService
             modelBuilder.Entity<Akas_Type>().ToTable("akas_type");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Id).HasColumnName("type_id");
             modelBuilder.Entity<Akas_Type>().Property(x => x.Name).HasColumnName("type_name");
+            modelBuilder.Entity<Akas_Type>()
+                .HasMany(x => x.Akases)
+                .WithOne(x => x.AkasType)
+                .HasForeignKey(x => x.Type_id);
 
             //Akas_Attribute
             modelBuilder.Entity<Akas_Attribute>().ToTable("akas_attribute");
@@ -210,6 +214,13 @@ namespace DataService
             modelBuilder.Entity<Akas>().Property(x => x.Region).HasColumnName("region");
             modelBuilder.Entity<Akas>().Property(x => x.Language).HasColumnName("language");
             modelBuilder.Entity<Akas>().Property(x => x.IsOriginalTitle).HasColumnName("is_original_title");
+            modelBuilder.Entity<Akas>().Property(x => x.Type_id).HasColumnName("type");
+            modelBuilder.Entity<Akas>()
+                .HasOne(x => x.AkasType)
+                .WithMany(x => x.Akases)
+                .HasForeignKey(x => x.Type_id);
+            
+               
             
             //Person known title
             modelBuilder.Entity<Person_known_title>().ToTable("person_known_title");
