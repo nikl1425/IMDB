@@ -14,6 +14,7 @@ namespace WebService.Controllers
     {
         private ITitleDataService _dataService;
         private readonly IMapper _mapper;
+        private GenreController _genreController;
 
         public TitleController(ITitleDataService dataService, IMapper mapper)
         {
@@ -29,7 +30,6 @@ namespace WebService.Controllers
 
             var items = titles.Select(CreateObjectOfTitle);
 
-
             return Ok(items);
         }
 
@@ -37,17 +37,28 @@ namespace WebService.Controllers
         public IActionResult GetTitle(string id)
         {
             var title = _dataService.getTitle(id);
-
+            var titleGenre = _dataService.GetTitleGenres(id);
             if (title == null)
             {
                 return NotFound();
             }
+            var titleDto = _mapper.Map<TitleDto>(title);
+            
+            titleDto.Url = Url.Link(nameof(GetTitle), new {id});
 
-            var dto = _mapper.Map<TitleDto>(title);
+            if (titleGenre == null)
+            {
+                return NotFound();
+            }
 
-            dto.Url = Url.Link(nameof(GetTitle), new {id});
+            IList<TitleGenreDTO> TitleGenres = titleGenre.Select(x => new TitleGenreDTO
+            {
+                Name = x.Genre.Name,
+                Url = "http://localhost:5001/api/genre/" + x.GenreId
+            }).ToList();
+            
 
-            return Ok(dto);
+            return Ok(new {titleDto, TitleGenres});
         }
        
         private TitleListDto CreateObjectOfTitle(Title title)

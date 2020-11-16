@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using DataService.Objects;
 using DataService.Services;
 using Microsoft.AspNetCore.Mvc;
 using WebService.ObjectDto;
@@ -27,17 +29,13 @@ namespace WebService.Controllers
         /// <returns></returns>
         
         [HttpGet]
-        public IActionResult getGenres()
+        public IActionResult AllGenres()
         {
-            var genre = _dataService.GetGenres();
+            var genres = _dataService.GetGenres();
 
-            IList<GenreDto> newGenreDtos = genre.Select(x => new GenreDto
-            {
-                Name = x.Name,
-                Id = x.Id
-            }).ToList();
+            var items = genres.Select(CreateObjectOfGenre);
 
-            return Ok(newGenreDtos);
+            return Ok(items);
         }
         
         /// <summary>
@@ -46,8 +44,8 @@ namespace WebService.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
 
-        [HttpGet("{id}", Name = nameof(getGenre))]
-        public IActionResult getGenre(int id)
+        [HttpGet("{id}", Name = nameof(GetGenre))]
+        public IActionResult GetGenre(int id)
         {
             var genre = _dataService.GetGenre(id);
             if (genre == null)
@@ -55,30 +53,30 @@ namespace WebService.Controllers
                 return NotFound();
             }
 
-            return Ok(genre);
-        }
-        
-        /// <summary>
-        /// Get list of all movie title names within a specific genre.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+            var genreDto = _mapper.Map<GenreDto>(genre);
+            genreDto.Url = Url.Link(nameof(GetGenre), new {id});
 
-        [HttpGet("Title/{id}", Name = nameof(getGenreTitles))]
-        public IActionResult getGenreTitles(int id)
-        {
-            var genreTitle = _dataService.getGenreTitles(id);
-            IList<GenreTitleNameDTO> genreTitleNameDto = genreTitle.Select(x => new GenreTitleNameDTO
+            var genretitles = _dataService.getGenreTitles(id);
+
+            IList<GenreTitleNameDTO> GenreTitleNameDto = genretitles.Select(x => new GenreTitleNameDTO
             {
                 Id = x.Id,
-                Name = x.Name,
-                TitleNames = x.TitleGenres.Select(x => new NameOfTitleDTO
-                {
-                     Name = x.Title.PrimaryTitle
-                }).ToList()
+                GenreName = x.Genre.Name,
+                titleName = x.Title.PrimaryTitle,
+                Url = "http://localhost:5001/api/title/" + x.Title.Id
+                
             }).ToList();
+            
+            return Ok(new {genreDto, GenreTitleNameDto});
+        }
 
-            return Ok(genreTitleNameDto);
+        
+
+        private GenreListDto CreateObjectOfGenre(Genre genre)
+        {
+            var dto = _mapper.Map<GenreListDto>(genre);
+            dto.Url = Url.Link(nameof(GetGenre), new {genre.Id});
+            return dto;
         }
     }
 }

@@ -130,7 +130,6 @@
               <e p="NameOfTitleDTO.cs" t="Include" />
               <e p="TitleDto.cs" t="Include" />
               <e p="TitleGenreDTO.cs" t="Include" />
-              <e p="TitleGenreDTO.cs~" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
             </e>
             <e p="UserDto.cs" t="Include" />

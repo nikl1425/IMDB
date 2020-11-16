@@ -49,12 +49,21 @@ namespace DataService.Services
             return query;
         }
 
-        
+
         public IList<Title> GetTitles()
         {
             using var ctx = new ImdbContext();
             var query = ctx.title.ToList();
-            
+            return query;
+        }
+
+        public IList<Title_Genre> GetTitleGenres(string id)
+        {
+            using var ctx = new ImdbContext();
+            var query = ctx.title_genre
+                .Include(x => x.Genre)
+                .Where(x => x.TitleId == id)
+                .ToList();
             return query;
         }
 
@@ -69,7 +78,7 @@ namespace DataService.Services
                 .ThenInclude(o => o.Genre)
                 .AsSingleQuery()
                 .FirstOrDefault(o => o.Id == id);
-            
+
             return query;
         }
 
@@ -94,29 +103,16 @@ namespace DataService.Services
             return query;
         }
 
-        public List<Genre> getGenreTitles(int id)
+        public List<Title_Genre> getGenreTitles(int id)
         {
             using var ctx = new ImdbContext();
-            var query = ctx.genre
-                .Include(x => x.TitleGenres)
-                .ThenInclude(x => x.Title)
+            var query = ctx.title_genre
+                .Include(x => x.Title)
+                .Include(x => x.Genre)
+                .Where(x => x.GenreId == id)
                 .ToList();
+                
             return query;
         }
-
-        public Title getFullTitle()
-        {
-            using var ctx = new ImdbContext();
-            
-            var query = ctx.title
-                .Include(x => x.Akases)
-                .Include(x => x.TitleGenres)
-                .Include(x => x.TitlePersons)
-                .ThenInclude(x => x.Person)
-                .FirstOrDefault();
-
-            return query;
-        }
-        
     }
 }

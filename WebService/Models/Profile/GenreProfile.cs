@@ -9,6 +9,8 @@ namespace WebService.Models
         public GenreProfile()
         {
             CreateMap<Genre, GenreDto>();
+            CreateMap<Genre, GenreListDto>();
+            CreateMap<Genre, TitleGenreDTO>();
             CreateMap<Genre, GenreTitleNameDTO>();
         }
     }

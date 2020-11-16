@@ -15,10 +15,10 @@ namespace WebService.ObjectDto
         
         //URL
         public string Url { get; set; }
+        public IList<Title_Genre> TitleGenres { get; set; }
         
         public Title_Rating TitleRating;
-        public IList<Title_Genre> TitleGenres { get; set; }
-        public IList<Title_Search> TitleSearches { get; set; }
+        
         public IList<Akas> Akases { get; set; }
         public Title_Episode TitleEpisode { get; set; }
         public Type Type { get; set; }

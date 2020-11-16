@@ -19,4 +19,8 @@
       <ProjectReference Include="..\DataService\DataService.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Models\ObjectDto\GenreDto.cs" />
+    </ItemGroup>
+
 </Project>
