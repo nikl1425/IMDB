@@ -82,12 +82,7 @@ namespace DataService.Services
                 ctx.users.Update(ctx.users.Find(id)).Entity.Password = hashSalt.Hash;
                 ctx.users.Update(ctx.users.Find(id)).Entity.Salt = hashSalt.Salt;
                 ctx.SaveChanges();
-            }
-            else
-            {
-                return false;
-            }
-
+            } else { return false; }
             return true;
         }
         

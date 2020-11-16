@@ -152,12 +152,12 @@ namespace DataService.Services
             var query = ctx.title_episode
                 .Where(x => x.TitleId == id)
                 .ToList();
-            
+
             var query2 = ctx.title_episode
-                .Where(x => x.ParentId == query.First().ParentId)
+                .Where(x => x.ParentId == ctx.title_episode.First().ParentId)
                 .Include(x => x.Title)
                 .ToList();
-
+            
             return query2;
         }
     }

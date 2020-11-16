@@ -30,7 +30,7 @@ namespace WebService.Controllers
         {
             var person = _dataService.GetPerson(id);
             var profession = _dataService.GetProfessionByPersonId2(id);
-            var personKnownTitle = _dataService.GetPersonKnownTitles2(id);
+            var personKnownTitle = _dataService.GetPersonKnownTitles(id);
 
             IList<ProfessionDTO> professionDtos = profession.Select(x => new ProfessionDTO
             {

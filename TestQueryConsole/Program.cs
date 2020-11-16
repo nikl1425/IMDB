@@ -6,6 +6,7 @@ using DataService.Objects;
 using DataService.Services;
 using DataService.Services.Utils;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.VisualBasic.CompilerServices;
 
 namespace TestQueryConsole
@@ -45,25 +46,27 @@ namespace TestQueryConsole
 
                 return query.ToList();
             }
-            
-            List<Title_Episode> GetMoreTitleEpisode(string id)
+
+
+
+            IIncludableQueryable<Title_Episode, Title> GetMoreTitleEpisode(string id)
             {
                 using var ctx = new ImdbContext();
+
                 var query = ctx.title_episode
                     .Where(x => x.TitleId == id)
                     .ToList();
-            
+
                 var query2 = ctx.title_episode
                     .Where(x => x.ParentId == query.First().ParentId)
-                    .Include(x => x.Title)
-                    .ToList();
+                    .Include(x => x.Title);
 
-                return query2;
-
+                return ctx.title_episode.Where(x => x.ParentId == query.First().ParentId).Include(x => x.Title);
             }
 
+            
+            Console.WriteLine(GetMoreTitleEpisode("tt0756483"));
 
-            Console.WriteLine(GetMoreTitleEpisode("tt0108778"));
 
 
 

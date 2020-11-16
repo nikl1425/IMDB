@@ -92,7 +92,7 @@ namespace PortFolio2.Tests
             var service = new TitleDataService();
             var Episodes = service.GetMoreTitleEpisode("tt0756483");
             Assert.Equal(235, Episodes.Count);
-            Assert.Equal("The One After Vegas", Episodes.First().Title.PrimaryTitle);
+            Assert.Equal("The One Where Chandler Doesn't Like Dogs", Episodes.First().Title.PrimaryTitle);
         } 
     }
 }

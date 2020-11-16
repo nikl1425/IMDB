@@ -72,8 +72,9 @@ namespace WebService.Controllers
 
             IList<TitleEpisodeDto> TitleEpisodes = titleEpisode.Select(x => new TitleEpisodeDto
             {
-                Id = x.TitleId
-
+                Id = x.TitleId,
+                TitleName = x.Title.PrimaryTitle,
+                Url = "http://localhost:5001/api/title/" + x.TitleId
             }).ToList();
             
 

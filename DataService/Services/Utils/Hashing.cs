@@ -11,9 +11,9 @@ namespace DataService.Services.Utils
             public string Salt { get; set; }
         }
 
-        public HashSalt PasswordHash(int size, string password)
+        public HashSalt PasswordHash(int saltSize, string password)
         {
-            var saltBytes = new byte[size];
+            var saltBytes = new byte[saltSize];
             var provider = new RNGCryptoServiceProvider();
             provider.GetNonZeroBytes(saltBytes);
             var salt = Convert.ToBase64String(saltBytes);

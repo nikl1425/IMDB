@@ -16,7 +16,6 @@ namespace DataService.Services
         public List<Person> GetPerson(string id)
         {
             using var ctx = new ImdbContext();
-            //var smthing = ctx.Person.FirstOrDefault(t => t.Id.Trim().ToLower() == id.Trim().ToLower());
             var query = ctx.Person.Where(person => person.Id == id);
             return query.ToList();
         }
@@ -69,18 +68,8 @@ namespace DataService.Services
             return query.ToList();
         }
         
-        public Person GetPersonKnownTitles(string id)
-        {
-            using var ctx = new ImdbContext();
-            var query = ctx.Person
-                .Include(x => x.PersonKnownTitles)
-                .AsSingleQuery()
-                .FirstOrDefault(x => x.Id == id);
-            return query;
-        }
-
          
-        public List<Person_known_title> GetPersonKnownTitles2 (string id)
+        public List<Person_known_title> GetPersonKnownTitles (string id)
         {
             using var ctx = new ImdbContext();
             var query = ctx.PersonKnownTitles
