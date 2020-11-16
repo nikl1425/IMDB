@@ -46,16 +46,24 @@ namespace TestQueryConsole
                 return query.ToList();
             }
             
-            List<Title_Bookmark> GetTitleBookmarks(int id)
+            List<Title_Episode> GetMoreTitleEpisode(string id)
             {
                 using var ctx = new ImdbContext();
-                var query = ctx.title_bookmarks.Where(x => x.Id == id);
-                return query.ToList();
-            }
-            Hashing hashing = new Hashing();
+                var query = ctx.title_episode
+                    .Where(x => x.TitleId == id)
+                    .ToList();
             
+                var query2 = ctx.title_episode
+                    .Where(x => x.ParentId == query.First().ParentId)
+                    .Include(x => x.Title)
+                    .ToList();
 
-            Console.WriteLine(hashing.PasswordHash(16, "koden123"));
+                return query2;
+
+            }
+
+
+            Console.WriteLine(GetMoreTitleEpisode("tt0108778"));
 
 
 
