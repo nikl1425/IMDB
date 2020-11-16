@@ -85,5 +85,14 @@ namespace PortFolio2.Tests
             var Akas = service.GetAkas(14);
             Assert.Equal("tt7622836", Akas.TitleId);
         }
+
+        [Fact]
+        public void getEpisodesOfTitle()
+        {
+            var service = new TitleDataService();
+            var Episodes = service.GetMoreTitleEpisode("tt0756483");
+            Assert.Equal(235, Episodes.Count);
+            Assert.Equal("The One After Vegas", Episodes.First().Title.PrimaryTitle);
+        } 
     }
 }

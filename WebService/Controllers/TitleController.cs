@@ -39,6 +39,8 @@ namespace WebService.Controllers
             var title = _dataService.getTitle(id);
             var titleGenre = _dataService.GetTitleGenres(id);
             var titleAkas = _dataService.GetTitleAkas(id);
+            var titleEpisode = _dataService.GetMoreTitleEpisode(id);
+           
             if (title == null)
             {
                 return NotFound();
@@ -57,6 +59,7 @@ namespace WebService.Controllers
                 Name = x.Genre.Name,
                 Url = "http://localhost:5001/api/genre/" + x.GenreId
             }).ToList();
+            
 
             IList<TitleAkasDTO> TitleAkases = titleAkas.Select(x => new TitleAkasDTO
             {
@@ -64,9 +67,15 @@ namespace WebService.Controllers
                 Region = x.Region,
                 Url = "http://localhost:5001/api/title/akas/" + x.Id
             }).ToList();
+
+            IList<TitleEpisodeDto> TitleEpisodes = titleEpisode.Select(x => new TitleEpisodeDto
+            {
+                Id = x.TitleId
+
+            }).ToList();
             
 
-            return Ok(new {titleDto, TitleGenres, TitleAkases});
+            return Ok(new {titleDto, TitleGenres, TitleAkases, TitleEpisodes});
         }
 
         private TitleListDto CreateObjectOfTitle(Title title)
@@ -86,12 +95,9 @@ namespace WebService.Controllers
             akasDto.Url = Url.Link(nameof(GetAkas), new {id});
             akasDto.TitleUrl = "http://localhost:5001/api/title/" + akas.TitleId;
             
-            
-            
-
             return Ok(akasDto);
         }
-        
+
     }
     
 }

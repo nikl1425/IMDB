@@ -127,6 +127,7 @@
               <e p="NameOfTitleDTO.cs" t="Include" />
               <e p="TitleAkasDTO.cs" t="Include" />
               <e p="TitleDto.cs" t="Include" />
+              <e p="TitleEpisodeDto.cs" t="Include" />
               <e p="TitleGenreDTO.cs" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
             </e>
@@ -143,6 +144,7 @@
             <e p="PersonBookmarkListProfile.cs" t="Include" />
             <e p="PersonBookmarkProfile.cs" t="Include" />
             <e p="PersonMapping.cs" t="Include" />
+            <e p="TitleEpisodeProfile.cs" t="Include" />
             <e p="TitleGenreProfile.cs" t="Include" />
             <e p="TitleProfile.cs" t="Include" />
             <e p="UserProfile.cs" t="Include" />
