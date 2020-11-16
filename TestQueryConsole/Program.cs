@@ -49,23 +49,18 @@ namespace TestQueryConsole
 
 
 
-            IIncludableQueryable<Title_Episode, Title> GetMoreTitleEpisode(string id)
+            List<Person_Profession> GetPersonsByProfession (string profession)
             {
-                using var ctx = new ImdbContext();
-
-                var query = ctx.title_episode
-                    .Where(x => x.TitleId == id)
-                    .ToList();
-
-                var query2 = ctx.title_episode
-                    .Where(x => x.ParentId == query.First().ParentId)
-                    .Include(x => x.Title);
-
-                return ctx.title_episode.Where(x => x.ParentId == query.First().ParentId).Include(x => x.Title);
+                var ctx = new ImdbContext();
+                var personList = ctx.PersonProfessions
+                    .Include(x => x.person)
+                    .Include(c => c.Profession)
+                    .Where(personProfession => personProfession.Profession.ProfessionName == profession);
+                return personList.ToList();
             }
 
             
-            Console.WriteLine(GetMoreTitleEpisode("tt0756483"));
+            Console.WriteLine(GetPersonsByProfession("actor"));
 
 
 

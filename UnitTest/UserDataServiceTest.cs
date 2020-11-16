@@ -17,7 +17,7 @@ namespace PortFolio2.Tests
             var service = new UserDataService();
             var users = service.GetUser(1);
             Assert.Equal(1, users.Id);
-            Assert.Equal("Jens", users.Surname);
+            Assert.Equal("jens", users.Surname);
         }
 
         [Fact]
@@ -27,6 +27,8 @@ namespace PortFolio2.Tests
             
         }
 
+        
+        /*
         [Fact]
         public void GetRatingFromUser()
         {
@@ -36,6 +38,7 @@ namespace PortFolio2.Tests
             Assert.Equal("tt0052520", rating.First().Title_Id);
             Assert.Equal(8, rating.Last().Rating_);
         }
+        */
 
         [Fact]
         public void GetPersonBookmarkLists()
@@ -43,16 +46,16 @@ namespace PortFolio2.Tests
             var service = new UserDataService();
             var personBookmarkList = service.GetUsersPersonBookmarkLists(1);
             Assert.Equal(2, personBookmarkList.Count);
-            Assert.Equal("My test list1", personBookmarkList.First().List_Name);
-            Assert.Equal("My test list2321", personBookmarkList.Last().List_Name);
+            Assert.Equal("hejsatest", personBookmarkList.First().List_Name);
+            Assert.Equal("My test list1", personBookmarkList.Last().List_Name);
         }
         
         [Fact]
         public void GetPersonBookmark()
         {
             var service = new UserDataService();
-            var personBookmark = service.GetPersonBookmark(19);
-            Assert.Equal(19,personBookmark.Id);
+            var personBookmark = service.GetPersonBookmark(26);
+            Assert.Equal(26,personBookmark.Id);
             Assert.Equal("nm0000001",personBookmark.Person_Id);
         }
 
@@ -61,8 +64,8 @@ namespace PortFolio2.Tests
         public void GetTitleBookmarks()
         {
             var service = new UserDataService();
-            var titleBookmarks = service.GetTitleBookmarks(1);
-            Assert.Equal(1, titleBookmarks.First().Id);
+            var titleBookmarks = service.GetTitleBookmarks(5);
+            Assert.Equal(5, titleBookmarks.First().Id);
             Assert.Equal(1, titleBookmarks.First().ListId);
             Assert.Equal("tt0734773", titleBookmarks.First().TitleId);
         }
@@ -80,9 +83,9 @@ namespace PortFolio2.Tests
         public void newPersonBookmark()
         {
             var service = new UserDataService();
-            var newBookmark = service.NewPersonBookmark("nm0000002", 4);
+            var newBookmark = service.NewPersonBookmark("nm0000002", 1);
             Assert.Equal("nm0000002",newBookmark.Person_Id);
-            Assert.Equal(4, newBookmark.List_Id);
+            Assert.Equal(1, newBookmark.List_Id);
         }
         
     }

@@ -83,7 +83,7 @@ namespace PortFolio2.Tests
         {
             var service = new TitleDataService();
             var Akas = service.GetAkas(14);
-            Assert.Equal("tt7622836", Akas.TitleId);
+            Assert.Equal("tt0052520", Akas.TitleId);
         }
 
         [Fact]
