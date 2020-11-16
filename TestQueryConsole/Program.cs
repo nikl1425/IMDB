@@ -4,7 +4,9 @@ using System.Linq;
 using DataService;
 using DataService.Objects;
 using DataService.Services;
+using DataService.Services.Utils;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace TestQueryConsole
 {
@@ -50,9 +52,10 @@ namespace TestQueryConsole
                 var query = ctx.title_bookmarks.Where(x => x.Id == id);
                 return query.ToList();
             }
+            Hashing hashing = new Hashing();
+            
 
-
-            Console.WriteLine(GetTitleBookmarks(1));
+            Console.WriteLine(hashing.PasswordHash(16, "koden123"));
 
 
 

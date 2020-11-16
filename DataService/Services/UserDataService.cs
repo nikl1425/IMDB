@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DataService.Objects;
+using DataService.Services.Utils;
 using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ namespace DataService.Services
 {
     public class UserDataService : IUserDataService
     {
+        private Hashing hashing = new Hashing();
+        private UserValidation _userValidation = new UserValidation();
         public UserDataService()
         {
             using var ctx = new ImdbContext();
@@ -26,7 +29,6 @@ namespace DataService.Services
         public User GetUser(int id)
         {
             using var ctx = new ImdbContext();
-            
             return ctx.users.Find(id);
         }
 
@@ -54,35 +56,66 @@ namespace DataService.Services
         }
         
         //CREATE NEW USER
-        public User CreateUser(string surname, string lastname, int age, string email)
+        public User CreateUser(string username, string password, string surname, string lastname, int age, string email)
         {
-            //TODO : add security
+            Hashing.HashSalt hashSalt = hashing.PasswordHash(16, password);
+            
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             
-            if (!Regex.IsMatch(surname, @"^[a-zA-Z]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z]+$") || !IsValidEmail(email) ||
-                age == 0) return null;
+            //if (!Regex.IsMatch(username, @"^[a-zA-Z]+$") || !Regex.IsMatch(surname, @"^[a-zA-Z]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z]+$") || !IsValidEmail(email) ||
+            //    age == 0) return null;
             ctx.users.Add(new User
-                {Id = maxId + 1, Age = age, Surname = surname, Last_Name = lastname, Email = email});
+                {Id = maxId + 1, Username = username, Password = hashSalt.Hash, Salt = hashSalt.Salt, Age = age, Surname = surname, Last_Name = lastname, Email = email});
             ctx.SaveChanges();
             return ctx.users.Find(maxId + 1);
         }
         
+        
         //UPDATE USER PROFILE
-        public bool UpdateUser(int id, string surname, string lastname, int age, string email)
+        public bool UpdateUser(int id, string username, string password, string surname, string lastname, int age, string email)
         {
             using var ctx = new ImdbContext();
             
             if (id <= 0) return false;
-            if(surname != null && Regex.IsMatch(surname, @"^[a-zA-Z]+$"))
-                ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
-            if(lastname != null && Regex.IsMatch(lastname, @"^[a-zA-Z]+$"))
-                ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
-            if(age != 0)
-                ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
-            if(email != null && IsValidEmail(email))
-                ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
-            
+            //PASSWORD
+            if (_userValidation.VerifyPassword(password, ctx.users.Find(id).Password, ctx.users.Find(id).Salt))
+            {
+                //PASSWORD
+                Hashing.HashSalt hashSalt = hashing.PasswordHash(16, password);
+                ctx.users.Find(id).Password = hashSalt.Hash;
+                ctx.users.Find(id).Salt = hashSalt.Salt;
+                //USERNAME
+                if (username != null && Regex.IsMatch(username, @"^[a-zA-Z]+$"))
+                {
+                    ctx.users.Update(ctx.users.Find(id)).Entity.Username = username;
+                }
+                //SURNAME
+                if (surname != null && Regex.IsMatch(surname, @"^[a-zA-Z]+$"))
+                {
+                    ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
+                }
+                //LASTNAME
+                if (lastname != null && Regex.IsMatch(lastname, @"^[a-zA-Z]+$"))
+                {
+                    ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
+                }
+                //AGE
+                if (age != 0)
+                {
+                    ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
+                }
+                //EMAIL
+                if (email != null && IsValidEmail(email))
+                {
+                    ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
+                }
+            }else
+            {
+                return false;
+            }
+
+
             ctx.SaveChanges();
 
             return true;

@@ -135,6 +135,9 @@ namespace DataService
             //User
             modelBuilder.Entity<User>().ToTable("users");
             modelBuilder.Entity<User>().Property(x => x.Id).HasColumnName("id");
+            modelBuilder.Entity<User>().Property(x => x.Username).HasColumnName("username");
+            modelBuilder.Entity<User>().Property(x => x.Password).HasColumnName("password");
+            modelBuilder.Entity<User>().Property(x => x.Salt).HasColumnName("salt");
             modelBuilder.Entity<User>().Property(x => x.Surname).HasColumnName("surname");
             modelBuilder.Entity<User>().Property(x => x.Last_Name).HasColumnName("last_name");
             modelBuilder.Entity<User>().Property(x => x.Age).HasColumnName("age");

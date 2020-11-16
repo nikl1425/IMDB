@@ -40,10 +40,8 @@ namespace WebService.Controllers
         public IActionResult createUser(UserDto userDto)
         {
             //string surname, string lastname, int age, string email
-            var user = _dataService.CreateUser(userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
-
+            var user = _dataService.CreateUser(userDto.Username, userDto.Password, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
             return Created(" ", user);
-
         }
 
         //UPDATE USER
@@ -55,7 +53,7 @@ namespace WebService.Controllers
                 return NotFound();
             }
             // If all is getting updated:
-            var updateUser = _dataService.UpdateUser(id, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
+            var updateUser = _dataService.UpdateUser(id, userDto.Username, userDto.Password, userDto.Surname, userDto.LastName, userDto.Age, userDto.Email);
             return Ok(updateUser);
         }
         

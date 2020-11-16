@@ -7,8 +7,8 @@ namespace DataService.Services
     public interface IUserDataService
     {
         User GetUser(int id);
-        User CreateUser(string surname, string lastname, int age, string email);
-        bool UpdateUser(int id, string surname, string lastname, int age, string email);
+        User CreateUser(string username, string password, string surname, string lastname, int age, string email);
+        bool UpdateUser(int id, string username, string password, string surname, string lastname, int age, string email);
         bool DeleteUser(int id);
         Person_Bookmark_list NewPersonBookmarkList(int userid, string listName);
         Title_Bookmark_List NewTitleBookmarkList(int userid, string listName);
