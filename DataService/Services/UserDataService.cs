@@ -64,8 +64,8 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             var maxId = ctx.users.Max(x => x.Id);
             
-            //if (!Regex.IsMatch(username, @"^[a-zA-Z]+$") || !Regex.IsMatch(surname, @"^[a-zA-Z]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z]+$") || !IsValidEmail(email) ||
-            //    age == 0) return null;
+            /*if (!Regex.IsMatch(username, @"^[a-zA-Z]+$") || !Regex.IsMatch(surname, @"^[a-zA-Z]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z]+$") || !IsValidEmail(email) ||
+                age == 0) return null;*/ // TODO: Add username & password check 
             ctx.users.Add(new User
                 {Id = maxId + 1, Username = username, Password = hashSalt.Hash, Salt = hashSalt.Salt, Age = age, Surname = surname, Last_Name = lastname, Email = email});
             ctx.SaveChanges();
@@ -132,7 +132,8 @@ namespace DataService.Services
             return true;
         }
         
-        //USER PROFILE
+        //DELETE USER PROFILE
+        //TODO : Slet alle brugerens lister mm. 
         public bool DeleteUser(int id)
         {
             using var ctx = new ImdbContext();
@@ -412,7 +413,7 @@ namespace DataService.Services
 
         }
         
-        //GET LIST OF THE USERS RATED MOVIES
+        //GET LIST OF THE USERS RATED MOVIES ... DELETE USERS RATING
         public IList<Rating> GetRatingFromUsers(int userid)
         {
             using var ctx = new ImdbContext();
