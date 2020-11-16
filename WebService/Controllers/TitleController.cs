@@ -67,6 +67,8 @@ namespace WebService.Controllers
                 Region = x.Region,
                 Url = "http://localhost:5001/api/title/akas/" + x.Id
             }).ToList();
+            
+           
 
             IList<TitleEpisodeDto> TitleEpisodes = titleEpisode.Select(x => new TitleEpisodeDto
             {
