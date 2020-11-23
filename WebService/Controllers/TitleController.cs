@@ -40,6 +40,8 @@ namespace WebService.Controllers
             var titleGenre = _dataService.GetTitleGenres(id);
             var titleAkas = _dataService.GetTitleAkas(id);
             var titleEpisode = _dataService.GetMoreTitleEpisode(id);
+            var titleEpisodeParentName = _dataService.GetTitleEpisodeParentName(id);
+            var titlePerson = _dataService.GetTitlePersons(id);
 
 
             if (title == null)
@@ -68,17 +70,41 @@ namespace WebService.Controllers
                 Region = x.Region,
                 Url = "http://localhost:5001/api/title/akas/" + x.Id
             }).ToList();
+
             
+
+            IList<TitlePersonDTO> TitlePersons = titlePerson.Select(x => new TitlePersonDTO
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Url = "http://localhost:5001/api/name/" + x.Id
+            }).ToList();
+            
+            
+            if (titleEpisode == null)
+            {
+                return Ok(new
+                {
+                    titleDto, TitleGenres, TitleAkases, TitlePersons
+                });
+            }
 
             IList<TitleEpisodeDto> TitleEpisodes = titleEpisode.Select(x => new TitleEpisodeDto
             {
                 Id = x.TitleId,
                 TitleName = x.Title.PrimaryTitle,
+                
                 Url = "http://localhost:5001/api/title/" + x.TitleId
             }).ToList();
+            
+
+            foreach (var episode in TitleEpisodes)
+            {
+                episode.ParentTitleName = titleEpisodeParentName;
+            }
 
 
-            return Ok(new {titleDto, TitleGenres, TitleAkases, TitleEpisodes});
+            return Ok(new {titleDto, TitleGenres, TitleAkases, TitleEpisodes, TitlePersons});
         }
 
         private TitleListDto CreateObjectOfTitle(Title title)

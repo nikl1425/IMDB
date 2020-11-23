@@ -7,7 +7,7 @@ namespace DataService.Services
     {
         Genre GetGenre(int id);
         IList<Title_Search> TitleSearches(string titleid);
-        Title getTitle(string id);
+        Title GetTitle(string id);
         Title getTitleEpisode(string id);
         Title getTitleGenreName(string id);
         IList<Title_Person> getTitlePersons(string id);
@@ -15,7 +15,7 @@ namespace DataService.Services
 
         List<Genre> GetGenres();
 
-        List<Title_Genre> getGenreTitles(int id);
+        List<Title_Genre> GetGenreTitles(int id);
 
         public IList<Title> GetTitles();
 
@@ -28,5 +28,9 @@ namespace DataService.Services
         public Title_Episode GetTitleEpisode(string id);
 
         public IList<Title_Episode> GetMoreTitleEpisode(string id);
+
+        public string GetTitleEpisodeParentName(string id);
+
+        public List<Person> GetTitlePersons(string id);
     }
 }

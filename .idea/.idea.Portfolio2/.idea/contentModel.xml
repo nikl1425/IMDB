@@ -137,6 +137,7 @@
               <e p="TitleEpisodeDto.cs" t="Include" />
               <e p="TitleGenreDTO.cs" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
+              <e p="TitlePersonDTO.cs" t="Include" />
             </e>
             <e p="UserDTOs" t="Include">
               <e p="ProfessionDTO.cs" t="Include" />

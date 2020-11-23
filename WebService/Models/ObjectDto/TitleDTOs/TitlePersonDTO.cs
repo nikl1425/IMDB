@@ -1,11 +1,11 @@
 ﻿namespace WebService.ObjectDto
 {
-    public class TitleEpisodeDto
+    public class TitlePersonDTO
     {
         public string Id { get; set; }
-        public string TitleName { get; set; }
         
-        public string ParentTitleName { get; set; }
+        public string Name { get; set; }
+        
         public string Url { get; set; }
     }
 }

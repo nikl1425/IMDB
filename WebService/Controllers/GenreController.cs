@@ -56,7 +56,7 @@ namespace WebService.Controllers
             var genreDto = _mapper.Map<GenreDto>(genre);
             genreDto.Url = Url.Link(nameof(GetGenre), new {id});
 
-            var genretitles = _dataService.getGenreTitles(id);
+            var genretitles = _dataService.GetGenreTitles(id);
 
             IList<GenreTitleNameDTO> GenreTitleNameDto = genretitles.Select(x => new GenreTitleNameDTO
             {

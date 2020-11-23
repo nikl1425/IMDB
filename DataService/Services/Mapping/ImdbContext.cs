@@ -15,6 +15,7 @@ namespace DataService
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+            optionsBuilder.EnableSensitiveDataLogging();
             optionsBuilder.UseNpgsql(myConnection.ToString());
         }
 
@@ -98,7 +99,11 @@ namespace DataService
             modelBuilder.Entity<Title_Episode>().Property(x => x.ParentId).HasColumnName("parent_id");
             modelBuilder.Entity<Title_Episode>().Property(x => x.SeasonNumber).HasColumnName("season_number");
             modelBuilder.Entity<Title_Episode>().Property(x => x.EpisodeNumber).HasColumnName("episode_number");
-            
+            modelBuilder.Entity<Title_Episode>()
+                .HasOne(x => x.Title)
+                .WithOne(x => x.TitleEpisode);
+
+
             //Title_Search
             modelBuilder.Entity<Title_Search>().ToTable("title_search");
             modelBuilder.Entity<Title_Search>().Property(x => x.Id).HasColumnName("title_id");
@@ -121,7 +126,11 @@ namespace DataService
                 .HasOne(x => x.TitleRuntime)
                 .WithOne(o => o.Title)
                 .HasForeignKey<TitleRuntime>(x => x.Id);
-            
+            modelBuilder.Entity<Title>()
+                .HasOne(x => x.TitleEpisode)
+                .WithOne(x => x.Title)
+                .HasForeignKey<Title_Episode>(x => x.TitleId);
+
             // Title Runtime
             modelBuilder.Entity<TitleRuntime>().ToTable("title_runtime");
             modelBuilder.Entity<TitleRuntime>().Property(x => x.Id).HasColumnName("title_id");

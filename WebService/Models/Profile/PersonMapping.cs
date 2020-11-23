@@ -10,6 +10,7 @@ namespace WebService.Models
         {
             CreateMap<Person, PersonDTO>();
             CreateMap<PersonDTO, Person>();
+            CreateMap<Person, TitlePersonDTO>();
         }
     }
 }

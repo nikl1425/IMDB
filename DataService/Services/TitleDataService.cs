@@ -26,6 +26,7 @@ namespace DataService.Services
             return ctx.genre.ToList();
         }
 
+
         public IList<Title_Search> TitleSearches(string titleid)
         {
             using var ctx = new ImdbContext();
@@ -34,7 +35,7 @@ namespace DataService.Services
             return query.ToList();
         }
 
-        public Title getTitle(string id)
+        public Title GetTitle(string id)
         {
             using var ctx = new ImdbContext();
             var query = ctx.title.Find(id);
@@ -103,7 +104,7 @@ namespace DataService.Services
             return query;
         }
 
-        public List<Title_Genre> getGenreTitles(int id)
+        public List<Title_Genre> GetGenreTitles(int id)
         {
             using var ctx = new ImdbContext();
             var query = ctx.title_genre
@@ -111,7 +112,7 @@ namespace DataService.Services
                 .Include(x => x.Genre)
                 .Where(x => x.GenreId == id)
                 .ToList();
-                
+
             return query;
         }
 
@@ -138,7 +139,7 @@ namespace DataService.Services
 
         public Title_Episode GetTitleEpisode(string id)
         {
-            using var  ctx = new ImdbContext();
+            using var ctx = new ImdbContext();
             var query = ctx.title_episode
                 .Where(x => x.TitleId == id)
                 .FirstOrDefault();
@@ -148,17 +149,59 @@ namespace DataService.Services
         public IList<Title_Episode> GetMoreTitleEpisode(string id)
         {
             using var ctx = new ImdbContext();
-            
+
             var query = ctx.title_episode
                 .Where(x => x.TitleId == id)
-                .ToList();
+                .FirstOrDefault();
+
+            if (query == null)
+            {
+                return null;
+            }
+
 
             var query2 = ctx.title_episode
-                .Where(x => x.ParentId == ctx.title_episode.First().ParentId)
+                .Where(x => x.ParentId == query.ParentId)
                 .Include(x => x.Title)
                 .ToList();
-            
+
             return query2;
+        }
+
+        public string GetTitleEpisodeParentName(string id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.title_episode
+                .Where(x => x.TitleId == id)
+                .FirstOrDefault();
+
+            if (query == null)
+            {
+                return null;
+            }
+
+            var query2 = ctx.title
+                .Where(x => x.Id == query.ParentId)
+                .Select(x => x.PrimaryTitle)
+                .FirstOrDefault();
+
+
+            return query2;
+        }
+
+        public List<Person> GetTitlePersons(string id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.TitlePersons
+                .Include(x => x.Person)
+                .Where(x => x.TitleId == id)
+                .Select(x => x.Person)
+                .Distinct()
+                .ToList();
+
+            return query;
         }
     }
 }
