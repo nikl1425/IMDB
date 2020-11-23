@@ -23,7 +23,7 @@ namespace PortFolio2.Tests
         public void getTitle()
         {
             var service = new TitleDataService();
-            var title = service.getTitle("tt9916538");
+            var title = service.GetTitle("tt9916538");
             Assert.Equal("Kuambil Lagi Hatiku", title.PrimaryTitle);
             Assert.Equal("2019", title.StartYear);
         }
@@ -38,7 +38,7 @@ namespace PortFolio2.Tests
         }
 
         [Fact]
-        public void getTitleGenreNames()
+        public void GetTitleGenreNames()
         {
             var service = new TitleDataService();
             var title = service.getTitleGenreName("tt0078672");
