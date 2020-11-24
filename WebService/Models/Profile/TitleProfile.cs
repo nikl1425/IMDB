@@ -11,6 +11,7 @@ namespace WebService.Models
             CreateMap<Title, TitleDto>();
             CreateMap<Title, TitleListDto>();
             CreateMap<Title, NameOfTitleDTO>();
+            CreateMap<Title, TypeTitlesDto>();
         }
     }
 }

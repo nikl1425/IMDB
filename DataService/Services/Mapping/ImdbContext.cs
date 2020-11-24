@@ -40,7 +40,7 @@ namespace DataService
         public DbSet<Title_Bookmark_List> title_bookmark_list { get; set; }
         public DbSet<Title_Episode> title_episode { get; set; }
         public DbSet<Title_Search> title_search { get; set; }
-        public DbSet<Type> type { get; set; }
+        public DbSet<TitleType> type { get; set; }
         public DbSet<Person_Rating> PersonRatings { get; set; }
         public DbSet<Title> title { get; set; }
 
@@ -137,9 +137,9 @@ namespace DataService
             modelBuilder.Entity<TitleRuntime>().Property(x => x.Runtime).HasColumnName("runtime_minut");
             
             //Type
-            modelBuilder.Entity<Type>().ToTable("type");
-            modelBuilder.Entity<Type>().Property(x => x.Id).HasColumnName("type_id");
-            modelBuilder.Entity<Type>().Property(x => x.TypeName).HasColumnName("type_name");
+            modelBuilder.Entity<TitleType>().ToTable("type");
+            modelBuilder.Entity<TitleType>().Property(x => x.Id).HasColumnName("type_id");
+            modelBuilder.Entity<TitleType>().Property(x => x.TypeName).HasColumnName("type_name");
             
             //User
             modelBuilder.Entity<User>().ToTable("users");

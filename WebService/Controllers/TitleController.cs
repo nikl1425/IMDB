@@ -42,7 +42,7 @@ namespace WebService.Controllers
             var titleEpisode = _dataService.GetMoreTitleEpisode(id);
             var titleEpisodeParentName = _dataService.GetTitleEpisodeParentName(id);
             var titlePerson = _dataService.GetTitlePersons(id);
-
+            var titleType = _dataService.GetTitleType(id);
 
             if (title == null)
             {
@@ -57,6 +57,9 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
+
+            titleDto.Type = titleType.Type.TypeName;
+            titleDto.TypeUrl = "http://localhost:5001/api/type/" + titleType.Type.Id;
 
             IList<TitleGenreDTO> TitleGenres = titleGenre.Select(x => new TitleGenreDTO
             {

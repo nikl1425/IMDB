@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DataService.Objects;
 using Microsoft.EntityFrameworkCore;
+using Type = System.Type;
 
 namespace DataService.Services
 {
@@ -201,6 +202,47 @@ namespace DataService.Services
                 .Distinct()
                 .ToList();
 
+            return query;
+        }
+
+        public Title GetTitleType(string id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.title
+                .Include(x => x.Type)
+                .FirstOrDefault();
+                
+
+            return query;
+        }
+
+        public List<TitleType> GetAllTypes()
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.type.ToList();
+
+            return query;
+        }
+
+        public TitleType GetType(int id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.type.FirstOrDefault(x => x.Id == id);
+
+            return query;
+        }
+
+        public List<Title> GetTypeTitles(int id)
+        {
+            using var ctx = new ImdbContext();
+
+            var query = ctx.title
+                .Include(x => x.Type)
+                .Where(x => x.Type.Id == id)
+                .ToList();
             return query;
         }
     }

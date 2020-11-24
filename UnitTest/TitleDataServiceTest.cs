@@ -93,6 +93,14 @@ namespace PortFolio2.Tests
             var Episodes = service.GetMoreTitleEpisode("tt0756483");
             Assert.Equal(235, Episodes.Count);
             Assert.Equal("The One Where Chandler Doesn't Like Dogs", Episodes.First().Title.PrimaryTitle);
-        } 
+        }
+
+        [Fact]
+        public void getTypeTitles()
+        {
+            var service = new TitleDataService();
+            var typeTitles = service.GetTypeTitles(1);
+            Assert.Equal(142, typeTitles.Count);
+        }
     }
 }

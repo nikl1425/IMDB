@@ -32,5 +32,13 @@ namespace DataService.Services
         public string GetTitleEpisodeParentName(string id);
 
         public List<Person> GetTitlePersons(string id);
+
+        public Title GetTitleType(string id);
+
+        public List<TitleType> GetAllTypes();
+
+        public List<Title> GetTypeTitles(int id);
+
+        public TitleType GetType(int id);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DataService.Objects
 {
-    public class Type
+    public class TitleType
     {
         public int Id { get; set; }
         public string TypeName { get; set; }

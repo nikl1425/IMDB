@@ -30,6 +30,7 @@
             <e p="Title_Genre.cs" t="Include" />
             <e p="Title_Rating.cs" t="Include" />
             <e p="TitleRuntime.cs" t="Include" />
+            <e p="TitleType.cs" t="Include" />
           </e>
           <e p="Persons" t="Include">
             <e p="Person.cs" t="Include" />
@@ -47,7 +48,6 @@
             <e p="Title_Bookmark.cs" t="Include" />
             <e p="Title_Bookmark_List.cs" t="Include" />
             <e p="Title_Search.cs" t="Include" />
-            <e p="Type.cs" t="Include" />
             <e p="User.cs" t="Include" />
           </e>
         </e>
@@ -111,6 +111,7 @@
           <e p="ListController.cs" t="Include" />
           <e p="PersonController.cs" t="Include" />
           <e p="TitleController.cs" t="Include" />
+          <e p="TypeController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
         <e p="Middleware" t="Include">
@@ -138,6 +139,8 @@
               <e p="TitleGenreDTO.cs" t="Include" />
               <e p="TitleListDto.cs" t="Include" />
               <e p="TitlePersonDTO.cs" t="Include" />
+              <e p="TypeDto.cs" t="Include" />
+              <e p="TypeTitlesDto.cs" t="Include" />
             </e>
             <e p="UserDTOs" t="Include">
               <e p="ProfessionDTO.cs" t="Include" />
@@ -155,6 +158,7 @@
             <e p="TitleEpisodeProfile.cs" t="Include" />
             <e p="TitleGenreProfile.cs" t="Include" />
             <e p="TitleProfile.cs" t="Include" />
+            <e p="TypeProfile.cs" t="Include" />
             <e p="UserProfile.cs" t="Include" />
           </e>
         </e>

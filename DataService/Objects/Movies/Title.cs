@@ -22,7 +22,7 @@ namespace DataService.Objects
         public IList<Title_Search> TitleSearches { get; set; }
         public IList<Akas> Akases { get; set; }
         public Title_Episode TitleEpisode { get; set; }
-        public Type Type { get; set; }
+        public TitleType Type { get; set; }
         public IList<Title_Person> TitlePersons { get; set; }
 
         //Måske skal ændres
