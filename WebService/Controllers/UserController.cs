@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using DataService;
 using DataService.Objects;
 using DataService.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -178,6 +179,26 @@ namespace WebService.Controllers
             return Ok(new {personList, titleList});
         }
         
+        //RATE A MOVIE
+        [HttpPut("title/{titleid}/RateMovie/{userid}/{thisRating}/")]
+        public IActionResult rateMovie(int userid, int thisRating, string titleid)
+        {
+            if (titleid == null)
+            {
+                return NotFound();
+            }
+            
+            var rateThisMovie = _dataService.RateMovie(userid, thisRating, titleid);
+            return Ok(rateThisMovie);
+        }
+        
+        //GET USERS RATED MOVIES
+        [HttpGet("user/{userid}/ratings/")]
+        public IActionResult getRatings(int userid)
+        {
+            var ratingsList = _dataService.GetRatingFromUsers(userid);
+            return Ok(new {ratingsList});
+        }
         
     }
 }

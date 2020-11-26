@@ -364,53 +364,56 @@ namespace DataService.Services
             return true;
         }
         
-        /////////////////////////////////////////////////////////////////////
-        /////////////// NOT YET IMPLEMENTED IN THE DATA SERVICE /////////////
-        /////////////////////////////////////////////////////////////////////
-        
         //RATE MOVIE
-        public bool rateMovie(int userid, int thisRating, string titleid)
+        public bool RateMovie(int userid, int thisRating, string titleid)
         {
             using var ctx = new ImdbContext();
             var query = ctx.rating.Where(x => x.User_Id == userid && x.Title_Id == titleid).ToList();
-            //if haven't been rated before then...
-            if (query.Count == 0)
+            //if rating is between 1 and 10... in the gui have drop down. 
+            if (thisRating >= 1 && thisRating <= 10 )
             {
+                //if haven't been rated before by user then set new rating
+                if (query.Count == 0)
+                {
+                    //Add to users rating list
+                    ctx.rating
+                        .Add(new Rating {User_Id = userid, Title_Id = titleid, Rating_ = thisRating});
+                    
+                    //if this movie haven't been voted before, add to DB
+                    if (ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid) == null)
+                    {
+                        ctx.title_rating.Add(new Title_Rating {Title_Id = titleid});
+                    }
+                    var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
+                    var thisMovieVotes = thisMovie.Num_Votes;
+                    var thisMovieRating = thisMovie.Average_Rating;
+                    var calcNewRating = (thisMovieVotes * thisMovieRating + thisRating) / (thisMovieVotes + 1);
+                    
+                    ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
+                    ctx.title_rating.Update(thisMovie).Entity.Num_Votes = (thisMovieVotes + 1);
+                    ctx.SaveChanges();
+                    return true;
 
-                //if rating is between 1 and 10... in the gui have drop down. 
-                //if user have not updated on this movie then... 
-                /*
-                ctx.rating
-                    .Add(new Rating
-                        {User_Id = userid, Rating_ = thisRating, Title_Id = titleid});
-                ctx.title_rating.Update(ctx.title_rating.Find().Title_Id == titleid).Entity.
-                */
-                //ctx.SaveChanges();
-                /*
-                update title_rating
-                set average_rating = ((num_votes*average_rating+thisRate)/(num_votes+1))
-                where title_id = titleid and thisRate between 1 and 10;
-                update title_rating
-                set num_votes = num_votes+1;
-                */
-            }
-            //if HAVE been rated before update rating
-            else
-            {
-                /*
-           select userid, titleid
-           from rating
-           where userid=user_id and titleid=title_id and thisRate between 1 and 10)
-           then update rating set rating = thisRate where userid=user_id and titleid=title_id and thisRate between 1 and 10;
-           --Opdater rating
-           update title_rating
-           set average_rating = ((num_votes*average_rating+thisRate)/(num_votes))
-           where title_id = titleid and thisRate between 1 and 10;
-                 */
+                }
+                //If user HAS ALREADY voted on this movie before. 
+                else
+                {
+                    //Update users rating list
+                    var updateRatingList = ctx.rating.FirstOrDefault(x => x.Title_Id == titleid && x.User_Id == userid);
+                    ctx.rating.Update(updateRatingList).Entity.Rating_ = thisRating;
+                    
+                    var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
+                    var thisMovieVotes = thisMovie.Num_Votes;
+                    var thisMovieRating = thisMovie.Average_Rating;
+                    var calcNewRating = (thisMovieVotes * thisMovieRating + thisRating) / (thisMovieVotes + 1);
+                    ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
+                    ctx.SaveChanges();
+                    return true;
+                }
             }
             
-            return true;
-
+            return false;
+            
         }
         
         //GET LIST OF THE USERS RATED MOVIES ... DELETE USERS RATING
@@ -420,8 +423,12 @@ namespace DataService.Services
             var x = ctx.rating.Where(r => r.User_Id == userid);
             return x.ToList();
         }
-
         
+        
+        /////////////////////////////////////////////////////////////////////
+        /////////////// NOT YET IMPLEMENTED IN THE DATA SERVICE /////////////
+        /////////////////////////////////////////////////////////////////////
+
         //GET LIST OF THE USERS SEARCH HISTORY
         public IList<Search_History> GetSearchHistories(int userid)
         {

@@ -30,6 +30,6 @@ namespace DataService.Services
         bool deletePersonBookmark(int id);
         bool deleteTitleBookmark(int id);
         bool deleteTitleBookmarks(int id);
-        bool rateMovie(int userid, int thisRating, string titleid);
+        bool RateMovie(int userid, int thisRating, string titleid);
     }
 }
