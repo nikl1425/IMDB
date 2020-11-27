@@ -200,5 +200,19 @@ namespace WebService.Controllers
             return Ok(new {ratingsList});
         }
         
+        //DELETE USERS RATED MOVIE
+        [HttpDelete("title/{titleid}/RateMovie/{userid}/Delete/")]
+        public IActionResult deleteRating(int userid, string titleid)
+        {
+            if (userid.Equals(null) && titleid == null)
+            {
+                return NotFound();
+            }
+
+            var delRating = _dataService.DeleteRatingFromUser(userid, titleid);
+            return Ok(delRating);
+
+        }
+        
     }
 }

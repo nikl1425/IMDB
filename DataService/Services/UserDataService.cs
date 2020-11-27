@@ -400,20 +400,46 @@ namespace DataService.Services
                 {
                     //Update users rating list
                     var updateRatingList = ctx.rating.FirstOrDefault(x => x.Title_Id == titleid && x.User_Id == userid);
-                    ctx.rating.Update(updateRatingList).Entity.Rating_ = thisRating;
-                    
+                    var prevRating = updateRatingList.Rating_;
                     var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
                     var thisMovieVotes = thisMovie.Num_Votes;
                     var thisMovieRating = thisMovie.Average_Rating;
-                    var calcNewRating = (thisMovieVotes * thisMovieRating + thisRating) / (thisMovieVotes + 1);
+                    var calcNewRating = (((thisMovieRating * thisMovieVotes) - prevRating) + thisRating) / thisMovieVotes;
+                    
                     ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
+                    ctx.rating.Update(updateRatingList).Entity.Rating_ = thisRating;
                     ctx.SaveChanges();
                     return true;
                 }
             }
-            
             return false;
-            
+        }
+        
+        //DELETE RATING FROM MOVIE
+        public bool DeleteRatingFromUser(int userid, string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var dbRating = GetMovieRatingFromUser(userid, titleid);
+            if (dbRating == null)
+            {
+                return false;
+            }
+            //calc new rating of movie
+            var updateRatingList = ctx.rating.FirstOrDefault(x => x.Title_Id == titleid && x.User_Id == userid);
+            var prevRating = updateRatingList.Rating_;
+            var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
+            var thisMovieVotes = thisMovie.Num_Votes;
+            var thisMovieRating = thisMovie.Average_Rating;
+            var calcNewRating = ((thisMovieRating * thisMovieVotes) - prevRating) / (thisMovieVotes-1);
+                    
+            ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
+            ctx.title_rating.Update(thisMovie).Entity.Num_Votes = thisMovieVotes - 1;
+
+            ctx.rating.Remove(dbRating);
+            ctx.SaveChanges();
+
+            return true;
+
         }
         
         //GET LIST OF THE USERS RATED MOVIES ... DELETE USERS RATING
@@ -422,6 +448,14 @@ namespace DataService.Services
             using var ctx = new ImdbContext();
             var x = ctx.rating.Where(r => r.User_Id == userid);
             return x.ToList();
+        }
+        
+        //GET SINGLE RATED MOVIE FROM USER (FOR DELETE)
+        public Rating GetMovieRatingFromUser(int userid, string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var x = ctx.rating.FirstOrDefault(r => r.User_Id == userid && r.Title_Id == titleid);
+            return x;
         }
         
         
