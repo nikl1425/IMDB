@@ -8,6 +8,8 @@ namespace WebService.ObjectDto
         public string Id { get; set; }
        
         public string TitleId { get; set; }
+        
+        public string TitleName { get; set; }
 
         public string Url { get; set; }
     }

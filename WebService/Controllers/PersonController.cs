@@ -16,11 +16,13 @@ namespace WebService.Controllers
     public class PersonController : ControllerBase
     {
         private IPersonDataService _dataService;
+        private ITitleDataService _titleDataService;
         private readonly IMapper _mapper;
 
-        public PersonController(IPersonDataService dataService, IMapper mapper)
+        public PersonController(IPersonDataService dataService, ITitleDataService titleDataService ,IMapper mapper)
         {
             _dataService = dataService;
+            _titleDataService = titleDataService;
             _mapper = mapper;
         }
 
@@ -51,6 +53,7 @@ namespace WebService.Controllers
             {
                 Id = x.Id,
                 TitleId = x.TitleId,
+                TitleName = _titleDataService.GetTitle(x.TitleId).OriginalTitle.ToString(),
                 Url = "http://localhost:5001/api/title/" + x.TitleId
             }).ToList();
 
