@@ -15,7 +15,7 @@ namespace DataService.Objects
 
         public List<Title_Bookmark_List> TitleBookmarkLists { get; set; }
 
-        public List<Rating> Ratings { get; set; }
+        //public List<Rating> Ratings { get; set; }
         
         //public List<Person_Bookmark_list> PersonBookmarkLists { get; set; }
         

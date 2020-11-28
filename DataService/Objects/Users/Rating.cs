@@ -7,7 +7,7 @@
         public string Title_Id { get; set; }
         public double Rating_ { get; set; }
 
-        public User Users;
+        //public User Users;
 
     }
 }

@@ -16,129 +16,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="webservice displayer html">
-      <change afterPath="$PROJECT_DIR$/WebService/wwwroot/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebService/wwwroot/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="c3fa2458-08ac-4054-b3a8-420ce5695d4a" name="Default Changelist" comment="Title til person virker. GetTitle indeholder tilmed en liste over alle person der har medvirket i filmen">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portfolio2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/Services/Mapping/PostgresSQL_Connect_String.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/Mapping/PostgresSQL_Connect_String.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/WebService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/WebService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.debug.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.debug.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/knockout/knockout-latest.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_spinners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_toasts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_deprecate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_interactions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_overflow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_stretched-link.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/wwwroot/lib/twitter-bootstrap/scss/vendor/_rfs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Services/UserDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controllers/UserController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,18 +43,26 @@
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54E51DB7-4175-4089-91E8-64EE775B8BC9/74/f601c3a3/PostgresException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/30/4ccbedb9/TestRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/31/7aeb5dd7/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92FCB906-F2E6-482A-9C7A-BCB425FF229D/f0/f67ceeef/ILoggerFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/7b/a15d2076/XunitTestCaseRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/8b/31e18c55/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e6/4e9f7a77/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/59/5b106b0e/XunitTestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/fc/f7b7a6c3/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/b4/f3f2d74c/TestCaseRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/DataService/Objects/Person_Known_Title.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person_Bookmark_list.cs" />
+        <option value="$PROJECT_DIR$/DataService/Objects/Person.cs" />
         <option value="$PROJECT_DIR$/WebService/Program.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/Profile/UserProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/Profile/PersonBookmarkProfile.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/IPersonDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Persons/Person_Known_Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Persons/Person_Person_Known_Title.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Movies/Akas_Akas_Type.cs" />
@@ -185,11 +76,8 @@
         <option value="$PROJECT_DIR$/DataService/Objects/Persons/Person.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Users/Person_Bookmark_list.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/PersonBookmarkDto.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" />
         <option value="$PROJECT_DIR$/WebService/Controllers/ListController.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/UserDTOs/UserDto.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Mapping/PostgresSQL_Connect_String.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Utils/Hashing.cs" />
         <option value="$PROJECT_DIR$/UnitTest/PersonDataServiceTest.cs" />
@@ -207,18 +95,17 @@
         <option value="$PROJECT_DIR$/DataService/Services/Mapping/ImdbContext.cs" />
         <option value="$PROJECT_DIR$/DataService/Objects/Movies/Title.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/TitleDTOs/TypeDto.cs" />
+        <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/TitleDTOs/TypeTitlesDto.cs" />
         <option value="$PROJECT_DIR$/DataService/Services/Interface/ITitleDataService.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/Profile/TypeProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Models/Profile/TitleProfile.cs" />
         <option value="$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
-        <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Models/ObjectDto/TitleDTOs/TypeTitlesDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Controllers/TypeController.cs" />
-        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
-        <option value="$PROJECT_DIR$/WebService/wwwroot/css/style.css" />
-        <option value="$PROJECT_DIR$/WebService/wwwroot/js/title.js" />
-        <option value="$PROJECT_DIR$/WebService/wwwroot/index.html" />
+        <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/TitleDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/Interface/IUserDataService.cs" />
+        <option value="$PROJECT_DIR$/DataService/Services/UserDataService.cs" />
       </list>
     </option>
   </component>
@@ -232,8 +119,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29934746" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebService">
@@ -332,9 +218,7 @@
       <workItem from="1605169129230" duration="2740000" />
       <workItem from="1605457657053" duration="10623000" />
       <workItem from="1605559382836" duration="6196000" />
-      <workItem from="1606319967949" duration="7471000" />
-      <workItem from="1606400849013" duration="802000" />
-      <workItem from="1606485827051" duration="3611000" />
+      <workItem from="1606471476458" duration="5221000" />
     </task>
     <task id="LOCAL-00001" summary="New Project">
       <created>1604402132484</created>
@@ -588,35 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606172399236</updated>
     </task>
-    <task id="LOCAL-00037" summary="Type virker og har adgang til title og tilbage">
-      <created>1606178696917</created>
+    <task id="LOCAL-00037" summary="Rating nu implementeret">
+      <created>1606403700625</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1606178696917</updated>
+      <updated>1606403700626</updated>
     </task>
-    <task id="LOCAL-00038" summary="webservice displayer html">
-      <created>1606396818129</created>
+    <task id="LOCAL-00038" summary="Ratings implementeret (mangler evt. sletning af ratings, med qol ting imo)">
+      <created>1606404440063</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1606396818129</updated>
+      <updated>1606404440063</updated>
     </task>
-    <task id="LOCAL-00039" summary="alt frontend">
-      <created>1606400999093</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1606400999093</updated>
-    </task>
-    <task id="LOCAL-00040" summary="alt frontend">
-      <created>1606401022107</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1606401022107</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,6 +513,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hej jesper" />
     <MESSAGE value="hej jesper" />
     <MESSAGE value="Flere config at DataService.csproj" />
     <MESSAGE value="Added genre to context + installed logger package for logging actions" />
@@ -665,10 +536,9 @@
     <MESSAGE value="niklas commit" />
     <MESSAGE value="Title episode virker + de har tilhørende sæson nu" />
     <MESSAGE value="Title til person virker. GetTitle indeholder tilmed en liste over alle person der har medvirket i filmen" />
-    <MESSAGE value="Type virker og har adgang til title og tilbage" />
-    <MESSAGE value="webservice displayer html" />
-    <MESSAGE value="alt frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="alt frontend" />
+    <MESSAGE value="Rating nu implementeret" />
+    <MESSAGE value="Ratings implementeret (mangler evt. sletning af ratings, med qol ting imo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ratings implementeret (mangler evt. sletning af ratings, med qol ting imo)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="416" y="156" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604402509785">
@@ -683,133 +553,133 @@
       <screen x="0" y="25" width="1792" height="1038" />
     </state>
     <state x="771" y="445" width="497" height="198" key="Github.ShareDialog/0.25.1792.1038@0.25.1792.1038" timestamp="1604402239002" />
-    <state width="1257" height="333" key="GridCell.Tab.0.bottom" timestamp="1606399898117">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1606478581948">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605476700991" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606478581948" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
-    <state width="1257" height="333" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606399898117" />
+    <state width="1257" height="314" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178508509" />
     <state width="1750" height="361" key="GridCell.Tab.0.bottom/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154201" />
-    <state width="1257" height="333" key="GridCell.Tab.0.center" timestamp="1606399898117">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1606478581947">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605476700991" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606478581947" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
-    <state width="1257" height="333" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606399898117" />
+    <state width="1257" height="314" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178508509" />
     <state width="1750" height="361" key="GridCell.Tab.0.center/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154200" />
-    <state width="1257" height="333" key="GridCell.Tab.0.left" timestamp="1606399898117">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1606478581947">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605476700991" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606478581947" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866792" />
-    <state width="1257" height="333" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606399898117" />
+    <state width="1257" height="314" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178508508" />
     <state width="1750" height="361" key="GridCell.Tab.0.left/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154199" />
-    <state width="1257" height="333" key="GridCell.Tab.0.right" timestamp="1606399898117">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1606478581947">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605476700991" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606478581947" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022511653" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016866793" />
-    <state width="1257" height="333" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606399898117" />
+    <state width="1257" height="314" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178508509" />
     <state width="1750" height="361" key="GridCell.Tab.0.right/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154200" />
-    <state width="1257" height="516" key="GridCell.Tab.1.bottom" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.1.bottom" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.1.bottom/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154203" />
-    <state width="1257" height="516" key="GridCell.Tab.1.center" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.1.center" timestamp="1606178339200">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339200" />
     <state width="1750" height="361" key="GridCell.Tab.1.center/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154202" />
-    <state width="1257" height="516" key="GridCell.Tab.1.left" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.1.left" timestamp="1606178339200">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339200" />
     <state width="1750" height="361" key="GridCell.Tab.1.left/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154202" />
-    <state width="1257" height="516" key="GridCell.Tab.1.right" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.1.right" timestamp="1606178339200">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339200" />
     <state width="1750" height="361" key="GridCell.Tab.1.right/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154202" />
-    <state width="1257" height="516" key="GridCell.Tab.2.bottom" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.2.bottom" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.2.bottom/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154204" />
-    <state width="1257" height="516" key="GridCell.Tab.2.center" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.2.center" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.2.center/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154203" />
-    <state width="1257" height="516" key="GridCell.Tab.2.left" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.2.left" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956425" />
-    <state width="1257" height="516" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.2.left/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154203" />
-    <state width="1257" height="516" key="GridCell.Tab.2.right" timestamp="1606178761861">
+    <state width="1257" height="516" key="GridCell.Tab.2.right" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761861" />
+    <state width="1257" height="516" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.2.right/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154204" />
-    <state width="1257" height="516" key="GridCell.Tab.3.bottom" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.3.bottom" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.3.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.3.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.3.bottom/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154205" />
-    <state width="1257" height="516" key="GridCell.Tab.3.center" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.3.center" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.3.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.3.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.3.center/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154205" />
-    <state width="1257" height="516" key="GridCell.Tab.3.left" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.3.left" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.3.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.3.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.3.left/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154204" />
-    <state width="1257" height="516" key="GridCell.Tab.3.right" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.3.right" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.3.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.3.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.3.right/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154205" />
-    <state width="1257" height="516" key="GridCell.Tab.4.bottom" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.4.bottom" timestamp="1606178339202">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.4.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.4.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339202" />
     <state width="1750" height="361" key="GridCell.Tab.4.bottom/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154207" />
-    <state width="1257" height="516" key="GridCell.Tab.4.center" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.4.center" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.4.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.4.center/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.4.center/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154206" />
-    <state width="1257" height="516" key="GridCell.Tab.4.left" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.4.left" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.4.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.4.left/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.4.left/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154206" />
-    <state width="1257" height="516" key="GridCell.Tab.4.right" timestamp="1606178761862">
+    <state width="1257" height="516" key="GridCell.Tab.4.right" timestamp="1606178339201">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605215956426" />
-    <state width="1257" height="516" key="GridCell.Tab.4.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178761862" />
+    <state width="1257" height="516" key="GridCell.Tab.4.right/0.0.3440.1400@0.0.3440.1400" timestamp="1606178339201" />
     <state width="1750" height="361" key="GridCell.Tab.4.right/0.25.1792.1038@0.25.1792.1038" timestamp="1605565154207" />
     <state x="184" y="85" key="MergeDialog" timestamp="1605214954411">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -821,33 +691,32 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605210115908" />
-    <state x="777" y="209" key="SettingsEditor" timestamp="1606486985930">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="405" y="180" key="SettingsEditor" timestamp="1605559280096">
+      <screen x="0" y="25" width="1792" height="1038" />
     </state>
-    <state x="777" y="209" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1606486985930" />
     <state x="405" y="180" key="SettingsEditor/0.25.1792.1038@0.25.1792.1038" timestamp="1605559280096" />
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog" timestamp="1604408159408">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2394" y="100" width="949" height="1200" key="VCS.FileHistoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1604408159408" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2" timestamp="1606401023780">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="536" y="256" key="Vcs.Push.Dialog.v2" timestamp="1606404441398">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="536" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605460890239" />
+    <state x="536" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606404441398" />
     <state x="536" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022782551" />
-    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1606401023780" />
+    <state x="960" y="345" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1606172405592" />
     <state x="500" y="281" key="Vcs.Push.Dialog.v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605563180714" />
     <state x="565" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605206083810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605206083810" />
-    <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606400932707">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="1355" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606480740995">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1355" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605473081601" />
+    <state x="1355" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606480740995" />
     <state x="1355" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605022434402" />
     <state x="3275" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1605016870314" />
-    <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1606400932707" />
+    <state x="2428" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1604999572823" />
     <state x="1265" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1792.1038@0.25.1792.1038" timestamp="1605550031592" />
     <state x="0" y="0" width="912" height="1058" key="dock-window-1" timestamp="1606174600996">
       <screen x="0" y="0" width="3440" height="1400" />
@@ -866,11 +735,11 @@
     </state>
     <state x="637" y="81" width="646" height="888" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605019583040" />
     <state x="595" y="105" width="684" height="878" key="find.popup/0.25.1792.1038@0.25.1792.1038" timestamp="1605562555073" />
-    <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup" timestamp="1606399189644">
+    <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup" timestamp="1606175734237">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="603" y="228" width="720" height="680" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605207517738" />
-    <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1606399189644" />
+    <state x="1081" y="308" width="1290" height="915" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1606175734237" />
     <state x="563" y="253" width="672" height="678" key="search.everywhere.popup/0.25.1792.1038@0.25.1792.1038" timestamp="1605559286154" />
   </component>
   <component name="XDebuggerManager">
@@ -879,27 +748,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs</url>
           <line>102</line>
-          <properties documentPath="C:\Users\45535\Desktop\RAWDATA\C#\Projects\IMDB\UnitTest\TitleDataServiceTest.cs" initialLine="102">
-            <startOffsets>
-              <option value="3076" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3112" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\45535\Desktop\RAWDATA\C#\Projects\IMDB\UnitTest\TitleDataServiceTest.cs" initialLine="102" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/UnitTest/TitleDataServiceTest.cs</url>
           <line>101</line>
-          <properties documentPath="C:\Users\45535\Desktop\RAWDATA\C#\Projects\IMDB\UnitTest\TitleDataServiceTest.cs" initialLine="101">
-            <startOffsets>
-              <option value="3021" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3063" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\45535\Desktop\RAWDATA\C#\Projects\IMDB\UnitTest\TitleDataServiceTest.cs" initialLine="101" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
