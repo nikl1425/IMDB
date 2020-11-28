@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\jjfiv\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
+    <e p="C:\Users\45535\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
-    <e p="C:\Users\jjfiv\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
-    <e p="C:\Users\jjfiv\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
-    <e p="C:\Users\jjfiv\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jjfiv\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Portfolio2.-1896571418.00" t="ExcludeRecursive" />
-    <e p="G:\Programmer\Drive\Dropbox\RUC\Kandidat\CS_2ndSemester\RAWDATA\Portfolio 2\Portfolio 2" t="IncludeFlat">
+    <e p="C:\Users\45535\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\45535\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\45535\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\45535\AppData\local\JetBrains\Rider2020.2\javascript\typings\node\14.14.10\node_modules\@types" t="IncludeRecursive" />
+    <e p="C:\Users\45535\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Portfolio2.-748555537.00" t="ExcludeRecursive" />
+    <e p="C:\Users\45535\AppData\Roaming\JetBrains\Rider2020.2\javascript\nodejs\15.1.0\core-modules" t="IncludeRecursive" />
+    <e p="C:\Users\45535\Desktop\RAWDATA\C#\Projects\IMDB" t="IncludeFlat">
       <e p="DataService" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DataService.csproj" t="IncludeRecursive" />
@@ -74,6 +76,9 @@
       <e p="Portfolio2.sln" t="IncludeFlat" />
       <e p="TestQueryConsole" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Diagrams" t="Include">
+          <e p="ClassDiagram1.cd" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -182,6 +187,7 @@
             <e p="title.js" t="Include" />
           </e>
           <e p="node_modules\knockout" t="IncludeRecursive" />
+          <e p="node_modules\twitter-bootstrap" t="IncludeRecursive" />
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
         </e>
