@@ -107,6 +107,7 @@
           <e p="TypeController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
+        <e p="Gruntfile.js" t="Include" />
         <e p="libman.json" t="Include" />
         <e p="Middleware" t="Include">
           <e p="RequestLoggerMiddleware.cs" t="Include" />
@@ -156,6 +157,11 @@
             <e p="UserProfile.cs" t="Include" />
           </e>
         </e>
+        <e p="node_modules/grunt" t="IncludeRecursive" />
+        <e p="node_modules/grunt-contrib-concat" t="IncludeRecursive" />
+        <e p="node_modules/grunt-contrib-uglify" t="IncludeRecursive" />
+        <e p="node_modules/grunt-contrib-watch" t="IncludeRecursive" />
+        <e p="node_modules/grunt-npm-install" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -163,6 +169,8 @@
             </e>
           </e>
         </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -170,11 +178,16 @@
         <e p="Startup.cs" t="Include" />
         <e p="WebService.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include">
+          <e p="build" t="Include">
+            <e p="scripts.js" t="Include" />
+            <e p="styles.css" t="Include" />
+          </e>
           <e p="css" t="Include">
             <e p="style.css" t="Include" />
           </e>
           <e p="index.html" t="Include" />
           <e p="js" t="Include">
+            <e p="person.js" t="Include" />
             <e p="title.js" t="Include" />
           </e>
           <e p="package-lock.json" t="Include" />
