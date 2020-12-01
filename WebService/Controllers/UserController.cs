@@ -53,7 +53,7 @@ namespace WebService.Controllers
             {
                 return NotFound();
             }
-            var updateUser = _dataService.ChangePassword(id, userDto.Username, userDto.Password, userDto.NewPassword);
+            var updateUser = _dataService.ChangePassword(userDto.Username, userDto.Password, userDto.NewPassword);
 
             if (updateUser)
             {

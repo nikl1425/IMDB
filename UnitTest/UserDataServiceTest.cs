@@ -17,28 +17,56 @@ namespace PortFolio2.Tests
             var service = new UserDataService();
             var users = service.GetUser(1);
             Assert.Equal(1, users.Id);
-            Assert.Equal("jens", users.Surname);
+            Assert.Equal("isvalid", users.Surname);
         }
 
         [Fact]
         public void CreateUser()
         {
             var service = new UserDataService();
-            
+            var newUser = service.CreateUser(
+                "userTest", 
+                "pw", 
+                "TestName", 
+                "Testlast", 
+                20, 
+                "t@t.com");
+            Assert.Equal("t@t.com", newUser.Email);
         }
 
+        [Fact]
+        public void ChangePassword()
+        {
+            var service = new UserDataService();
+            var chpw = service.ChangePassword("userTest", "pw", "pwnew");
+            Assert.True(chpw);
+        }
+
+        [Fact]
+        public void UpdateUserCorrect()
+        {
+            var service = new UserDataService();
+            var update = service.UpdateUser(10,"userTest", "pwnew", "Testname", "lastname", 10, "tt@tt.com");
+            Assert.True(update);
+        }
+        [Fact]
+        public void UpdateUserFalse()
+        {
+            var service = new UserDataService();
+            var updateFalse = service.UpdateUser(10,"userTestUpdate", "falsepw", "Testname", "lastname", 10, "tt@com");
+            Assert.False(updateFalse);
+        }
         
-        /*
         [Fact]
         public void GetRatingFromUser()
         {
             var service = new UserDataService();
             var rating = service.GetRatingFromUsers(1);
             Assert.Equal(1, rating.Count);
-            Assert.Equal("tt0052520", rating.First().Title_Id);
-            Assert.Equal(8, rating.Last().Rating_);
+            Assert.Equal("tt11972952", rating.First().Title_Id);
+            Assert.Equal(1, rating.Last().Rating_);
         }
-        */
+        
 
         [Fact]
         public void GetPersonBookmarkLists()
@@ -46,8 +74,8 @@ namespace PortFolio2.Tests
             var service = new UserDataService();
             var personBookmarkList = service.GetUsersPersonBookmarkLists(1);
             Assert.Equal(7, personBookmarkList.Count);
-            Assert.Equal("hejsatest", personBookmarkList.First().List_Name);
-            Assert.Equal("My test list1", personBookmarkList.Last().List_Name);
+            Assert.Equal("My Fav Directors", personBookmarkList.First().List_Name);
+            Assert.Equal("x", personBookmarkList.Last().List_Name);
         }
         
         [Fact]
@@ -59,15 +87,14 @@ namespace PortFolio2.Tests
             Assert.Equal("nm0000001",personBookmark.Person_Id);
         }
 
-
         [Fact]
         public void GetTitleBookmarks()
         {
             var service = new UserDataService();
-            var titleBookmarks = service.GetTitleBookmarks(5);
-            Assert.Equal(5, titleBookmarks.First().Id);
-            Assert.Equal(1, titleBookmarks.First().ListId);
-            Assert.Equal("tt0734773", titleBookmarks.First().TitleId);
+            var titleBookmarks = service.GetTitleBookmarks(6);
+            Assert.Equal(6, titleBookmarks.First().Id);
+            Assert.Equal(5, titleBookmarks.First().ListId);
+            Assert.Equal("tt0052520", titleBookmarks.First().TitleId);
         }
 
         [Fact]
@@ -77,7 +104,7 @@ namespace PortFolio2.Tests
             var newbooklist = service.NewPersonBookmarkList(1, "hejsatest");
             Assert.Equal(1,newbooklist.User_Id);
             Assert.Equal("hejsatest",newbooklist.List_Name);
-        }
+            }
 
         [Fact]
         public void newPersonBookmark()
@@ -86,6 +113,30 @@ namespace PortFolio2.Tests
             var newBookmark = service.NewPersonBookmark("nm0000002", 1);
             Assert.Equal("nm0000002",newBookmark.Person_Id);
             Assert.Equal(1, newBookmark.List_Id);
+        }
+
+        [Fact]
+        public void RateMovie()
+        {
+            var service = new UserDataService();
+            var rateMovie = service.RateMovie(3, 1, "tt11972952");
+            Assert.True(rateMovie);
+        }
+
+        [Fact]
+        public void GetRating()
+        {
+            var service = new UserDataService();
+            var getRating = service.GetMovieRatingFromUser(3, "tt11972952");
+            Assert.Equal(1, getRating.Rating_);
+        }
+
+        [Fact]
+        public void DeleteRating()
+        {
+            var service = new UserDataService();
+            var delRating = service.DeleteRatingFromUser(3, "tt11972952");
+            Assert.True(delRating);
         }
         
     }

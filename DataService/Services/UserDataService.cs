@@ -72,26 +72,31 @@ namespace DataService.Services
             return ctx.users.Find(maxId + 1);
         }
 
-        public bool ChangePassword(int id, string username, string oldpassword, string newpassword)
+        //CHANGE PASSWORD
+        public bool ChangePassword(/*int id,*/ string username, string oldpassword, string newpassword)
         {
             using var ctx = new ImdbContext();
+            var getUser = ctx.users.FirstOrDefault(x => x.Username == username);
+            if(_userValidation.VerifyPassword(oldpassword, getUser.Password, getUser.Salt))
+            /*
             if (_userValidation.VerifyPassword(oldpassword, ctx.users.Find(id).Password, ctx.users.Find(id).Salt)
-                && ctx.users.Find(id).Username == username)
+                && ctx.users.Find(id).Username == username)*/
             {
                 Hashing.HashSalt hashSalt = hashing.PasswordHash(16, newpassword);
-                ctx.users.Update(ctx.users.Find(id)).Entity.Password = hashSalt.Hash;
-                ctx.users.Update(ctx.users.Find(id)).Entity.Salt = hashSalt.Salt;
+                //ctx.users.Update(ctx.users.Find(id)).Entity.Password = hashSalt.Hash;
+                //ctx.users.Update(ctx.users.Find(id)).Entity.Salt = hashSalt.Salt;
+                ctx.users.Update(getUser).Entity.Password = hashSalt.Hash;
+                ctx.users.Update(getUser).Entity.Salt = hashSalt.Salt;
                 ctx.SaveChanges();
             } else { return false; }
             return true;
         }
         
-        
         //UPDATE USER PROFILE
         public bool UpdateUser(int id, string username, string password, string surname, string lastname, int age, string email)
         {
             using var ctx = new ImdbContext();
-            
+            var getUser = ctx.users.FirstOrDefault(x => x.Username == username);
             if (id <= 0) return false;
             //PASSWORD
             if (_userValidation.VerifyPassword(password, ctx.users.Find(id).Password, ctx.users.Find(id).Salt))
@@ -101,35 +106,37 @@ namespace DataService.Services
                 {
                     ctx.users.Update(ctx.users.Find(id)).Entity.Username = username;
                 }
+
                 //SURNAME
                 if (surname != null && Regex.IsMatch(surname, @"^[a-zA-Z]+$"))
                 {
                     ctx.users.Update(ctx.users.Find(id)).Entity.Surname = surname;
                 }
+
                 //LASTNAME
                 if (lastname != null && Regex.IsMatch(lastname, @"^[a-zA-Z]+$"))
                 {
                     ctx.users.Update(ctx.users.Find(id)).Entity.Last_Name = lastname;
                 }
+
                 //AGE
                 if (age != 0)
                 {
                     ctx.users.Update(ctx.users.Find(id)).Entity.Age = age;
                 }
+
                 //EMAIL
                 if (email != null && IsValidEmail(email))
                 {
                     ctx.users.Update(ctx.users.Find(id)).Entity.Email = email;
                 }
-            }else
-            {
-                return false;
+
+                ctx.SaveChanges();
+                return true;
             }
 
-
-            ctx.SaveChanges();
-
-            return true;
+            return false;
+            
         }
         
         //DELETE USER PROFILE
@@ -419,27 +426,37 @@ namespace DataService.Services
         public bool DeleteRatingFromUser(int userid, string titleid)
         {
             using var ctx = new ImdbContext();
-            var dbRating = GetMovieRatingFromUser(userid, titleid);
-            if (dbRating == null)
-            {
-                return false;
-            }
             //calc new rating of movie
             var updateRatingList = ctx.rating.FirstOrDefault(x => x.Title_Id == titleid && x.User_Id == userid);
-            var prevRating = updateRatingList.Rating_;
-            var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
-            var thisMovieVotes = thisMovie.Num_Votes;
-            var thisMovieRating = thisMovie.Average_Rating;
-            var calcNewRating = ((thisMovieRating * thisMovieVotes) - prevRating) / (thisMovieVotes-1);
+            if (updateRatingList == null) return false;
+            {
+                var prevRating = updateRatingList.Rating_;
+                var thisMovie = ctx.title_rating.FirstOrDefault(x => x.Title_Id == titleid);
+                var thisMovieVotes = thisMovie.Num_Votes;
+                var thisMovieRating = thisMovie.Average_Rating;
+                var calcNewRating = ((thisMovieRating * thisMovieVotes) - prevRating) / (thisMovieVotes-1);
                     
-            ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
-            ctx.title_rating.Update(thisMovie).Entity.Num_Votes = thisMovieVotes - 1;
+                ctx.title_rating.Update(thisMovie).Entity.Average_Rating = calcNewRating;
+                ctx.title_rating.Update(thisMovie).Entity.Num_Votes = thisMovieVotes - 1;
+                ctx.SaveChanges();
+                DeleteRatingFromDB(userid, titleid);
+                return true;
+            }
 
-            ctx.rating.Remove(dbRating);
+        }
+
+        //FOR ABOVE METHOD, MADE BCS OF AN ERROR;
+        /*
+         * The instance of entity type 'Rating' cannot be tracked because another
+         * instance with the key value '{Id: x}' is already being tracked 
+         */
+        public bool DeleteRatingFromDB(int userid, string titleid)
+        {
+            using var ctx = new ImdbContext();
+            var dbRating = GetMovieRatingFromUser(userid, titleid);
+            ctx.Remove(dbRating);
             ctx.SaveChanges();
-
             return true;
-
         }
         
         //GET LIST OF THE USERS RATED MOVIES ... DELETE USERS RATING
