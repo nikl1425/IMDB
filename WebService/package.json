@@ -1,5 +1,5 @@
 {
-  "name": "gruntproject",
+  "name": "webservice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "grunt": "^1.3.0"
-  },
-  "devDependencies": {
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^5.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-npm-install": "^0.3.1"
+    "knockout": "^3.5.1",
+    "requirejs": "^2.3.6"
   }
 }

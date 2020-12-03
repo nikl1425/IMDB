@@ -144,7 +144,23 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="wwwroot\build" />
+      <Folder Include="wwwroot\js\lib\node_modules\.bin" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="wwwroot\js\lib\node_modules\knockout\build\output\knockout-latest.debug.js" />
+      <Content Include="wwwroot\js\lib\node_modules\knockout\build\output\knockout-latest.js" />
+      <Content Include="wwwroot\js\lib\node_modules\knockout\LICENSE" />
+      <Content Include="wwwroot\js\lib\node_modules\knockout\package.json" />
+      <Content Include="wwwroot\js\lib\node_modules\knockout\README.md" />
+      <Content Include="wwwroot\js\lib\node_modules\requirejs\bin\r.js" />
+      <Content Include="wwwroot\js\lib\node_modules\requirejs\package.json" />
+      <Content Include="wwwroot\js\lib\node_modules\requirejs\README.md" />
+      <Content Include="wwwroot\js\lib\node_modules\requirejs\require.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="wwwroot\js\lib\node_modules\knockout\build\types\knockout.d.ts" />
     </ItemGroup>
 
 </Project>
